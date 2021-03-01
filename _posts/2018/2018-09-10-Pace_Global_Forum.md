@@ -72,7 +72,7 @@ test track에서의 Alsist
 
 **Folding mechanism**
 
-
+![folding](/assets/folding.gif)
 
 worm geared motor를 이용하여 folding mechanism을 구현하였습니다.
 
