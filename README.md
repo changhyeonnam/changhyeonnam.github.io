@@ -1,2 +1,1 @@
-engineering blog based on [jekyll-now][link]
-[link]: https://github.com/barryclark/jekyll-now#quick-start
+engineering blog based on [jekyll-now](https://github.com/barryclark/jekyll-now#quick-start)
