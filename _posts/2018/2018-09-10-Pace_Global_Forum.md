@@ -103,8 +103,7 @@ worm geared motor를 이용하여 folding mechanism을 구현하였습니다.
 Team2 Presentation
 
 ![PACE%20Global%20Annual%20Forum,%20GM%20Warren%20Tech%20Center%20,J%203163bb469c1b4004b4983bd54672b814/Untitled%203.png](/images/2018/pace/race.png)
-
-    test track
+test track
 
 **Award Ceremony**
 
