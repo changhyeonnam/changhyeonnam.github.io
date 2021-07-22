@@ -5,7 +5,7 @@
 /*****************************************************************************/
 
 html {
-  font-size: 8px;
+  font-size: 18px;
 }
 @media (min-width: 38em) {
   html {
@@ -74,20 +74,20 @@ td pre {
 
 @media (prefers-color-scheme: dark) {
   body {
-    color: #313131;
-    // background-color: #000;
+    color: #ccc;
+    background-color: #000;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: #313131;
+    color: #eee;
   }
 
   .page-title, .post-title {
-    color: #313131;
+    color: #eee;
   }
 
   .anchorjs-link {
-    color: #313131;
+    color: #eee;
   }
 
   code {
@@ -100,7 +100,7 @@ td pre {
   }
 
   .sidebar-toggle {
-    color: #313131;
+    background-color: #eee;
   }
 }
 
