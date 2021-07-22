@@ -3,7 +3,7 @@ title: PACE Global Annual Forum GM Warren 2018 후기
 layout: post
 Created: Dec 8, 2020 9:08 PM
 tags:
-    - 대회 후기
+    - Competition
 ---
 
 PACE Global Annual Forum, GM Warren Tech Center, July 22-25, 2018 후기
