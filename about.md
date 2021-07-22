@@ -13,10 +13,10 @@ title: About
 Coursera Deep Learning 특화과정을 수료, TensorFlow Developer Certificate 취득하였습니다. 현업 엔지니어분들과의 교류를 통해 많은것을 배웠습니다.
 
 ##### Resposive Static Website (반응형 정적 웹페이지)
-materialize framework를 사용하였고,  aws Lambda와 aws API Gateway을 이용한 severless email 구현. [링크](http://www.shinchang-fa.com)
+materialize framework를 사용하였고,  aws Lambda와 aws API Gateway을 이용한 severless email 구현하였습니다. [링크](http://www.shinchang-fa.com)
 
 ##### Stacked-BLSTM EMG classifier for lower limb transverse plane movement prediction : 2018.7 - 2019.6 ( 개인 프로젝트)
-gm pace forum을 참가하고, 돌아오면서 보스턴에서 Mit museum에서 1족 로봇을 보고 흥미가 생겨 팀원들을 모아 프로젝트를 진행했습니다.
+gm pace forum을 참가하고, 돌아오면서 보스턴에서 Mit museum에서 1족 로봇을 보고 흥미가 생겨 팀원들을 모아 프로젝트를 진행했습니다.프로젝트의 결과물을 논문의 형태로 만들어 26회 삼성 휴먼테크논문대상에 참여했습니다. 비록 좋은 결과를 얻지는 못했지만 많은 것을 배울 수 있었습니다. [링크](https://drive.google.com/file/d/1EFHuEwamI4aJcw-dneXQm-M72pYNrus_/view)
 
 ##### The 1st Place on Industrial Design, The 2nd Place on Track Race on PACE Global Annual Forum - PUMA Session (Warren, USA) 2018.3 - 2018.8
 GM PACE Global Annual Forum에서 babyboomer를 위해 제시된 컨셉 중 차체의 폴딩 시스템과 tracking 기능에 대한 개발을 인정받아 1st Place on Industrial Design을 수상하였고, track race (주행) 부문에서 2nd Place on Track Race를 수상했습니다.
