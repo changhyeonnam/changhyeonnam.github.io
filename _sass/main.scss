@@ -72,7 +72,7 @@ td pre {
   margin-left: -1.125em !important;
 }
 
-@media {
+@media (prefers-color-scheme: dark) {
   body {
     color: #ccc;
     background-color: #000;
@@ -169,7 +169,7 @@ ul.posts li span {
   padding: 10px;
 }
 
-@media {
+@media (prefers-color-scheme: dark) {
   .page .social-icons a {
     color: #aaa;
   }
@@ -222,7 +222,7 @@ ul.posts li span {
   font-size: 0.625rem;
 }
 
-@media {
+@media (prefers-color-scheme: dark) {
   .tag-box a {
     background-color: #222;
   }
