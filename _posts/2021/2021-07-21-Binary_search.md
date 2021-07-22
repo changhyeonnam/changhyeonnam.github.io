@@ -4,7 +4,6 @@ layout: post
 Created: Jul 7, 2021 12:00 PM
 tags:
     - Algorithm
-    - C++
 use_math: true
 ---
 
