@@ -74,20 +74,20 @@ td pre {
 
 @media (prefers-color-scheme: dark) {
   body {
-    color: #ccc;
-    background-color: #000;
+    // color: #ccc;
+    // background-color: #000;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: #eee;
+    color: #313131;
   }
 
   .page-title, .post-title {
-    color: #eee;
+    color: #313131;
   }
 
   .anchorjs-link {
-    color: #eee;
+    color: #313131;
   }
 
   code {
@@ -100,7 +100,7 @@ td pre {
   }
 
   .sidebar-toggle {
-    background-color: #eee;
+    color: #313131;
   }
 }
 
