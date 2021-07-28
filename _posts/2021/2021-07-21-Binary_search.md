@@ -1,7 +1,7 @@
 ---
 title: 이진 탐색(Binary Search)
 layout: post
-Created: Jul 7, 2021 12:00 PM
+Created: Jul 21, 2021 12:00 PM
 tags:
     - Algorithm
 use_math: true

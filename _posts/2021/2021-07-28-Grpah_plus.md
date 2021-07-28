@@ -1,7 +1,7 @@
 ---
 title: 그래프(Grpah) 와 관련된 이론
 layout: post
-Created: Jul 7, 2021 12:00 PM
+Created: Jul 28, 2021 12:00 PM
 tags:
     - Algorithm
 use_math: true
