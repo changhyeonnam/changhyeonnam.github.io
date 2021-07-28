@@ -6,7 +6,9 @@ tags:
     - Algorithm
 use_math: true
 ---
-
+```
+CTP 알고리즘 동아리에서 여름방학 코딩테스트반에 참여하여 공부한 내용입니다.
+```
 ### A - 섬의 개수
 
 DFS로 싸이클에 속한 정점을 찾을 수 있습니다. 정점 방문을 시작했는지에 대한 visited 배열 말고, 그 정점의 방문 함수가 완전히 끝났는지를 나타내는 finished 배열이 하나 더 필요합니다. DFS를  하다가 visited[k] = true, finished[k]=false인 경우, 사이클이 발생합니다.
@@ -677,3 +679,7 @@ int main(){
 }
 ```
 {% endraw %}
+
+```
+reference : [플로이드 와샬 알고리즘](https://blog.naver.com/kks227?Redirect=Log&logNo=220797649276&from=postView)
+```
