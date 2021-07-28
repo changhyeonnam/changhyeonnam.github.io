@@ -576,6 +576,7 @@ int main(){
 
 처음 플레티넘문제를 풀어봤다. 플레티넘V는 넘사벽이라 할만큼 어렵지는 않은것 같다. BFS 문제였는데, 처음에는 위아래좌우 한칸씩 방문했더니 틀렸다. 문제에서 위아래로 1이아닌 곳까지 무한으로 이동할수 있기때문에, 위아래에 대해 최대한 방문해줘야 한다.
 [17267번 상남자](https://www.acmicpc.net/problem/17267)
+{% raw %}
 ```cpp
 #include <iostream>
 #include <cstring>
@@ -675,3 +676,4 @@ int main(){
     return 0;
 }
 ```
+{% endraw %}
