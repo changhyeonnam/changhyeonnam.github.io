@@ -7,8 +7,6 @@ tags:
 use_math: true
 ---
 
-# Grpah 와 관련된 이론
-
 ### A - 섬의 개수
 
 DFS로 싸이클에 속한 정점을 찾을 수 있습니다. 정점 방문을 시작했는지에 대한 visited 배열 말고, 그 정점의 방문 함수가 완전히 끝났는지를 나타내는 finished 배열이 하나 더 필요합니다. DFS를  하다가 visited[k] = true, finished[k]=false인 경우, 사이클이 발생합니다.
@@ -578,7 +576,6 @@ int main(){
 
 처음 플레티넘문제를 풀어봤다. 플레티넘V는 넘사벽이라 할만큼 어렵지는 않은것 같다. BFS 문제였는데, 처음에는 위아래좌우 한칸씩 방문했더니 틀렸다. 문제에서 위아래로 1이아닌 곳까지 무한으로 이동할수 있기때문에, 위아래에 대해 최대한 방문해줘야 한다.
 [17267번 상남자](https://www.acmicpc.net/problem/17267)
-
 ```cpp
 #include <iostream>
 #include <cstring>
@@ -606,7 +603,7 @@ int L,R;
 
 int bfs(int y,int x, int count_l, int count_r){
     int count = 0;
-    q.push({{y,x},{count_l,count_r}});
+    q.push({ {y,x},{count_l,count_r}});
     while(!q.empty()){
         int by,bx,cl,cr;
         by = q.front().first.first;
