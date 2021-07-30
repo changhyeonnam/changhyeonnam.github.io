@@ -10,7 +10,7 @@ use_math: true
 ---
 
 PACE Global Annual Forum, GM Warren Tech Center, July 22-25, 2018 후기
-2018년 에 team2에 합류하여 약  6개월이 동안 프로젝트를 진행했고, 7월 25일 award ceremony을 기점으로 프로젝트를 마무리 했습니다.
+2018년 에 team2에 합류하여 약  6개월 동안 프로젝트를 진행했고, 7월 25일 award ceremony을 기점으로 프로젝트를 마무리 했습니다.
 
 ![alsist](/images/2018/pace/alsist.png)
 ---
