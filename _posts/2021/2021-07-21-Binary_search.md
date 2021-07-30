@@ -13,7 +13,11 @@ CTP 알고리즘 동아리에서 여름방학 코딩테스트반에 참여하여
 ```
 이진 탐색은 탐색 알고리즘 중 하나이다.  오름차순으로 정렬된 리스트의 중간 값을 임의의 값으로 선택하여 찾고하자 하는 key 값과 비교하는 방식으로 돌아가는 알고리즘이다. 정렬된 리스트에서만 사용가능하고, O(logN)이 걸린다.  
 
-![bs0](/images/2021/binary_search/bs0.png)
+<div class="center">
+  <figure>
+    <a href="/images/2021/binary_search/bs0.png"><img src="/images/2021/binary_search/bs0.png"></a>
+  </figure>
+</div>
 
 위 그림에서 6을 찾으려 할때, 탐색 index를 start =0, end = 6, mid= 3으로 시작하여 1/2씩 탐색 범위를 줄여가며 찾는 방법이다. 가장 기본적인 예시가 A - 수찾기이다.
 
@@ -371,13 +375,20 @@ int main(){
 
 ### G - 챔피언 (Easy)
 
-![bs1](/images/2021/binary_search/bs1.png){: width="300"  height="300"){: .center}
+<div class="center">
+  <figure>
+    <a href="/images/2021/binary_search/bs1.png"><img src="/images/2021/binary_search/bs1.png"></a>
+  </figure>
+</div>
 
 
 5명의 선수가 있다고 했을때, 챔피언이 되는 가장 작은 전투력의 선수를 찾으면 된다. C가 챔피언이 되는  가장 작은 전투력의 선수라면, A와B는 챔피언이 될수 없고,  D,E는 챔피언이 될 수  있다. C,D,E가 챔피언이 되는 경우는 단조성이 유지되는 경우에만 해당한다.
 
-![bs2](/images/2021/binary_search/bs2.png){: width="300"  height="300"){: .center}
-
+<div class="center">
+  <figure>
+    <a href="/images/2021/binary_search/bs2.png"><img src="/images/2021/binary_search/bs2.png"></a>
+  </figure>
+</div>
 
 하지만 위와 같이 같은 숫자의 선수가 있다면 단조성이 깨진다. 그래서 같은 전투력의 선수들을 고려하여 가장 왼쪽 선수들만 취해야 한다. 단조 증가하지 않는 경우에 대해서 이분 탐색시  en = mid-1(탐색의 끝지점)로 만들어서,  더 왼쪽 만을 취했다.
 

@@ -93,7 +93,12 @@ int main(){
 
 벨만-포드 알고리즘(Bellman-Ford algorithm)은 다익스트라 알고리즘과 마찬가지로 시작점을 정해주면, 다른 모든 정점으로의 최단 경로를 구한다. 다익스트라가 O(ElogV)가 걸린데 비해, 벨만-포드를 모든 정점에 대해 돌리면 O(VE)로 시간이 더 걸린다.
 
-![gr0](/images/2021/graph_plus/gr0.png){: width="300"  height="300"){: .center}
+<div class="center">
+  <figure>
+    <a href="/images/2021/graph_plus/gr0.png"><img src="/images/2021/graph_plus/gr0.png"></a>
+  </figure>
+</div>
+
 
 
 
@@ -101,7 +106,12 @@ int main(){
 
 따라서 벨만 포드 알고리즘은 2중 for문을 통해 철저하게  가능한 모든 경우를 다 체크한다. 최단 경로의 간선의 최대 개수는 V-1개 이므로, 루프를 V-1번 돈다. 따라서 루프를 V-1번 돌리는데, k번째 루프에서는 시작점으로부터 각 정점으로 k개의 간선을 거쳐서 도달할 수 있는 최단경로를 다 갱신해주자는 것이 기본 아이디어 이다. k-1번째 루프까지 최대 k-1개의 간선을 거치는 최단경로를 구해놓고, k번째 루프에서는 그 정보들을 사용해 또 다른 최단 경로를 구해보는 것이다.
 
-![gr1](/images/2021/graph_plus/gr1.png){: width="300"  height="300"){: .center}
+<div class="center">
+  <figure>
+    <a href="/images/2021/graph_plus/gr1.png"><img src="/images/2021/graph_plus/gr1.png"></a>
+  </figure>
+</div>
+
 
 
 
@@ -440,8 +450,11 @@ int main(){
 
 ### F - 양 구출 작전
 
-![gr2](/images/2021/graph_plus/gr2.png){: width="300"  height="300"){: .center}
-
+<div class="center">
+  <figure>
+    <a href="/images/2021/graph_plus/gr2.png"><img src="/images/2021/graph_plus/gr2.png"></a>
+  </figure>
+</div>
 
 
 3번과 4번 섬의 양의 수의 합이 2번 섬의 늑대의 수보다 클 경우 100마리가 살아남는다. ← 처음에 각 섬을 독립적으로 생각해서 2번 섬까지 살아 남는 양이 없다고 생각했다. 이 경우를 제외하곤 평범한 dfs문제였다.
