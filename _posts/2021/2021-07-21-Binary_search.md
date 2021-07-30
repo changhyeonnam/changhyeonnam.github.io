@@ -371,11 +371,13 @@ int main(){
 
 ### G - 챔피언 (Easy)
 
-![bs1](/images/2021/binary_search/bs1.png)
+![bs1](/images/2021/binary_search/bs1.png){: width="300"  height="300"){: .center}
+
 
 5명의 선수가 있다고 했을때, 챔피언이 되는 가장 작은 전투력의 선수를 찾으면 된다. C가 챔피언이 되는  가장 작은 전투력의 선수라면, A와B는 챔피언이 될수 없고,  D,E는 챔피언이 될 수  있다. C,D,E가 챔피언이 되는 경우는 단조성이 유지되는 경우에만 해당한다.
 
-![bs2](/images/2021/binary_search/bs2.png)
+![bs2](/images/2021/binary_search/bs2.png){: width="300"  height="300"){: .center}
+
 
 하지만 위와 같이 같은 숫자의 선수가 있다면 단조성이 깨진다. 그래서 같은 전투력의 선수들을 고려하여 가장 왼쪽 선수들만 취해야 한다. 단조 증가하지 않는 경우에 대해서 이분 탐색시  en = mid-1(탐색의 끝지점)로 만들어서,  더 왼쪽 만을 취했다.
 
