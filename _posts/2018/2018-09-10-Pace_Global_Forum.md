@@ -4,6 +4,9 @@ layout: post
 Created: Dec 8, 2020 9:08 PM
 tags:
     - Competition
+comments: true
+use_math: true
+
 ---
 
 PACE Global Annual Forum, GM Warren Tech Center, July 22-25, 2018 후기
