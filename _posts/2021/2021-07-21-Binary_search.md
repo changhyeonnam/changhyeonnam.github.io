@@ -377,7 +377,7 @@ int main(){
 
 <div class="center">
   <figure>
-    <a href="/images/2021/binary_search/bs1.png"><img src="/images/2021/binary_search/bs1.png"></a>
+    <a href="/images/2021/binary_search/bs1.png"><img src="/images/2021/binary_search/bs1.png" width="500" ></a>
   </figure>
 </div>
 
@@ -386,7 +386,7 @@ int main(){
 
 <div class="center">
   <figure>
-    <a href="/images/2021/binary_search/bs2.png"><img src="/images/2021/binary_search/bs2.png"></a>
+    <a href="/images/2021/binary_search/bs2.png"><img src="/images/2021/binary_search/bs2.png" width="500" ></a>
   </figure>
 </div>
 
