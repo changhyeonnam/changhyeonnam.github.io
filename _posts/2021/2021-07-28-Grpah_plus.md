@@ -95,7 +95,7 @@ int main(){
 
 <div class="center">
   <figure>
-    <a href="/images/2021/graph_plus/gr0.png"><img src="/images/2021/graph_plus/gr0.png"></a>
+    <a href="/images/2021/graph_plus/gr0.png"><img src="/images/2021/graph_plus/gr0.png" width="500" ></a>
   </figure>
 </div>
 
@@ -108,7 +108,7 @@ int main(){
 
 <div class="center">
   <figure>
-    <a href="/images/2021/graph_plus/gr1.png"><img src="/images/2021/graph_plus/gr1.png"></a>
+    <a href="/images/2021/graph_plus/gr1.png"><img src="/images/2021/graph_plus/gr1.png" width="500" ></a>
   </figure>
 </div>
 
@@ -452,7 +452,7 @@ int main(){
 
 <div class="center">
   <figure>
-    <a href="/images/2021/graph_plus/gr2.png"><img src="/images/2021/graph_plus/gr2.png"></a>
+    <a href="/images/2021/graph_plus/gr2.png"><img src="/images/2021/graph_plus/gr2.png" height="400"></a>
   </figure>
 </div>
 
