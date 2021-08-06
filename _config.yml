@@ -13,6 +13,8 @@ gems:
   # https://help.github.com/articles/atom-rss-feeds-for-github-pages/
   - jekyll-gist
   - jekyll-sitemap
+  plugins:
+    - jekyll-toc
 
 sass:
     sass_dir: _sass
