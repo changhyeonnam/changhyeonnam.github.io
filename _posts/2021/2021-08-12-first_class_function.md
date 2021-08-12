@@ -303,7 +303,7 @@ terminal에 위와 같이 스크립트와 저 요청을 하면 403 forbidden res
 
 <div class="center">
   <figure>
-    <a href="/images/2021/python/missing.png"><img src="/images/2021/python/missing.png"  width="300"></a>
+    <a href="/images/2021/python/missing.png"><img src="/images/2021/python/missing.png"  width="500"></a>
   </figure>
 </div>
 
@@ -315,7 +315,7 @@ $ curl -i http://localhost:8080/?person=JIM
 
 <div class="center">
   <figure>
-    <a href="/images/2021/python/jim.png"><img src="/images/2021/python/jim.png"  width="300"></a>
+    <a href="/images/2021/python/jim.png"><img src="/images/2021/python/jim.png"  width="500"></a>
   </figure>
 </div>
 
