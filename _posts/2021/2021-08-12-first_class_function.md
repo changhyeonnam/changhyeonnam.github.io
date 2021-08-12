@@ -3,7 +3,7 @@ title: 일급 객체로서의 함수 ( first-class function)
 layout: post
 Created: August 12, 2021 4:15 PM
 tags:
-    - python
+    -Python
 use_math: true
 comments: true
 ---
