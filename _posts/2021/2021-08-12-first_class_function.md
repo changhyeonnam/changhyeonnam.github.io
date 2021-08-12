@@ -7,7 +7,7 @@ tags:
 use_math: true
 comments: true
 ---
-> "Fluent Python part3 객체로서의 함수 chapter05 일급함수" 를 참고하여 작성한 포스트입니다. 일급 객체로서의 함수의 특성과 파이썬에서의 함수형 프로그래밍에 대한 내용이다. 고위 함수인 reduce, map, `__call__`,callable() 내장함수와 inspect, annotation에 대한 내용을 포함한다.
+> "Fluent Python part3 객체로서의 함수 chapter05 일급함수" 를 참고하여 작성한 포스트입니다. 일급 객체로서의 함수의 특성과 파이썬에서의 함수형 프로그래밍에 대한 내용이다. 고위 함수인 reduce, map, `__call__`,`callable()` 내장함수와 inspect, annotation에 대한 내용을 포함한다.
 
 ---
 
@@ -41,7 +41,7 @@ print(list(map(fact,range(11))))
 # [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800]
 ```
 
-.__doc__ : 함수 객체의 속성 중 하나로, docstring을 반합니다
+`.__doc__` : 함수 객체의 속성 중 하나로, docstring을 반합니다
 
 함수를 fact라는 변수에 할당하고, 변수명을 통해 함수를 호출한다.
 
@@ -70,13 +70,13 @@ print(sorted(fruits,key=reverse))
 
 길이에 따라 단어 리스트를 정렬하기 위해 len 함수를 key 인수로 전달 하였고, reverse 함수를 key로 받아 거꾸로 된 철자가 정렬기준이 되었습니다.
 
-함수형 프로그래밍 세계에서는 map(), filter(),  reduce(), apply() 등의 고위함수가 널리 알려져 있다.
+함수형 프로그래밍 세계에서는 `map(), filter(),  reduce(), apply()` 등의 고위함수가 널리 알려져 있다.
 
 ---
 
 ### map(), filter(), reduce()의 대안
 
-리스트 컴프리헨션, 제네레이터의 표현식이 가독성이 더 좋고 위 함수들을 모두 처리할 수 있어서, map(), filter(), reduce() 함수의 중요성이 떨어졌다.
+리스트 컴프리헨션, 제네레이터의 표현식이 가독성이 더 좋고 위 함수들을 모두 처리할 수 있어서, `map(), filter(), reduce()` 함수의 중요성이 떨어졌다.
 
 ```python
 print(list(map(fact,range(6))))
@@ -88,7 +88,7 @@ print([factorial(n) for n in range(6) if n%2])
 #[1, 6, 120]
 ```
 
-map(), filter()에 대한 똑같은 결과을 리스트 컴프리헨션으로 생성하였다.
+`map(), filter()`에 대한 똑같은 결과을 리스트 컴프리헨션으로 생성하였다.
 
 map()과 filter()는 generator (일종의 반복 가능 객체)를 반환하므로, 제네레이터 표현식이 이 함수들을 대체한다.
 
@@ -104,7 +104,7 @@ print(sum(range(100)))
 
 python  3.0부터는 reduce()는  더이상 내장 함수로  제공하지 않고, 동일 작업이지만, 성능과 가독성이 좋은 sum()을 사용하면 된다.
 
-sum()과 reduce()는 연속된 항목에 어떤 연산을 적용해서, 이전 결과를 누적시키면서 일련의 값을 하나의 값으로 reduction한다는 공통점이 있습니다.
+`sum()`과 `reduce()`는 연속된 항목에 어떤 연산을 적용해서, 이전 결과를 누적시키면서 일련의 값을 하나의 값으로 reduction한다는 공통점이 있습니다.
 
 ---
 
@@ -144,7 +144,7 @@ print([callable(obj) for obj in (abs,str,13)])
 
 ### 사용자 정의 callable 형
 
-파이썬 함수가 실제 객체일 뿐만 아니라, 모든 파이썬 객체가 함수처럼 동작하게 만들 수 있다. 단지 __call__() 인스턴스 메서드를 구현하면 된다.
+파이썬 함수가 실제 객체일 뿐만 아니라, 모든 파이썬 객체가 함수처럼 동작하게 만들 수 있다. 단지 `__call__()` 인스턴스 메서드를 구현하면 된다.
 
 ```python
 import random
@@ -253,7 +253,7 @@ def tag(name, *content, cls=None, **attrs):
 
 위의 코드는 HTML 태그를 생성하는 코드 입니다.
 
-`tag(name, *content, cls=None, **attrs)` : 첫번째 이후의 인수들은 모두 `*content` 매개변수에 tuple로 전달됩니다. tag에 명시적으로 이름이 지정되지 않은 키워드 인수들은 딕셔너리로 **attrs로 전달됩니다. name, cls에 대해서 명명된 매개변수가 전달됩니다.
+`tag(name, *content, cls=None, **attrs)` : 첫번째 이후의 인수들은 모두 `*content` 매개변수에 tuple로 전달됩니다. tag에 명시적으로 이름이 지정되지 않은 키워드 인수들은 딕셔너리로 `**attrs`로 전달됩니다. name, cls에 대해서 명명된 매개변수가 전달됩니다.
 
 ```python
 print(tag('br'))
@@ -323,7 +323,7 @@ $ curl -i http://localhost:8080/?person=JIM
 
 ```python
 def clip(text, max_len=80):
-    """max_len 앞이나 두ㅟ의 마지막 공백에서 잘라낸 텍스트를 반환한다."""
+    """max_len 앞이나 뒤의 마지막 공백에서 잘라낸 텍스트를 반환한다."""
     end = None
     if len(text) > max_len:
         space_before = text.rfind(' ',0,max_len)
