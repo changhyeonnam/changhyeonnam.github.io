@@ -41,19 +41,19 @@ print(list(map(fact,range(11))))
 # [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800]
 ```
 
-`.__doc__` : 함수 객체의 속성 중 하나로, docstring을 반합니다
+`.__doc__` : 함수 객체의 속성 중 하나로, docstring을 반환한다.
 
 함수를 fact라는 변수에 할당하고, 변수명을 통해 함수를 호출한다.
 
-`map(function, iterable, ...)` : 첫번째 인수로 함수, 두번째 인수로 반복 가능한 객체를 받고, 첫번째 인수(함수)에 두번째 인수(itearable 객체)를 적용한 결과를  갖는 반복 가능한 객체를 반환합니다.
+`map(function, iterable, ...)` : 첫번째 인수로 함수, 두번째 인수로 반복 가능한 객체를 받고, 첫번째 인수(함수)에 두번째 인수(itearable 객체)를 적용한 결과를  갖는 반복 가능한 객체를 반환한다.
 
-일급 함수가 있으면 함수형 스타일로 프로그래밍 할 수 있고, 함수형 프로그래밍의 특징 중 하나는 고위 함수 입니다.
+일급 함수가 있으면 함수형 스타일로 프로그래밍 할 수 있고, 함수형 프로그래밍의 특징 중 하나는 고위 함수이다.
 
 ---
 
 ### 고위 함수 (higher-order function)
 
-함수를 인수로 받거나, 함수를 결과로 받는 함수를 고위 함수 (higher-order function)이라고 합니다.대표적으로 위에 사용한 map()함수, 아래 코드에서 사용할 sorted() 내장 함수가 있습니다.
+함수를 인수로 받거나, 함수를 결과로 받는 함수를 고위 함수 (higher-order function)이라고 한다. 대표적으로 위에 사용한 map()함수, 아래 코드에서 사용할 sorted() 내장 함수가 있다.
 
 ```python
 fruits = ['fig','apple','strawberry','banana','cherry']
@@ -66,9 +66,9 @@ print(sorted(fruits,key=reverse))
 # ['banana', 'apple', 'fig', 'strawberry', 'cherry']
 ```
 
-`sorted(iterable,*, key=None, reverse=False)`: 선택적인 key 인수로 함수를 전달받아 정렬할 각 항목에 적용합니다. 인수를 하나 받는 함수는 모두 key 사용 가능합니다.
+`sorted(iterable,*, key=None, reverse=False)`: 선택적인 key 인수로 함수를 전달받아 정렬할 각 항목에 적용한다. 인수를 하나 받는 함수는 모두 key 사용 가능하다.
 
-길이에 따라 단어 리스트를 정렬하기 위해 len 함수를 key 인수로 전달 하였고, reverse 함수를 key로 받아 거꾸로 된 철자가 정렬기준이 되었습니다.
+길이에 따라 단어 리스트를 정렬하기 위해 len 함수를 key 인수로 전달 하였고, reverse 함수를 key로 받아 거꾸로 된 철자가 정렬기준이 되었다.
 
 함수형 프로그래밍 세계에서는 `map(), filter(),  reduce(), apply()` 등의 고위함수가 널리 알려져 있다.
 
@@ -104,7 +104,7 @@ print(sum(range(100)))
 
 python  3.0부터는 reduce()는  더이상 내장 함수로  제공하지 않고, 동일 작업이지만, 성능과 가독성이 좋은 sum()을 사용하면 된다.
 
-`sum()`과 `reduce()`는 연속된 항목에 어떤 연산을 적용해서, 이전 결과를 누적시키면서 일련의 값을 하나의 값으로 reduction한다는 공통점이 있습니다.
+`sum()`과 `reduce()`는 연속된 항목에 어떤 연산을 적용해서, 이전 결과를 누적시키면서 일련의 값을 하나의 값으로 reduction한다는 공통점이 있다.
 
 ---
 
@@ -185,7 +185,7 @@ print(callable(bingo))
 
 ---
 
-다음은 `__init__`과 `__call__` 의 기본적인 차이점을 보여주는 코드입니다.
+다음은 `__init__`과 `__call__` 의 기본적인 차이점을 보여주는 코드이다.
 
 The first is used to initialise newly created object, and receives arguments used to do that:
 
@@ -214,7 +214,7 @@ reference : [link](https://stackoverflow.com/questions/9663562/what-is-the-diffe
 
 ### 함수 인트로스펙션 (introspection)
 
-일반적으로 객체 지향 언어의 맥락에서 introspection 은 런타임시 객체가 유형, 사용 가능한 속성 및 메서드, 객체에 대한 추가 작업을 수행하는 데 필요한 기타 정보를 알아내는 기능입니다. python에서 introspection과 관련된 함수로 `dir()` , `type()` , `isinstance()` , `hasattr()` 등이 있습니다.
+일반적으로 객체 지향 언어의 맥락에서 introspection 은 런타임시 객체가 유형, 사용 가능한 속성 및 메서드, 객체에 대한 추가 작업을 수행하는 데 필요한 기타 정보를 알아내는 기능이다. python에서 introspection과 관련된 함수로 `dir()` , `type()` , `isinstance()` , `hasattr()` 등이 있다.
 
 ```python
 class C: pass
@@ -225,7 +225,7 @@ print(sorted(set(dir(func))-set((dir(obj)))))
 #  '__get__', '__globals__', '__kwdefaults__', '__name__', '__qualname__']
 ```
 
-다음은 일반 객체에는 존재하지 않는 함수 속성을 나열한 것입니다.
+다음은 일반 객체에는 존재하지 않는 함수 속성을 나열한 것이다.
 
 ---
 
@@ -319,7 +319,7 @@ $ curl -i http://localhost:8080/?person=JIM
   </figure>
 </div>
 
-함수에 어떤 매개변수가 필요한지, 매개변수 기본값이 있는지 없는지 Bobo는 어떻게 알까? 함수 객체안의 `__defaults__` 속성에는 위치(posistional) 인수와 키워드(keyword) 인수의 기본값을 가진 튜블이 있다. 키워드 전용 인수의 기본값은 `__kwdefaults__` 속성에 들어가 있다. 인수명은 `__code__` 속성에 들어가 있는데, 이 속성은 여러 속성을 담고있는 code 객체를 가르킨다.
+함수에 어떤 매개변수가 필요한지, 매개변수 기본값이 있는지 없는지 Bobo는 어떻게 알까? 함수 객체안의 `__defaults__` 속성에는 위치(posistional) 인수와 키워드(keyword) 인수의 기본값을 가진 튜블이 있다. 키워드 전용 인수의 기본값은 `__kwdefaults__` 속성에 들어가 있다. 인수명은 `__code__` 속성에 들어가 있는데, 이 속성은 여러 속성을 담고있는 code 객체를 가리킨다.
 
 ```python
 def clip(text, max_len=80):
@@ -350,7 +350,7 @@ print(clip.__code__.co_argcount)
 # 2
 ```
 
-정보가 그다지 사용하기 편하게 배치되어 있지는 않다. `__code__.co_varnames` 에는  함수 본체에서 사용한 지역 변수명도 들어가 있다. 그래서 `inspect` 모듈을 사용하면 더 깔끔하게 처리할 수  있다.
+정보가 그다지 사용하기 편하게 배치되어 있지는 않다. `__code__.co_varnames` 에는  함수 본체에서 사용한 지역 변수명도 들어가 있다. 그래서 `inspect` 모듈을 사용하면 더 깔끔하게 처리할 수 있다.
 
 ```python
 from inspect  import signature
