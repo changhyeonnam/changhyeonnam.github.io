@@ -296,7 +296,7 @@ def hello(person):
 
 ```python
 bobo -f ch05-13.py
-$curl -i http://localhost:8080/
+$ curl -i http://localhost:8080/
 ```
 
 terminal에 위와 같이 스크립트와 저 요청을 하면 403 forbidden response와 함께 'Missing form variable person'이라는 메시지가 나온다. (curl-i 를 사용하여 HTTP 헤더를 출력하였다.)
