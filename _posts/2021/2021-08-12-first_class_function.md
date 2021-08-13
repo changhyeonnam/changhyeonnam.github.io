@@ -92,7 +92,6 @@ print([factorial(n) for n in range(6) if n%2])
 
 map()과 filter()는 generator (일종의 반복 가능 객체)를 반환하므로, 제네레이터 표현식이 이 함수들을 대체한다.
 
-> 다음 링크들은 [제네레이터(generator)](https://www.notion.so/generator-expression-fd1880816f5148fa96b72f7615d0e1f9) 와 [리스트 컴프리헨션(list comprehension)](https://www.notion.so/list-comprehension-b5e588c8d5304e0f957eb1ac55767699)에 대한 포스트  입니다. (추후 업로드 예정입니다.)
 
 ```python
 from functools  import reduce
@@ -119,7 +118,6 @@ print(sorted(fruits,key=lambda word: word[::-1]))
 
 def 문과 마찬가지로 람다 표현식 또한 하나의 함수 객체를 만든다. 즉, 파이썬에서  제공하는 여러 callable(호출 가능한) 객체 중 하나 일 뿐이다.
 
-> 다음 링크는 [람다(lambda) 함수](https://www.notion.so/lambda-e40393b0582341ba82ee5aaecdd85583)에 대한 포스트입니다. (추후 업로드 예정입니다.)
 
 ---
 
@@ -181,7 +179,6 @@ print(callable(bingo))
 
 `__call__`과 유사한 것이 데코레이터(decorator)가 있다. 데코레이터는 함수이지만, 때때로 호출된 후의 상태를 '기억'할 수 있는 기능이 유용하게 사용된다.
 
-> 다음 링크는 [데코레이터(decorator)함수](https://www.notion.so/decorator-9dea8b9f4a074d7f91ad2bc2b4a66c18)에 대한 포스트입니다.(추후 업로드 예정입니다.)
 
 ---
 
