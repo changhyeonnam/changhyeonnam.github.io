@@ -2,4 +2,6 @@
 layout: page
 title: About
 ---
-안녕하세요 남창현 이라고 합니다. 컴퓨터 공학과 ML/DL에 대해 더 근본적인 공부를 하기 위해 블로그를 개설 했습니다. 진행하는 프로젝트 및 수업에서 배운 것들에 대해 기록할 예정입니다.
+Hi. I'm Changhyeon Nam, interested in python, deep learning, machine learning. I keep studying to become an expert.
+
+contact : <a href="mailto:hj04143@gmail.com">hj04143@gmail.com</a>
