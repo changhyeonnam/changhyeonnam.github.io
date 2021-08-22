@@ -99,12 +99,12 @@ print(b'one'+b'two')
 print('one'+'two')
 # onetwo
 print(b'one'+two)
-# Trackback.. NameError: name 'two' is not defined
+# traceback.. NameError: name 'two' is not defined
 
 assert b'red' > b'blue'
 assert 'red' > 'blue'
 assert 'red' > b'blue'
-# Trackback.. TypeError: '>' not supported between instances of 'str' and 'bytes'
+# traceback.. TypeError: '>' not supported between instances of 'str' and 'bytes'
 
 print(b'foo'=='foo')
 #False
@@ -113,7 +113,7 @@ print(b'red %s' % b'blue')
 print('red %s' % 'blue')
 #red blue
 print(b'red %s' % 'blue')
-# Trackback.. TypeError: %b requires a bytes-like object, or an object that implements __bytes__, not 'str'
+# traceback.. TypeError: %b requires a bytes-like object, or an object that implements __bytes__, not 'str'
 
 print('red %s' % b'blue')
 #red b'blue'
@@ -129,7 +129,7 @@ print('red %s' % b'blue')
 ```python
 with open('data.bin','w') as f:
     f.write(b'\xf1\xf2\xf3\xf4\xf5')
-# Trackback.. TypeError: write() argument must be str, not bytes
+# traceback.. TypeError: write() argument must be str, not bytes
 ```
 
 
@@ -138,7 +138,7 @@ with open('data.bin','w') as f:
 ```python
 with open('data.bin','r') as f:
     data = f.read()
-# Trackback.. UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf1 in position 0: invalid continuation byte
+# traceback.. UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf1 in position 0: invalid continuation byte
 ```
 
 파일에서 데이터를 읽을 때도 비슷한 문제가 발생할 수 있습니다. 파일을 열때 이진 읽기 모드 ('rb')가 아닌 텍스트 읽기 모드 ('r')로 열었기 때문입니다.
