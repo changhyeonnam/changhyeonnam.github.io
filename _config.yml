@@ -1,6 +1,6 @@
 name: ChangHyeon Nam's Blog
 url: 'https://changhyeonnam.github.io'
-description: 'tech blog'
+description: 'notes and thoughts from changhyeon'
 
 exclude: [Gemfile, Gemfile.lock, README.md]
 markdown: kramdown
