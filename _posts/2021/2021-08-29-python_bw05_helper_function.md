@@ -1,5 +1,5 @@
 ---
-title: 복잡한 식(Complex expression)을 쓰는 대신 도우미 함수(Helper function)를 작성하라
+title: Complex expression을 쓰는 대신 Helper function를 작성하라
 Created: August 29, 2021 7:43 PM
 tags:
     - Python
@@ -20,7 +20,7 @@ comments: true
 
 `urllib.parse.parse_qs(qs, keep_blank_values=False ...)` : 주어진 string argument에 대한 query string을 parse 합니다. 데이터는 딕셔너리로 반환됩니다. 딕셔너리 키는 고유한 쿼리 변수 이름이고 값은 각 이름의 값 리스트입니다. argument 중 책에서 사용한 것에 대한 설명만 하겠습니다.
 
-argument 중 keep_blank_values은 쿼리의 빈 값을 빈 문자열로 처리해야하는 지에 대한 flag 입니다. True인 경우, 빈 문자열로 유지하고, False라면 빈값이 무시됩니다.(전자인 경우 '', 후자는 None)
+argument 중 keep_blank_values은 쿼리의 빈 값을 빈 문자열로 처리해야하는 지에 대한 flag 입니다. True인 경우 빈 문자열로 유지하고, False라면 빈값이 무시됩니다.(전자인 경우 빈 문자열, 후자는 None이 반환됩니다.)
 
 ---
 
@@ -45,7 +45,7 @@ print('투명도:',my_values.get('투명도'))
 # 투명도: None
 ```
 
-파라미터가 없거나 비어있을 경우 0이 디폴트 값으로 대입되게 해봅시다. 다음 코드에서는 빈 문자열, 빈 list, 0이 모두 암묵적으로  False로 평가된다는 사실을 이용합니다. 각 식은 왼쪽의 하위식이 False인 경우 모두 or 연산자의 오른쪽의 하위식 값으로 계산됩니다.
+파라미터가 없거나 비어있을 경우 0이 디폴트 값으로 대입되게 해봅시다. 다음 코드에서는 빈 문자열, 빈 list, 0이 모두 암묵적으로  False로 평가된다는 사실을 이용합니다. 각 식은 왼쪽의 하위식이 False인 경우 모두 `or` 연산자의 오른쪽의 하위식 값으로 계산됩니다.
 
 ```python
 # 질의 문자열이 '빨강=5&퍄량=0&초록='인 경우
