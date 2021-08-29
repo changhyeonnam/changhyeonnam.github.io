@@ -14,7 +14,7 @@ comments: true
 
 ---
 
-먼저  여기서 사용한 `urllib.parse` 모듈과 `parse_qs`에 대해 간단한 설명을 하겠습니다.
+먼저 예제에서 사용한 `urllib.parse` 모듈과 `parse_qs`에 대해 간단한 설명을 하겠습니다.
 
 `urllib.parse`은 URL(Uniform Resource Locator) 문자열을 구성 요소(주소 지정 체계, 네트워크 위치, 경로 등)로 분리하고, 구성 요소를 다시 URL 문자열로 결합하고, 'relative URL'을 주어진 'base URL'에 따라 'absoulte URL'로 변환하는 표준 인터페이스를 정의합니다. URL 구문 분석과 URL 인용(quoting)에 대한 함수들을 정의한다고 합니다.
 
