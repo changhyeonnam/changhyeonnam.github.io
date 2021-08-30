@@ -49,10 +49,10 @@ for i in range(len(flavor_list)):
 파이썬은 이런 문제를 해결할 수 있는 enumerate 내장함수를 제공합니다. enumerate는 iterator를 lazy generator로 감싸 구현합니다. (이후 chapter에서 설명)
 
 ```python
-**def** enumerate(sequence, start=0):
+def enumerate(sequence, start=0):
     n = start
-    **for** elem **in** sequence:
-        **yield** n, elem
+    for elem in sequence:
+        yield n, elem
         n += 1
 ```
 
