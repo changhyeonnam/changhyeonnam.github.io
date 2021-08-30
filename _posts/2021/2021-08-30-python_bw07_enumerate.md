@@ -16,11 +16,11 @@ comments: true
 - range에 대해 루프를 돌면서 시퀀스의 원소를 인덱스로 가져오기보다는 enumerate를 사용하라.
 - enumerate의 두번째 파라미터로 어디부터 원소를 가져오기 시작할지 지정할 수 있다.
 
-> python의 enumerate는 c++ 에서 for (int i=0; i<container.size(); i++) 대신 for (auto i : container)을 사용하는 것과 같은 느낌이다.
+> python의 enumerate는 c++ 에서 for (int i=0; i<container.size(); i++) 대신 for (auto i : container)을 사용하는 것과 같은 느낌 입니다.
 
 ---
 
-range 내장함수는 iteration할 sequence( string, tuple, list) 및 데이터구조가 있을때, 이 시퀀스에 대해 바로 루프를 돌 수 있다.
+range 내장함수는 iteration할 sequence( string, tuple, list) 및 데이터구조가 있을때, 이 시퀀스에 대해 바로 루프를 돌 수 있습니다.
 
 ```python
 flavor_list = ['바닐라','초콜릿','피칸','딸기']
@@ -32,7 +32,7 @@ for flavor in flavor_list:
 # 딸기
 ```
 
-리스트를 iteration하면서 리스트의 몇 번째 원소를 처리 중인지 알아야 할때는, range를 사용하면 다음과 같이 작성해야 한다.
+리스트를 iteration하면서 리스트의 몇 번째 원소를 처리 중인지 알아야 할때는, range를 사용하면 다음과 같이 작성해야 합니다.
 
 ```python
 for i in range(len(flavor_list)):
@@ -44,9 +44,9 @@ for i in range(len(flavor_list)):
 # 4: 딸기
 ```
 
-위의 코드는 list 길이를 알아야하고, index를 사용해 원소에 접근해야 해서 가독성이 떨어진다.
+위의 코드는 list 길이를 알아야하고, index를 사용해 원소에 접근해야 해서 가독성이 떨어집니다.
 
-파이썬은 이런 문제를 해결할 수 있는 enumerate 내장함수를 제공한다. enumerate는 iterator를 lazy generator로 감싸 구현합니다. (이후 chapter에서 설명)
+파이썬은 이런 문제를 해결할 수 있는 enumerate 내장함수를 제공합니다. enumerate는 iterator를 lazy generator로 감싸 구현합니다. (이후 chapter에서 설명)
 
 ```python
 **def** enumerate(sequence, start=0):
