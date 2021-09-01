@@ -17,7 +17,19 @@ comments: true
 > python의 enumerate는 c++ 에서 for (int i=0; i<container.size(); i++) 대신 for (auto i : container)을 사용하는 것과 같은 느낌 입니다.
 
 ---
+먼저 python document에 나와 있는 enumerate의 구현을 보겠습니다.[link](https://docs.python.org/3.9/library/functions.html?highlight=enumerate#enumerate)
 
+```python
+def enumerate(sequence, start=0):
+    n = start
+    for elem in sequence:
+        yield n, elem
+        n += 1
+```
+iterable을 arguement로 받는데, iterable(반복 가능한 객체)는 sequence 자료 구조여야 합니다. enumerate 함수 내에서 loop를 돌며, next 내장 함수를 사용해 원소를 가져옵니다. (next 함수는 `__next()__`를 호출하고, `__next()__`은 container의 다음 item을 반환합니다.)
+index와 iterator가 가리키는 값인 elem 으로 이뤄진 쌍을 yield하는 generator를 반환합니다. index는 enumerate의 두번째 인자인 start부터 시작합니다.
+
+---
 range 내장함수는 iteration할 sequence( string, tuple, list) 및 데이터구조가 있을때, 이 시퀀스에 대해 바로 루프를 돌 수 있습니다.
 
 ```python
@@ -44,22 +56,10 @@ for i in range(len(flavor_list)):
 
 위의 코드는 list 길이를 알아야하고, index를 사용해 원소에 접근해야 해서 가독성이 떨어집니다.
 
-파이썬은 이런 문제를 해결할 수 있는 enumerate 내장함수를 제공합니다. enumerate는 iterator를 lazy generator로 구현합니다. 
+파이썬은 이런 문제를 해결할 수 있는 enumerate 내장함수를 제공합니다. enumerate는 iterator를 lazy generator로 구현합니다.
 
 ```python
-def enumerate(sequence, start=0):
-    n = start
-    for elem in sequence:
-        yield n, elem
-        n += 1
-```
-
-enumerate의 실제 구현이고, python 공식문서에 가보면 iterable을 arguement로 받는데, iterable은 sequence 자료 구조여야 합니다.
-
-enumerate는 loop idex와 iterator의 다음 값으로 이뤄진 쌍을 넘겨준다.(yield) 다음 코드는 next 내장 함수를 사용해 다음 원소를 가져온다.  next 함수는 `__next()__`를 호출 하고, `__next()__`은 container의 다음 item을 반환합니다.
-
-```python
-it =enumerate(flavor_list)
+it = enumerate(flavor_list)
 print(next(it))
 print(next(it))
 # (0, '바닐라')
