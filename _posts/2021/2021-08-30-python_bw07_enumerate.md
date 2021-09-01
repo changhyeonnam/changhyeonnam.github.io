@@ -26,7 +26,7 @@ def enumerate(sequence, start=0):
         yield n, elem
         n += 1
 ```
-iterable을 arguement로 받는데, iterable(반복 가능한 객체)는 sequence 자료 구조여야 합니다. enumerate 함수 내에서 loop를 돌며, next 내장 함수를 사용해 원소를 가져옵니다. (next 함수는 `__next()__`를 호출하고, `__next()__`은 container의 다음 item을 반환합니다.)
+iterable을 arguement로 받는데, iterable(반복 가능한 객체)는 sequence 자료 구조여야 합니다.(sequence 자료구조에는 string, tuple, list 가 있습니다.) enumerate 함수 내에서 loop를 돌며, next 내장 함수를 사용해 원소를 가져옵니다. (next 함수는 `__next()__`를 호출하고, `__next()__`은 container의 다음 item을 반환합니다.)
 index와 iterator가 가리키는 값인 elem 으로 이뤄진 쌍을 yield하는 <del>generator</del>를 반환합니다. index는 enumerate의 두번째 인자인 start부터 시작합니다.
 
 **enumerate는 enumerate object을 반환합니다**
