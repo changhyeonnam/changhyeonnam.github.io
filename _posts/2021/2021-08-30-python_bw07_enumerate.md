@@ -10,8 +10,6 @@ comments: true
 
 ### [Effective Python] Better way 07: range 보다는 enumerate를 사용하라
 
-> python document도 참고하였습니다.
-
 - enumerate를 사용하면 iterator에 대해 루프를 돌면서 iterator에서 가져오는 원소의 인덱스까지 얻는 코드를 간결하게 작성할 수 있다.
 - range에 대해 루프를 돌면서 시퀀스의 원소를 인덱스로 가져오기보다는 enumerate를 사용하라.
 - enumerate의 두번째 파라미터로 어디부터 원소를 가져오기 시작할지 지정할 수 있다.
@@ -46,7 +44,7 @@ for i in range(len(flavor_list)):
 
 위의 코드는 list 길이를 알아야하고, index를 사용해 원소에 접근해야 해서 가독성이 떨어집니다.
 
-파이썬은 이런 문제를 해결할 수 있는 enumerate 내장함수를 제공합니다. enumerate는 iterator를 lazy generator로 감싸 구현합니다. (이후 chapter에서 설명)
+파이썬은 이런 문제를 해결할 수 있는 enumerate 내장함수를 제공합니다. enumerate는 iterator를 lazy generator로 구현합니다. 
 
 ```python
 def enumerate(sequence, start=0):
