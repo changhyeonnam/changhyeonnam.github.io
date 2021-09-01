@@ -26,8 +26,26 @@ def enumerate(sequence, start=0):
         yield n, elem
         n += 1
 ```
-iterable을 arguement로 받는데, iterable(반복 가능한 객체)는 sequence 자료 구조여야 합니다. enumerate 함수 내에서 loop를 돌며, next 내장 함수를 사용해 원소를 가져옵니다. (next 함수는 `__next()__`를 호출하고, `__next()__`은 container의 다음 item을 반환합니다.)
+iterable을 arguement로 받는데, iterable(반복 가능한 객체) sequence 자료 구조여야 합니다. enumerate 함수 내에서 loop를 돌며, next 내장 함수를 사용해 원소를 가져옵니다. (next 함수는 `__next()__`를 호출하고, `__next()__`은 container의 다음 item을 반환합니다.)
 index와 iterator가 가리키는 값인 elem 으로 이뤄진 쌍을 yield하는 generator를 반환합니다. index는 enumerate의 두번째 인자인 start부터 시작합니다.
+
+**enumerate는 enumerate object을 반환합니다**
+enumerate 내부에 yield가 있어서 generator를 반환하는지 알았는데, [link](https://stackoverflow.com/questions/23663231/does-enumerate-produce-a-generator-object)
+를 참고하여 보니 아니었습니다. 결론부터 말하자면, generator는 기본적을로 특정한 타입의 iterator이고, yield를 이용해 함수로부터 데이터를 반환해야 합니다. 하지만 enumerate는 사실 C로 구현 되어 있고, pure Python이 아니므로 yield 함수가 포함되어 있지 않습니다.
+```Python
+>>> import collections
+>>> e = enumerate('abc')
+>>> isinstance(e, enumerate)
+True
+>>> isinstance(e, collections.Iterable)
+True
+>>> isinstance(e, collections.Iterator)
+True
+>>> import types
+>>> isinstance(e, types.GeneratorType)
+False
+```
+위 예제를 통해서도 enumerate가 generator 객체가 아니라는 것을 확인할 수 있습니다.
 
 ---
 range 내장함수는 iteration할 sequence( string, tuple, list) 및 데이터구조가 있을때, 이 시퀀스에 대해 바로 루프를 돌 수 있습니다.
