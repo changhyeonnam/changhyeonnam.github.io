@@ -53,7 +53,7 @@ else:
 ```python
 for x in []:
     print('이 줄은 실행되지 않음')
-else:
+else:     # no break
     print('For Else block!')
 # For Else block!
 ```
@@ -68,7 +68,7 @@ for i in range(2,min(a,b)+1):
     if a % i == 0 and b % i == 0:
         print('서로소 아님')
         break
-else:
+else:   # no break
     print('서로소')
 # 서로소
 ```
