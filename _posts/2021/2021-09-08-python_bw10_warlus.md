@@ -46,7 +46,7 @@ while (block := f.read(256)) != '':
  if (clean_name := normalize('NFC', name)) in allowed_names]
 ```
 
-filtering condition의 표현식에 사용되는 list expression에서도 위와 같이 간략하게 작성할 수 있습니다.
+filtering condition의 표현식에 사용되는 list comprehension에서도 위와 같이 간략하게 작성할 수 있습니다.
 
 ---
 
