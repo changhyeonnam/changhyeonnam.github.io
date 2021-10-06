@@ -155,14 +155,13 @@ C번 문제는 C++의 binary_search, lower_bound를 활용하면 쉽게 풀 수 
 1. `binary_search(start_ptr, end_ptr, num)`: 이 함수는 element가 container에 존재할때 boolean true값을 반환하고, 그 외로는 false를 반환한다.
 
 2. `lower_bound(start_ptr, end_ptr, num)`  반환하는 경우가 세가지가 있다.
-- container에 num에 해당하는 값이 하나 있을 경우, num의 위치를 가르키는 포인터를 반환한다.
-- container에 num에 해당하는 값이 여러개 있을 경우, 첫번째 num에 해당하는 위치를 가리키는 포인터를 반환한다.
-
-- num에 해당하는 값이 없을 경우 num 다음으로 큰 값의 위치를 가리키는 포인터를 반환한다.lower_bound의 반환값에서 첫번째 인자의 위치를 실제 index값을 구할 수 있다.
+  - container에 num에 해당하는 값이 하나 있을 경우, num의 위치를 가르키는 포인터를 반환한다.
+  - container에 num에 해당하는 값이 여러개 있을 경우, 첫번째 num에 해당하는 위치를 가리키는 포인터를 반환한다.
+  - num에 해당하는 값이 없을 경우 num 다음으로 큰 값의 위치를 가리키는 포인터를 반환한다.lower_bound의 반환값에서 첫번째 인자의 위치를 실제 index값을 구할 수 있다.
 3. `upper_bound(start_ptr, end_ptr, num)`: 반환하는 경우가 세가지가 있다.
-- container에 num에 해당하는 값이 하나 있을 경우, num 다음으로 큰 숫자의 위치를 가르키는 포인터를 반환한다.
-- container에 num에 해당하는 값이 여러개 있을 경우, num 다음 으로 큰 첫번째 숫자에 해당하는 위치를 가리키는 포인터를 반환한다.
-- num에 해당하는 값이 없을 경우 num 다음으로 큰 값의 위치를 가리키는 포인터를 반환한다. upper_bound의 반환값에서 첫번째 인자의 위치를 실제 index값을 구할 수 있다.
+  - container에 num에 해당하는 값이 하나 있을 경우, num 다음으로 큰 숫자의 위치를 가르키는 포인터를 반환한다.
+  - container에 num에 해당하는 값이 여러개 있을 경우, num 다음 으로 큰 첫번째 숫자에 해당하는 위치를 가리키는 포인터를 반환한다.
+  - num에 해당하는 값이 없을 경우 num 다음으로 큰 값의 위치를 가리키는 포인터를 반환한다. upper_bound의 반환값에서 첫번째 인자의 위치를 실제 index값을 구할 수 있다.
 
 binary_search()는 return type이 boolean이기 때문에 해당 원소가 있는지 없는지 확인하는 용도로 사용한다.
 
