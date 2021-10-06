@@ -4,10 +4,10 @@
   color: #f8f8f2;
   background-color: #272822;
 }
-.highlight .err {
+/* .highlight .err {
   color: #272822;
   background-color: #f92672;
-}
+} */
 .highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
   color: #75715e;
 }
