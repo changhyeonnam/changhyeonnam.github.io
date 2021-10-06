@@ -3,7 +3,6 @@ url: 'https://changhyeonnam.github.io'
 description: 'notes and thoughts from changhyeon'
 
 exclude: [Gemfile, Gemfile.lock, README.md]
-markdown: kramdown
 
 author: 'ChangHyeon Nam'
 disqus_shortname: Nam
@@ -18,7 +17,7 @@ gems:
 sass:
     sass_dir: _sass
     style: :compressed
-
+markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
