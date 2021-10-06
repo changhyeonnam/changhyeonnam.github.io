@@ -1,6 +1,6 @@
-name: notes and thoughts from changhyeon
+name: ChangHyeon Nam's Blog
 url: 'https://changhyeonnam.github.io'
-# description: 'notes and thoughts from changhyeon'
+description: 'notes and thoughts'
 
 exclude: [Gemfile, Gemfile.lock, README.md]
 
