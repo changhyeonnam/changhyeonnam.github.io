@@ -373,7 +373,7 @@ if(arr[y][x]<arr[ny][nx]) {
     ret = max(dfs(ny, nx) + 1, dp[ny][nx]);
 }
 ```
-
+시간 복잡도는 $O(N^2 + 4*N^2) = O(5N^2)$ 이다.
 [1937번 욕심쟁이 판다](https://www.acmicpc.net/problem/1937)
 
 <details>
@@ -646,7 +646,6 @@ int main(){
 <summary>code</summary>
 <div markdown="1">  
 
-{% raw %}
 ```cpp
 #include <iostream>
 #include <cstring>
@@ -681,32 +680,30 @@ int bfs(int y,int x, int count_l, int count_r){
         bx = q.front().first.second;
         cl = q.front().second.first;
         cr = q.front().second.second;
-        if(visit[by][bx])
+        if(visit[by][bx]) // 다시 방문했다면, 위아래로 쭉 또 이동할 필요가 없다.
         {
             q.pop();
             continue;
         }
         if(!visit[by][bx])
             count+=1;
-
         visit[by][bx]=true;
 
         q.pop();
 
         for(int i=0;i<2;i++){
-        int ny,nx;
-        ny = by;
-        nx = bx;
-        int addy = dy[i];
-        for(int j=0;j<n;j++){
-            ny+=addy;
-            if(ny<0||ny>=n||nx<0||nx>=m||visit[ny][nx])
-                continue;
-            if(arr[ny][nx]==1)
-                break;
-            q.push({{ny,nx},{cl,cr}});
-        }
-
+            int ny,nx;
+            ny = by;
+            nx = bx;
+            int addy = dy[i];
+            for(int j=0;j<n;j++){
+                ny+=addy;
+                if(ny<0||ny>=n||nx<0||nx>=m||visit[ny][nx])
+                    continue;
+                if(arr[ny][nx]==1) // 위아래로 쭉 움직이다가 벽이 있으면 break
+                    break;
+                q.push({{ny,nx},{cl,cr}});
+            }
         }
 
         int lnx,rnx;
@@ -714,14 +711,10 @@ int bfs(int y,int x, int count_l, int count_r){
         rnx = bx + rx[0];
 
         if(lnx>=0 && lnx<m && !visit[by][lnx] && arr[by][lnx]!=1 && cl<L) {
-            int tmp;
-            tmp= cl+1;
-            q.push({{by, lnx},{tmp,cr}});
+            q.push({{by, lnx},{cl+1,cr}});
         }
         if(rnx>=0 && rnx<m && !visit[by][rnx] && arr[by][rnx]!=1 && cr<R){
-            int tmp;
-            tmp = cr+1;
-            q.push({{by,rnx},{cl,tmp}});
+            q.push({{by,rnx},{cl,cr+1}});
         }
     }
     return count;
@@ -746,7 +739,6 @@ int main(){
     return 0;
 }
 ```
-{% endraw %}
 
 </div>
 </details>
