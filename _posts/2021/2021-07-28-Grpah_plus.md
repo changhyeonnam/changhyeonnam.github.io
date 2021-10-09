@@ -645,7 +645,7 @@ int main(){
 <details>
 <summary>code</summary>
 <div markdown="1">  
-
+{% raw %}
 ```cpp
 #include <iostream>
 #include <cstring>
@@ -739,7 +739,7 @@ int main(){
     return 0;
 }
 ```
-
+{% endraw %}
 </div>
 </details>
 
