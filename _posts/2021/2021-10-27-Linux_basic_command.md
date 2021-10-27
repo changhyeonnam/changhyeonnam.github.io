@@ -1,6 +1,7 @@
 ---
 title: Linux basic command
 Created: October 27, 2021 5:18 PM
+layout: post
 tags:
     - Linux
 use_math: true
