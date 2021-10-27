@@ -8,17 +8,17 @@ comments: true
 ---
 
 
-### login
+### 로그인
 
 - 사용자가 로그인 하여 맨 처음 연결된 장소
 - 일반적으로 "home<id>/"
 - ID : 해당 Linux 시스템에서 사용되는 사용자 이름
 - Password : 사용자 비밀번호. `passwd`를 통해 변경 가능. (비밀 번호 입력시 보이지 않음, 대소문자 구분)
 
-### id, groups
+### 사용자 확인
 
 - Linux 시스템은 시스템 관리자가 각 사용자에게 부여한 사용자 번호와 그룹 번호로 사용자를 식별 합니다.
-- id,groups를 통해서 자신의 gid, uid를 확인 가능합니다.
+- `id`,`groups`를 통해서 자신의 gid, uid를 확인 가능합니다.
 
 ```c
 jimmy@jimmy-VirtualBox:~$ id
