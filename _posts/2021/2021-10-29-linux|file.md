@@ -448,9 +448,9 @@ $ prog_name < infile > outfile
 $ prog_1 | prog_2
 ```
 
-- input of prog2가 prog1의 출력으로부터 읽혀진다. '|'은 pipe관련된 것이다.
+- input of prog2가 prog1의 출력으로부터 읽혀진다. `|`은 pipe관련된 것이다.
     - 프로세스간 연결을 해줄 수 있다.
-    - | : 프로그램1의 스탠다드 output이 프로그램2의 input으로 연결된다. 이런 개념을 pipe라고 한다.
+    - `|` : 프로그램1의 스탠다드 output이 프로그램2의 input으로 연결된다. 이런 개념을 pipe라고 한다.
 - standard input/output
 
     ```c
