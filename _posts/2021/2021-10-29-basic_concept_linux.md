@@ -1,5 +1,5 @@
 ---
-title: 1.Linux | Basic Concept & Terminology
+title: Linux | Basic Concept & Terminology
 layout: post
 Created: October 29, 2021 1:31 AM
 tags:
