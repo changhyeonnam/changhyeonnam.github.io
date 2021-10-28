@@ -40,8 +40,8 @@ Created: October 29, 2021 1:31 AM
 6. File types
     - regular : 바이너리 파일, 텍스트파일을 의미합니다. 다른 os와 다른 점은 유닉스,리눅스에서는 일반파일의 종류를 구분하지 않습니다. 즉, 정해진 확장자가 없다는 뜻이고, 하나의 파일은 어떠한 형태로도 존재할 수 있다.
     - directory file : 해당하는 디렉토리에 있는 파일의 이름과 위치를 갖고 있습니다.
-    - character, block speicl file : device 파일로, 각각은 특정 디바이스를 나타냅니다. 이 둘의 차이점은 character인 경우 버퍼링 없이 하드웨어 접근을 가능하게 하는 반면, block은 블록단위로 하드웨어 접근가능합니다. character는 즉시 하드웨어 작업, 표준 입력 표준 출력이 쓰이고, block 블록단위는 예를들어 하드디스크에 데이터를 쓸때 블록단위로 접근한다. 즉, 위 두개의 파일은 장치 파일 입니다.
-    - pipe, socket : process comunication을 위한 파일입니다. 서로 소통을 할 수 있게 하는 파일이 파이프나 소켓이다. 파이프는 프로세스간, 소켓은 네트워크를 통한 프로세스 통신을 지원합니다.
+    - character, block special file : device 파일로, 각각은 특정 디바이스를 나타냅니다. 이 둘의 차이점은 character인 경우 버퍼링 없이 하드웨어 접근을 가능하게 하는 반면, block은 블록단위로 하드웨어 접근가능합니다. character는 즉시 하드웨어 작업, 표준 입력 표준 출력이 쓰이고, block 블록단위는 예를들어 하드디스크에 데이터를 쓸때 블록단위로 접근한다. 즉, 위 두개의 파일은 장치 파일 입니다.
+    - pipe, socket : process communication을 위한 파일입니다. 서로 소통을 할 수 있게 하는 파일이 파이프나 소켓이다. 파이프는 프로세스간, 소켓은 네트워크를 통한 프로세스 통신을 지원합니다.
 7. Ownership, Permissions
     - Ownership : 각 파일은 특정 user에 의해 own됩니다. owner는 permission을 정할 수 있습니다.
     - permission : read, write, execute와 관련된 permission이다.
