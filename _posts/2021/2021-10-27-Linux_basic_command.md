@@ -1,5 +1,5 @@
 ---
-title: Linux basic command
+title: Linux | basic command
 layout: post
 Created: October 27, 2021 5:18 PM
 tags:
