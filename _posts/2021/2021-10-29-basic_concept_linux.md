@@ -8,9 +8,6 @@ use_math: true
 comments: true
 ---
 
-
-Created: October 29, 2021 1:31 AM
-
 ### Unix Architecture
 
 <div class="center">
