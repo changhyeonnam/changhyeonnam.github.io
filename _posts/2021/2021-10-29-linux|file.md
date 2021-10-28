@@ -473,9 +473,9 @@ $ prog_1 | prog_2
 - 버퍼 사이즈에 따라 read, write의 성능이 달라진다. 프로그래머들이 성능에 대해 고려해야 하고, 부담이 된다. 그래서 C에서는  standard i/o library를 제공한다. 시스템 콜과 비슷한데 추가적인 기능을 제공한다. (auto buffering, stdio.h, more programmer-friendly interface)
 - standard i/o vs Unix I/O
 
-    Unix I/O에서는 파일 디스크립터  값을 통해 파일을 다뤘다. standar i/o에서는 file structure를 이용하여 파일을 다룬다. fopen과 같은 함수들은 int인 fd를 반환하는 것이 아니라 파일 구조체인 `FILE*` 을 반환한다.
+    - Unix I/O에서는 파일 디스크립터  값을 통해 파일을 다뤘다. standar i/o에서는 file structure를 이용하여 파일을 다룬다. fopen과 같은 함수들은 int인 fd를 반환하는 것이 아니라 파일 구조체인 `FILE*` 을 반환한다.
 
-    라이브러리 함수들도 call하면 내부에서 동일하게 시스템 콜이 호출된다.
+    - 라이브러리 함수들도 call하면 내부에서 동일하게 시스템 콜이 호출된다.
 
 
 ### standard i/o : fopen
@@ -486,7 +486,7 @@ $ prog_1 | prog_2
 FILE *fopen(const char *restrict pathname, const char * restrict type)
 ```
 
-- * restrict 포인터 : pathname과 type에 대한 포인터가 다른것을 보장한다. 같은 포인터가 오면 안된다. pathname과 type이 서로 다른 포인터로 주어져 어셈블리어로 바뀌었을때 instruction과 관련하여 최적화 하는 방법이 적용된다.
+- `* restrict` 포인터 : pathname과 type에 대한 포인터가 다른것을 보장한다. 같은 포인터가 오면 안된다. pathname과 type이 서로 다른 포인터로 주어져 어셈블리어로 바뀌었을때 instruction과 관련하여 최적화 하는 방법이 적용된다.
 - type
     - r : read
     - w : truncate to 0 length가 기본
@@ -504,13 +504,9 @@ int getc(FILE *istream);
 int putc(int c, FILE *ostream);
 ```
 
-- getc
+- `getc` : file structre pointer를 받아서 character하나를 읽어온다. 다음 character를 반환한다.
 
-    file structre pointer를 받아서 character하나를 읽어온다. 다음 character를 반환한다.
-
-- putc
-
-    file structre pointer를 받아서 character하나를 써준다. 성공하면 c를 반환한다.
+- `putc` :file structre pointer를 받아서 character하나를 써준다. 성공하면 c를 반환한다.
 
 
 ### Buffering
