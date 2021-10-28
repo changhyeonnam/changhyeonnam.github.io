@@ -26,7 +26,7 @@ comments: true
 
     <div class="center">
       <figure>
-        <a href="/images/2021/linux/a1.png"><img src="/images/2021/linux/a1.png" width="400" ></a>
+        <a href="/images/2021/linux/a2.png"><img src="/images/2021/linux/a2.png" width="400" ></a>
       </figure>
     </div>
 
@@ -66,7 +66,7 @@ int open(const char* pathname, int flags, [mode_t mode]);
 
       <div class="center">
         <figure>
-          <a href="/images/2021/linux/a2.png"><img src="/images/2021/linux/a2.png" width="400" ></a>
+          <a href="/images/2021/linux/a0.png"><img src="/images/2021/linux/a0.png" width="400" ></a>
         </figure>
       </div>
 
