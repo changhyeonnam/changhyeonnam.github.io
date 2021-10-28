@@ -26,7 +26,7 @@ comments: true
 
     <div class="center">
       <figure>
-        <a href="/images/2021/linux/a0.png"><img src="/images/2021/linux/a0.png" width="400" ></a>
+        <a href="/images/2021/linux/a1.png"><img src="/images/2021/linux/a1.png" width="400" ></a>
       </figure>
     </div>
 
@@ -203,7 +203,7 @@ wriet, read 함수를 사용하여 infile을 outfile로 복사하는 프로그�
 
 <div class="center">
   <figure>
-    <a href="/images/2021/linux/a1.png"><img src="/images/2021/linux/a1.png" width="400" ></a>
+    <a href="/images/2021/linux/a0.png"><img src="/images/2021/linux/a0.png" width="400" ></a>
   </figure>
 </div>
 
@@ -380,27 +380,27 @@ int fcntl(int filedes, int cmd, ...);
     ```c
     #include <fcntl.h>
     int filestatus(int filedes){
-    		int arg1;
-    		if (( arg1 = fcntl (filedes, F_GETFL)) == -1) {
-    				printf ("filestatus failed\n");
-    				return (-1);
-    		}
-    		  /* file access mode flag test */
-    		  switch ( arg1 & O_ACCMODE) {
-    			case O_WRONLY:
-    					printf ("write-only");
-    					break;
-    			case O_RDWR:
-    					printf ("read-write");
-    					break;
-    			case O_RDONLY: printf ("read-only");
-    					break;
-    			default: printf("No such mode");
-    		  }
-    		  if (arg1 & O_APPEND)
-    		    printf (" -append flag set");
-    		  printf ("\n");
-    		return (0);
+  		int arg1;
+  		if (( arg1 = fcntl (filedes, F_GETFL)) == -1) {
+  				printf ("filestatus failed\n");
+  				return (-1);
+  		}
+  		  /* file access mode flag test */
+  		  switch ( arg1 & O_ACCMODE) {
+  			case O_WRONLY:
+  					printf ("write-only");
+  					break;
+  			case O_RDWR:
+  					printf ("read-write");
+  					break;
+  			case O_RDONLY: printf ("read-only");
+  					break;
+  			default: printf("No such mode");
+  		  }
+  		  if (arg1 & O_APPEND)
+  		    printf (" -append flag set");
+  		  printf ("\n");
+  		return (0);
     }
     ```
 
