@@ -1,7 +1,7 @@
 ---
 title: 1.Linux | Basic Concept & Terminology
 layout: post
-Created: October 29, 2021 12:59 AM
+Created: October 29, 2021 1:31 AM
 tags:
     - Linux
 use_math: true
