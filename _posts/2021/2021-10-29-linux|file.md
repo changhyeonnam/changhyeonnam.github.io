@@ -26,10 +26,10 @@ comments: true
 
     <div class="center">
       <figure>
-        <a href="/images/2021/linux/a2.png"><img src="/images/2021/linux/a2.png" width="400" ></a>
+        <a href="/images/2021/linux/a2.png"><img src="/images/2021/linux/a2.png" width="600" ></a>
       </figure>
     </div>
-      
+
     - 0=terminal에서의 입력, 1= terminal에서의 출력, 2 = 에러
     - 3개의 디스크립터가 기본적으로 할당되어 있다. 파일을 새로 시작하면 3번으로 시작하게 된다.
 
@@ -66,7 +66,7 @@ int open(const char* pathname, int flags, [mode_t mode]);
 
       <div class="center">
         <figure>
-          <a href="/images/2021/linux/a0.png"><img src="/images/2021/linux/a0.png" width="400" ></a>
+          <a href="/images/2021/linux/a0.png"><img src="/images/2021/linux/a0.png" width="600" ></a>
         </figure>
       </div>
 
@@ -203,7 +203,7 @@ wriet, read 함수를 사용하여 infile을 outfile로 복사하는 프로그�
 
 <div class="center">
   <figure>
-    <a href="/images/2021/linux/a1.png"><img src="/images/2021/linux/a1.png" width="400" ></a>
+    <a href="/images/2021/linux/a1.png"><img src="/images/2021/linux/a1.png" width="600" ></a>
   </figure>
 </div>
 
@@ -313,7 +313,7 @@ file size를 반환 받는 코드입니다.
 
     <div class="center">
       <figure>
-        <a href="/images/2021/linux/b4.png"><img src="/images/2021/linux/b4.png" width="400" ></a>
+        <a href="/images/2021/linux/b4.png"><img src="/images/2021/linux/b4.png" width="600" ></a>
       </figure>
     </div>
 
@@ -337,7 +337,7 @@ int dup2(int filedes, int filedes2);
 
     <div class="center">
       <figure>
-        <a href="/images/2021/linux/b5.png"><img src="/images/2021/linux/b5.png" width="400" ></a>
+        <a href="/images/2021/linux/b5.png"><img src="/images/2021/linux/b5.png" width="600" ></a>
       </figure>
     </div>
 
@@ -347,7 +347,7 @@ int dup2(int filedes, int filedes2);
 
     <div class="center">
       <figure>
-        <a href="/images/2021/linux/b6.png"><img src="/images/2021/linux/b6.png" width="400" ></a>
+        <a href="/images/2021/linux/b6.png"><img src="/images/2021/linux/b6.png" width="600" ></a>
       </figure>
     </div>
 
@@ -406,7 +406,7 @@ int fcntl(int filedes, int cmd, ...);
 
     <div class="center">
       <figure>
-        <a href="/images/2021/linux/b7.png"><img src="/images/2021/linux/b7.png" width="400" ></a>
+        <a href="/images/2021/linux/b7.png"><img src="/images/2021/linux/b7.png" width="600" ></a>
       </figure>
     </div>
 
@@ -513,7 +513,7 @@ int putc(int c, FILE *ostream);
 
 <div class="center">
   <figure>
-    <a href="/images/2021/linux/b8.png"><img src="/images/2021/linux/b8.png" width="400" ></a>
+    <a href="/images/2021/linux/b8.png"><img src="/images/2021/linux/b8.png" width="600" ></a>
   </figure>
 </div>
 
