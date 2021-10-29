@@ -48,7 +48,7 @@ comments: true
 
 <div class="center">
   <figure>
-    <a href="/images/2021/linux/l1.png"><img src="/images/2021/linux/l1.png" width="400" ></a>
+    <a href="/images/2021/linux/l2.png"><img src="/images/2021/linux/l2.png" width="400" ></a>
   </figure>
 </div>
 
@@ -59,7 +59,7 @@ comments: true
 
 <div class="center">
   <figure>
-    <a href="/images/2021/linux/l2.png"><img src="/images/2021/linux/l2.png" width="400" ></a>
+    <a href="/images/2021/linux/l1.png"><img src="/images/2021/linux/l1.png" width="400" ></a>
   </figure>
 </div>
 
