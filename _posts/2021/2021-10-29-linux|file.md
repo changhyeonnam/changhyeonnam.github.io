@@ -24,11 +24,12 @@ comments: true
 - 새로운 파일 디스크립터를 할당 할때 프로세스가 사용하지 않은 가장 낮은 수를 할당하게 됩니다.
 - 각 프로세스가 쉘에 의해 생성될때 터미널과 관련된 세개의 open file이 생긴다.
 
-    <div class="center">
+    <!-- <div class="center">
       <figure>
         <a href="/images/2021/linux/a2.png"><img src="/images/2021/linux/a2.png" width="400" ></a>
       </figure>
-    </div>
+    </div> -->
+    ![Untitled.png](/images/2021/linux/a2.png)
 
     - 0=terminal에서의 입력, 1= terminal에서의 출력, 2 = 에러
     - 3개의 디스크립터가 기본적으로 할당되어 있다. 파일을 새로 시작하면 3번으로 시작하게 된다.
