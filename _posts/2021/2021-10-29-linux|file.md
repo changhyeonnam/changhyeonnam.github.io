@@ -131,7 +131,7 @@ fd = open("/tmp/newfile", O_WRONLY| O_CREAT| O_TRUNC, 0644);
 ### Owner and Permission of a new file
 
 - 현재 작업중인 current directory( or parent directory)에 대한 쓰기 권한이 있어합니다. 디렉토리 파일은 그 안의 정보들을 갖고 있고, 그 파일들에 대해 쓰기 권한을 갖고 있어야 합니다.
-- process를 만든 사람을 effective user id라 하고, 포함되어 있는 그룹을 effective group id라고 합니다 process의 소유자는 real user id로 설정되고, 그에 대한 real group-id도 있습니다. (나중에 자세히 설명)
+- process를 만든 사람을 effective user id라 하고, 포함되어 있는 그룹을 effective group id라고 합니다. process 실행 시킨 사람은 user id로 설정되고, 그에 대한 group-id도 있습니다. (나중에 자세히 설명)
 
 ### System Call : read
 
