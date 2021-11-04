@@ -126,7 +126,7 @@ for(int i=0;i<str.size();i++){
  <details>
  <summary>code</summary>
  <div markdown="1">
- 
+
 ```cpp
 #include <iostream>
 #include <cstring>
@@ -199,4 +199,4 @@ int main(){
 
 [1509번 펠린드롬 분할](https://www.acmicpc.net/problem/1509)
 
-주어진 문자열을 펠린드롬 분할할 수 있는 개수의 최소값을 구하는 문제이다.  B번을 풀고보니 C번과 똑같은 문제였다. n의 범위만 바뀌었다. (1≤n≤2500)
+주어진 문자열을 펠린드롬 분할할 수 있는 개수의 최소값을 구하는 문제입니다.  B번을 풀고보니 C번과 똑같은 문제였다. n의 범위만 바꿔 주었습니다.(ㄱㅇㄷ) (1≤n≤2500)
