@@ -46,7 +46,7 @@ comments: true
 
 - 하지만 스트라이딩과 슬라이딩을 분리하여 사용하면 두번의 얕은 복사가 일어나기 때문에 메모리를 더 많이 차지 한다. 이런 경우 메모리를 고려하기 위해 itertools 내장 모듈의 islice 메서드를 사용하는 것이 바람직하다. islice는 가독성이 더 좋고, 시작,끝, 증가값에 음수를 사용할 수 없습니다.
 
-    **`islice**(*iterable*, *stop*)` 또는 **`islice**(*iterable*,*start*,*stop*[,*step*])`에 대한 공식 문서는 다음과 같습니다. [link](https://docs.python.org/ko/3.8/library/itertools.html#itertools.islice)
+    `islice(iterable, stop)` 또는 `islice(iterable,start,stop[,step])`에 대한 공식 문서는 다음과 같습니다. [link](https://docs.python.org/ko/3.8/library/itertools.html#itertools.islice)
 
     ```python
     islice('ABCDEFG', 2) --> A B
