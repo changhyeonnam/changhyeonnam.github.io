@@ -16,8 +16,11 @@ comments: true
 [이전 포스트](https://changhyeonnam.github.io/2021/11/06/segment_tree.html)에 이어서 세그먼트 트리 응용에 대해 다룰려고 합니다. 세그먼트 트리는 단순히 구간에 대한 연산 뿐만 아니라 여러개의 값,상태를 저장할 수 있습니다. 다음 세그먼트 트리의 응용에 대해 다룰 예정입니다.
 
 - A번은 구간의 연산이 아닌 구간에서의 최댓값을 저장하는 세그먼트 트리에 대한 내용입니다.
+
 - B번은 분할정복을 이용하는 머지 소트를 메모리제이션 하는 머지소트 트리에 대한 내용입니다. 세그먼트 트리는 분할 정복에 대해 메모리제이션하는 자료구조라고도 볼 수 있습니다.
+
 - C번에서는 세그먼트 트리에 저장해야 하는 인덱스 범위가 클때 사용하는 다이나믹 세그먼트 트리에 대한 내용 입니다. 오프라인 쿼리,온라인 쿼리 방법으로 모두 구현이 가능합니다.
+
 - D번 좌표 압축과 스위핑을 이용한 세그먼트 트리 문제입니다. 주어진 구간에서 연속된 부분합의 최댓값을 분할정복을 통한 세그먼트 트리로 해결하는 (유명한?)금광세그 문제입니다.
 
 ---
@@ -304,15 +307,27 @@ int main(){
 
 다이나믹 세그먼트 트리는 세그먼트 트리의 메모리 사용량을 줄여주는 테크닉 입니다.
 
-![Untitled](/images/2021/segment/h1.png)
+<div class="center">
+  <figure>
+    <a href="/images/2021/segment/h1.png"><img src="/images/2021/segment/h1.png" width="600"></a>
+  </figure>
+</div>
 
 위와 같이 길이 8인 수열이 있다고 해봅시다. 세번째 원소를 갱신하는 경우, 세번째 원소와 관련된 노드들만 갱신하면 됩니다.
 
-![Untitled](/images/2021/segment/h2.png)
+<div class="center">
+  <figure>
+    <a href="/images/2021/segment/h2.png"><img src="/images/2021/segment/h2.png" width="600"></a>
+  </figure>
+</div>
 
 그리고 사용하지 않은 노드들은 0으로 초기화 되어있기 때문에, 사용하지 않은 노드들은 필요 없다는 것을 알 수  있습니다.
 
-![Untitled](/images/2021/segment/h3.png)
+<div class="center">
+  <figure>
+    <a href="/images/2021/segment/h3.png"><img src="/images/2021/segment/h3.png" width="600"></a>
+  </figure>
+</div>
 
 그리고 5번째 원소를 바꾸고 싶다면, 그 노드까지 가는 길에 있는 노드들을 할당해주면  됩니다. 이런식으로 트리의 해당 노드가 필요할때 할당해 주고, 안쓰이는 노드들은 생성을 안하는 방식으로 세그먼트 트리를 만들면 각 쿼리마다  $O(logN$) 개의 노드를 만들게 되고, 공간 복잡도는 $O(min(Q*logN,N))$이 됩니다.
 
