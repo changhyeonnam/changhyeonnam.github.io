@@ -408,6 +408,7 @@ Node merge(Node a, Node b){
 <details>
 <summary>code</summary>
 <div markdown="1">  
+
 ```cpp
 #include <iostream>
 #include <cstring>
@@ -529,6 +530,7 @@ int main(){
     return 0;
 }
 ```
+
 </div>
 </details>
 ---
@@ -536,5 +538,6 @@ int main(){
 ### reference
 
 1. [https://anz1217.tistory.com/133](https://anz1217.tistory.com/133)
-2. [https://justicehui.github.io/medium-algorithm/2020/02/28/DynamicSeg/](https://justicehui.github.io/medium-algorithm/2020/02/28/DynamicSeg/)
+2. [https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=kks227&logNo=221400656663](https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=kks227&logNo=221400656663)
+3. [https://justicehui.github.io/medium-algorithm/2020/02/28/DynamicSeg/](https://justicehui.github.io/medium-algorithm/2020/02/28/DynamicSeg/)
 3. [https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=edenooo&logNo=221415337560](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=edenooo&logNo=221415337560)
