@@ -27,7 +27,7 @@ comments: true
 
     먼저 세그먼트 트리의 크기는 완전 이진트리인 점을 고려하여 $((1<<ceil(logN))-1)$ 로 해도 되지만, ($ceil(log N)$ =세그먼트 트리의 높이), 보통 4*N 정도의 크기로 설정해 줍니다. 다음은 4*N 에 대한 증명입니다. (k*N에 대해서 𝑘<4인 수 중에 다른 수가 가능한지 궁금하다면 다음 [링크](https://www.quora.com/Why-does-4-*-N-space-have-to-be-allocated-for-a-segment-tree-where-N-is-the-size-of-the-original-array)를 보면 될것같습니다.)
 
-    $𝑆(𝑛)\hspace{2mm}≤2^{⌈log2𝑛⌉+1}−1\\ \hspace{10mm} <2⋅2^{⌈log2𝑛⌉}\\\hspace{10mm}=4⋅2^{⌈log2𝑛⌉}−1\\\hspace{10mm}≤4⋅2^{⌊log2𝑛⌋}≤4𝑛$
+    $𝑆(𝑛)\hspace{2mm}≤2^{⌈log2𝑛⌉+1}−1 \\ \hspace{10mm} <2⋅2^{⌈log2𝑛⌉} \\ \hspace{10mm}=4⋅2^{⌈log2𝑛⌉}−1 \\ \hspace{10mm}≤4⋅2^{⌊log2𝑛⌋}≤4𝑛$
 
 - 세그먼트 트리 코드
 
