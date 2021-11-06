@@ -45,7 +45,7 @@ comments: true
     # 9 5 [4, 3, 2, 0]
     ```
 
-- 별표식은 중간에 혹은 처음에 올 수있다.
+- 별표식은 중간 혹은 처음에 올 수있다.
 
     ```python
     oldest, *others,  youngest = car_ages_descending
