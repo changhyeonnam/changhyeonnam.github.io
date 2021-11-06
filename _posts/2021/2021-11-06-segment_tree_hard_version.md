@@ -11,7 +11,7 @@ comments: true
 > C번 문제(나무는 쿼리를 싫어해~)에 대해서는 빠른 시일 내에 오프라인 쿼리와 온라인 쿼리를 공부하고 업데이트 하겠습니다.
 >
 
-[이전 포스트](https://changhyeonnam.github.io/2021/11/06/segment_tree.html)에 이어서 세그먼트 트리 응용에 대해 다룰려고 합니다.
+[세그먼트 트리 포스트](https://changhyeonnam.github.io/2021/11/06/segment_tree.html)에 이어서 세그먼트 트리 응용에 대해 다룰려고 합니다.
 
 - A번은 구간의 연산이 아닌 구간에서의 최댓값을 저장하는 세그먼트 트리에 대한 내용입니다.
 
