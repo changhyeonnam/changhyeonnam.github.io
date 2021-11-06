@@ -219,7 +219,7 @@ int main(){
                 return st[i];
             }
             int m = l + r >> 1;
-            return st[i] = update(i * 2,l,m,s,e,d) + update(i * 2 + 1, m + 1, r, s,e,d);
+            return st[i] = update(i * 2,l,m,s,e,d)+ update(i * 2 + 1,m + 1,r,s,e,d);
         }
         ```
         해당 구간에 대해 propagation할 것이 있으면 하고, 아니면 update합니다.
