@@ -37,7 +37,7 @@ comments: true
 
     하지만 가독성이 떨어진다. 그리고 이런식으로 원소를 여러 집합으로 나눌 시에 1 차이 나는 인덱스로 인한 오류(off-by-one error)가 발생할 수 있다.
 
-- 그래서 파이썬에서는 별표식(starred expression을 사용해 모든 값을 담는 언패킹을 할 수 있게 지원한다.
+- 그래서 파이썬에서는 별표식(starred expression)을 사용해 모든 값을 담는 언패킹을 할 수 있게 지원한다.
 
     ```python
     oldest, second_oldest, *others = car_ages_descending
