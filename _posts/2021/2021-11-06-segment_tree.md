@@ -193,8 +193,6 @@ int main(){
     - initiailize 하는 부분은 일반 세그먼트 트리와 동일합니다.
     - propagation
 
-        만약 해당하는 노드에 대해 갱신해야 할 값이 있다면 갱신해주고, 갱신을 해주었다면 0을 대입해줍니다. 예를들어 위의 트리에서 10번 노드([3,3])에 대해서 +3을 갱신해주어야 하고, lz[10]=3이 대입되어 있습니다. propagation(10,3,3)을 실행하면 9번노드의 값에 3을 더해주고 연산이 끝납니다. 2번노드 ([1,4])에 대해서 propagation(2,1,4)을 수행하면 st[2] +=(4-1+1)*lz[2] 이 수행됩니다.
-
         ```cpp
         void propagation(int i,int l, int r){
             if(lz[i]){
@@ -209,8 +207,9 @@ int main(){
         }
         ```
 
-    - update code
+        만약 해당하는 노드에 대해 갱신해야 할 값이 있다면 갱신해주고, 갱신을 해주었다면 0을 대입해줍니다. 예를들어 위의 트리에서 10번 노드([3,3])에 대해서 lz[10]=3이라고 해봅시다. propagation(10,3,3)을 실행하면 10번노드의 값에 3을 더해주고 연산이 끝납니다.
 
+    - update code
         ```cpp
         ll update(int i, int l,int r, int s,int e, ll d) {
             propagation(i,l,r);
@@ -225,7 +224,7 @@ int main(){
             return st[i] = update(i * 2,l,m,s,e,d) + update(i * 2 + 1, m + 1, r, s,e,d);
         }
         ```
-
+        해당 구간에 대해 propagation할 것이 있으면 하고, 아니면 update합니다.
     - query
 
         ```cpp
@@ -240,6 +239,8 @@ int main(){
         }
 
         ```
+        해당 구간에 대해 propagation할 것이 있으면 하고, 아니면 구간합을 구합니다.
+
 <details>
 <summary>code</summary>
 <div markdown="1">  
