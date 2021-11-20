@@ -394,7 +394,7 @@ Lchild.Rusm + Rchild.Lsum)
 
 이때, 분할정복(O(nlog n)에 (y1,y2)를 고려한 시간 복잡도는 $O(N^3logN)$ 이므로 시간초과가 납니다.
 
-여기서 더 빠른 계산 방법은 y1에서 y2로 값을 증가 시키면서(스위핑) 분할정복의 값들을 누적시키는 방법입니다.
+여기서 더 빠른 계산 방법은 y1에서 y2로 값을 증가 시키면서(스위핑) 분할정복으로 계산한 부분합들을 update시키는 방법입니다.
 
 <div class="center">
   <figure>
@@ -566,3 +566,4 @@ int main(){
 2. [https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=kks227&logNo=221400656663](https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=kks227&logNo=221400656663)
 3. [https://justicehui.github.io/medium-algorithm/2020/02/28/DynamicSeg/](https://justicehui.github.io/medium-algorithm/2020/02/28/DynamicSeg/)
 3. [https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=edenooo&logNo=221415337560](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=edenooo&logNo=221415337560)
+4. [금광세그 KOI 해설](https://www.youtube.com/watch?v=NHf7v-_azYs&list=PLN3yisVKGPfh_sdb_pxGMP3lTF91DOgOr&index=32)
