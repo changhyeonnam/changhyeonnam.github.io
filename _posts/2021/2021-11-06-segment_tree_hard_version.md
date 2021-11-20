@@ -398,7 +398,7 @@ ret.max_sum = max(Lchild.max_sum,Rchild.max_sum,
 Lchild.Rusm + Rchild.Lsum)
 ```
 
-이때, 분할정복(O(nlog n)에 (y1,y2)를 고려한 시간 복잡도는 $O(N^3logN)$ 이므로 시간초과가 납니다.
+이때, 분할정복(O(nlog n)에 (y1,y2)를 고려한 시간 복잡도도 $O(N^3logN)$ 이므로 시간초과가 납니다.
 
 여기서 더 빠른 계산 방법은 y1에서 y2로 값을 증가 시키면서(스위핑) 분할정복으로 계산한 부분합들을 update시키는 방법입니다.
 
