@@ -244,4 +244,5 @@ s(7, 8)
     ```
 ---
 ### reference
-1. [closure 관련한 블로그 포스트](https://shoark7.github.io/programming/python/closure-in-python) : 파이썬 관련해서 예전부터 정말 많이 본 블로그 입니다. 
+
+1. [closure 관련한 블로그 포스트](https://shoark7.github.io/programming/python/closure-in-python) : 파이썬 관련해서 예전부터 정말 많이 본 블로그 입니다.
