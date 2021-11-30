@@ -67,13 +67,13 @@ comments: true
     >
     > SIGKILL, SIGSTP을 제외한 signal들은 catch가 가능하다.
     >
-    - SIGKILL : process를 termation 시키는 signal이고, catch, ignore 될수 없다. SIGKILL은 ignore, catch될  수 없고, 무조건 defailt동작을 한다.
-    - SIGSTOP : catch, ignore될  수 업는 또 하나의 시그널이다. SIGKILL과 차이점은 terminate가 아니라 stop된다. SIGCONT를 보내면 stop되었던 애가 다시 시작함.
-    - SIGPIPE : 프로세스 A와 B사이에 통신하는 방법을 파이프라고하는데, A가 B에게 데이터를 파이프를 통해 보내다가 B가 없어지면 끊어진 파이프가 되고, 이때 파이프를 쓰려고 하면 SIGPIPE가 발생한다.
-    - SIGSEGV : invalid memory reference 정의되지 않은 메모리 공간을 접근한다고 하면 SIGSEGV가 발생한다. core dumped라는 것을 같이 수행한다.
-    - SIGTERM : kill과 비슷하고, terminate signal을 보낸다. kill을 통해서 기본적으로 발생하는 시그널. ignore, catch될 수 있다..
-    - SIGTSTP : terminal에 generate되는 stop signal 이다. 터미널에서 주는 stop. ctl + z를 누르면 forground process group으로 SIGTSTP이 간다.
-    - SIGURS1 : user defined signald으로 kill이라는 커맨드를 통해서 이 커맨드를 보낼 수 있다.
+  - SIGKILL : process를 termation 시키는 signal이고, catch, ignore 될수 없다. SIGKILL은 ignore, catch될  수 없고, 무조건 defailt동작을 한다.
+  - SIGSTOP : catch, ignore될  수 업는 또 하나의 시그널이다. SIGKILL과 차이점은 terminate가 아니라 stop된다. SIGCONT를 보내면 stop되었던 애가 다시 시작함.
+  - SIGPIPE : 프로세스 A와 B사이에 통신하는 방법을 파이프라고하는데, A가 B에게 데이터를 파이프를 통해 보내다가 B가 없어지면 끊어진 파이프가 되고, 이때 파이프를 쓰려고 하면 SIGPIPE가 발생한다.
+  - SIGSEGV : invalid memory reference 정의되지 않은 메모리 공간을 접근한다고 하면 SIGSEGV가 발생한다. core dumped라는 것을 같이 수행한다.
+  - SIGTERM : kill과 비슷하고, terminate signal을 보낸다. kill을 통해서 기본적으로 발생하는 시그널. ignore, catch될 수 있다..
+  - SIGTSTP : terminal에 generate되는 stop signal 이다. 터미널에서 주는 stop. ctl + z를 누르면 forground process group으로 SIGTSTP이 간다.
+  - SIGURS1 : user defined signald으로 kill이라는 커맨드를 통해서 이 커맨드를 보낼 수 있다.
 
     ---
 
