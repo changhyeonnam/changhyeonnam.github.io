@@ -92,7 +92,7 @@ comments: true
 ---
 
 
-### Exit Status Macro  다시정리!!
+### Exit Status Macro  
 
 - WIFEXITIED : child가 정상적으로 exit되엇는지 봄.
 - WIEXITSTATIS: 그때 status를 읽어줘. exit 시스템콜을 통해서 종료될 경우만 의미.
