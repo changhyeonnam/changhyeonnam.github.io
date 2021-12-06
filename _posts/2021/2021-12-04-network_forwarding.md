@@ -98,7 +98,7 @@ comments: true
 
 - default router로 보내게 되면 ARP 프로토콜을 통해 hop-to-hop을 한다.
 
-Simplified forwarding module in classful address with subnetting
+### Simplified forwarding module in classful address with subnetting
 
 ![Untitled](/images/2021/network/ch06/u9.png)
 
