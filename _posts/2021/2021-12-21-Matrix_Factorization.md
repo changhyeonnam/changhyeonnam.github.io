@@ -10,7 +10,7 @@ comments: true
 ---
 
 
-> 2009년에 발표된 [Matrix Factorization Techniques for Recommender Systems](https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf) 논문을 요약 정리한 내용입니다.
+> 2009년에 발표된 [Matrix Factorization Techniques for Recommender Systems](https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf) 논문을 review한 내용입니다.
 >
 
 ## Abstract
