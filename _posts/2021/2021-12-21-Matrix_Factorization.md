@@ -1,6 +1,14 @@
-# Matrix Factorization Techniques for Recommender Systems
-
+---
+title: Matrix Factorization Techniques for Recommender Systems
+layout: post
 Created: November 17, 2021 4:49 PM
+tags:
+    - Recommender system
+    - Paper
+use_math: true
+comments: true
+---
+
 
 > 2009년에 발표된 [Matrix Factorization Techniques for Recommender Systems](https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf) 논문을 요약 정리한 내용입니다.
 >
