@@ -10,7 +10,7 @@ comments: true
 ---
 
 
-> 2009년에 발표된 [Matrix Factorization Techniques for Recommender Systems](https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf) 논문을 정리한 내용입니다.
+> 2009년에 발표된 [Matrix Factorization Techniques for Recommender Systems](https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf) 논문을 review 내용입니다.
 >
 
 ## Abstract
@@ -33,7 +33,7 @@ Recommender system은 기본적으로 두가지 전략에 기저한다.
 
 ### Collaborative filtering
 
-- Collaborative filtering은 past user behavior에 의존한다. 예를들어 previous transaction 또는 product rating에 관한 것이고, 이것들은 explicit profile(content filtering에서 요구하는 content profile, user profile)을 생성하는 것을 요구하지 않는다.
+- Collaborative filtering은 past user behavior에 의존한다. 예를들어 previous transaction 또는 product rating에 관한 것이고, 이것들은 explicit profile(content filetering에서 요구하는 content profile, user profile)을 생성하는 것을 요구하지 않는다.
 
 - Collaborative filtering은 유저 간의  relationship과 새로운  user-item association을 식별하기 위한 product에서의 interdependency를 분석한다.
 
