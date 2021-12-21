@@ -98,7 +98,7 @@ dimensions를 갖는 less well defined factor들일 수있다.
 
 - 가장 편리한 데이터로, user의 product interest에 관한 explicit input을 포함한다. Netflix에서 영화에 매기는 star가 그 예이다.   이러한 데이터를 explicit user feedback이라 부른다.
 
-- explicit feedback은 보통 sparse matrix로 이뤄집니다. sparse matrix는 item들에 대해 매우 적은 퍼센티지로 rate된 matrix를 의미한다.
+- explicit feedback은 보통 sparse matrix로 이뤄집니다. sparse matrix는 item들에 대해 매우 적은 퍼센티지로 rate된 matrix를 의미합니다.
 
 - MF의 장점 중  하나는  additional info를 incorporate할 수 있다는 것이다. explicit feedback이 불가능한 경우 implicit feedback을 사용하면 된다.
 
@@ -122,11 +122,11 @@ dimensions를 갖는 less well defined factor들일 수있다.
 
 - $\hat r_{ui} = q^T_ip_u$
 
-  위 vector의 결과인 dot product로써, user u와 item i간의 interaction을 capture한다. (item의 characteristic에 관한 전반적인 user의 interest를 의미) 이것은 item i에 대한 user u의 rating을 approximate하고, $r_{ui}$로 표현한다.
+  위 vector의 결과인 dot product로써, user u와 item i간의 interaction을 capture한다. (item의 characteristic에 관한 전반적인 유적의 interest를 의미) 이것은 item i에 대한 user u의 rating을 approximate하고, $r_{ui}$로 표현한다.
 
 - 가장  challenge한 것은 각 item과 user를 factor vector로 mapping하는 것이다. mapping한 후에는 위의 dot product를 통해 쉽게 rating을 estimate할 수 있다.
 
-- MF는 information retrieval 분야에서 latent semantic factor를 identify할 때 사용하는  well established technique인 SVD (singular value decomposition)와 매우 밀접하게 연관되어 있다.
+- information retrieval 분야에서 latent semantic factor를 identify할 때 well established technique인 SVD (singular value decomposition)과 매우 밀접하게 연관되어 있다.
 
     Collaborative filtering domain에 SVD를 적용하는 것은  user-item rating matrix를 factoring하는  것을 요구한다. user-item rating matrix에서의  sparseness로 인한 high portion of missing value 때문에 적용하기 어려울 수도 있다.
 
@@ -143,17 +143,17 @@ dimensions를 갖는 less well defined factor들일 수있다.
 
 ## Learning Algorithms
 
-MF에서 cost function을 minimize하는 두가지 접근 방법이 stochastic gradient descent (SGD)와  alternating least squares(ALS)가 있습니다. SGD의 설명에 대해선 생략하겠습니다.
+MF에서 costfunction을 minimize하는 두가지 접근 방법이 stochastic gradient descent (SGD)와  alternating least squares(ALS)가 있습니다. SGD의 설명에 대해선 생략하겠습니다.
 
 ### Alternating Least Squares
 
-$q_i,p_u$가 unknown값이기 때문에 (MF에서 예측하려는 vector들), cost function이 convex하지 않다.  ALS에서는 unknown중 하나를 fix하여, optimization problem을 quadratic하게 만든다. ALS는  $q_i$를 고정하는것과 $p_u$를 고정하는 것을 rotate한다. $p_u$를 모두  고정하면, 시스템은  least-squares problem를 해결함으로써, $q_i$를 recompute하고, 반대로도 한다. 이 rotate를 cost function이 수렴할때 까지 반복한다.  
+$q_i,p_u$가 unknown값이기 때문에 (MF에서 예측하려는 vector들), cost function이 convex하지 않다.  ALS에서는 unknown중 하나를 fix하여, optimazation problem이 quadratic하게 만든다. ALS는  $q_i$를 고정하는것과 $p_u$를 고정하는 것을 rotate한다. $p_u$를 모두  고정하면, 시스템은  least-squares problem를 해결함으로써, $q_i$를 recompute하고, 반대로도 한다. 이 rotate를 costfunction이 수렴할때 까지 반복한다.  
 
 general한 SGD방식이 ALS보다 쉽고 빠르지만, 두가지 케이스에서 ALS이 더 좋다.
 
 1. 시스템은 parallelization을 사용하는 케이스이다. 시스템은 각 $q_i$를 다른 item factor들에 대해 독립적으로 계산하고, $p_u$또한 다른 user factor에 대해 독립적으로 계산한다. 이러한 경우 매우 거대한 parallelization of the algorithm이 될 가능성이 있다.
 
-2. 두번째 경우는 시스템이 implicit data에 초점을 맞춘 경우이다. sparse한 training set에 대해 반복해서 SGD를 돌리면 practical 하지 못하고, ALS가  이러한 문제점을 해결할 수 있다.
+2. 두번째 경우는 시스템이 implict data에 초점을 맞춘 경우이다. sparase한 training set에 대해 반복해서 SGD를 돌리면 practical 하지 못하고, ALS가  이러한 문제점을 해결할 수 있다.
 
 ## Adding Biases
 
