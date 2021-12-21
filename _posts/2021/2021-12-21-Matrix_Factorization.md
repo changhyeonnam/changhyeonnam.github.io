@@ -15,7 +15,7 @@ comments: true
 
 ## Abstract
 
-Netflix Prize competition에서 matrix factorization model이 고전적인  nearest-neighbor technique보다 더 좋은 성능을 보인다고 증명했다. Matrix Factorization에서는 implicit feedback, temporal effect, confidence level과 같은 additional한 정보를 incorporate한다
+Netflix Prize competition에서 matrix factorization model이 고전적인  nearest-neighbor technique보다 더 좋은 성능을 보인다고 증명했다. Matrix Factorization에서는 implicit feedback, temporal effect, confidence level과 같은 additional한 정보를 incorporate한다.
 
 ## Recommender System Strategies
 
