@@ -115,7 +115,7 @@ dimensions를 갖는 less well defined factor들일 수있다.
 
 - 그래서 recent work에선 observed rating만을 사용하여 모델링 하는것을 제안한다. 또한 regularize된 model를 사용하여 overfitting을 피한다.
 
-    $\min\limits_{q,p} $\sum \limits_{(u,i)\in k}(r_{ui}-q^T_ip_u)^2+ \lambda( \mid \mid q_i \mid\mid ^2+ \mid \mid p_u \mid \mid^2)$
+    $\min\limits_{q,p} \sum\limits_{(u,i)\in k}(r_{ui}-q^T_ip_u)^2+\lambda(\mid\mid q_i \mid\mid ^2+ \mid\mid p_u\mid\mid^2)$
 
     k는 training set에서의 (u,i) pair를 의미한다. $r_{ui}$는 관측치, $q_i^Tp_u$는 측정치를 의미한다. regularized squared error를 최소화하고, $\lambda$  값에 따라 regularization 정도를 결정한다.
 
