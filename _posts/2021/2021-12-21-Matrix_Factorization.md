@@ -20,7 +20,6 @@ Netflix Prize competition에서 matrix factorization model이 고전적인  near
 ## Recommender System Strategies
 
 Recommender system은 기본적으로 두가지 전략에 기저한다.
-
 1. content filtering approach
 2. collaborative filtering
 
