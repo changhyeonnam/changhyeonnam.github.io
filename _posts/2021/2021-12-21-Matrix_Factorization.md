@@ -115,7 +115,7 @@ dimensions를 갖는 less well defined factor들일 수있다.
 
 - 그래서 recent work에선 observed rating만을 사용하여 모델링 하는것을 제안한다. 또한 regularize된 model를 사용하여 overfitting을 피한다.
 
-    $\min\limits_{q*,p*}$  ${\sum \limits_{(u,i)\in k}(r_{ui}-q^T_ip_u)^2+ \lambda( \mid \mid q_i \mid\mid ^2+ \mid \mid p_u \mid \mid^2)}$
+    $\min {\sum \limits_{(u,i)\in k}(r_{ui}-q^T_ip_u)^2+ \lambda( \mid \mid q_i \mid\mid ^2+ \mid \mid p_u \mid \mid^2)}$
 
     k는 training set에서의 (u,i) pair를 의미한다. $r_{ui}$는 관측치, $q_i^Tp_u$는 측정치를 의미한다. regularized squared error를 최소화하고, $\lambda$  값에 따라 regularization 정도를 결정한다.
 
@@ -151,7 +151,7 @@ $b_{ui} = \mu+b_i+b_u$
 
 앞에서 말한 cost function에 bias 항을 추가하여 optimize하면 된다.
 
-$\min\limits_{q*,p*} \sum\limits_{(u,i)\in k}(r_{ui}-\mu-b_i-b_u-q^T_ip_u)^2+\lambda(\mid\mid q_i \mid\mid ^2+ \mid\mid p_u\mid\mid^2+b_u^2+b_i^2)$
+$\min \sum\limits_{(u,i)\in k}(r_{ui}-\mu-b_i-b_u-q^T_ip_u)^2+\lambda(\mid\mid q_i \mid\mid ^2+ \mid\mid p_u\mid\mid^2+b_u^2+b_i^2)$
 
 ## Additional input sources
 
@@ -191,7 +191,7 @@ $\hat r_{ui}=\mu+b_i(t)+b_u(t)+q^T_ip_u(t)$ .
 
 이러한 케이스에서, estimated preference에 confidence score를 추가하는 것은 의미가 있다. Confidence는 action의 빈도를 묘사하는 numerical value이다, 예를들어 user가  특정 show를 얼마나 보았는지 도는 user가  특정 item을 몇번 구매했는지에 관한 값이다. 반복되는  event는 user의 의견을 반영할 가능성이 높다.
 
-$\min\limits_{q*,p*} \sum\limits_{(u,i)\in k}c_{ui}(r_{ui}-\mu-b_i-b_u-q^T_ip_u)^2+\lambda(\mid\mid q_i \mid\mid ^2+ \mid\mid p_u\mid\mid^2+b_u^2+b_i^2)$
+$\min \sum\limits_{(u,i)\in k}c_{ui}(r_{ui}-\mu-b_i-b_u-q^T_ip_u)^2+\lambda(\mid\mid q_i \mid\mid ^2+ \mid\mid p_u\mid\mid^2+b_u^2+b_i^2)$
 
 $c_{ui}$항을 이용하여 confidence level에 따라서 weight를 조절할 수 있다.
 
