@@ -8,7 +8,7 @@ use_math: true
 comments: true
 ---
 
->협업을 위한 사용법이 아닌, Gpu server를 사용하기 위한 간단한 command 사용법 입니다.
+>협업을 위한 사용법이 아닌, GPU server를 사용하기 위한 간단한 command 사용법 입니다.
 >
 
 1. git repository clone
