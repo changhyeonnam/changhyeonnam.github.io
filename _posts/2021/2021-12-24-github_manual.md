@@ -1,5 +1,5 @@
 ---
-title: github 사용법
+title: Github 사용법
 layout: post
 Created: December 24, 2021 3:05 PM
 tags:
