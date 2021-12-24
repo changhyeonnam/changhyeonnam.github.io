@@ -17,7 +17,7 @@ comments: true
     git clone [REPO_URL] [DIR]
     ```
 
-    DIR 안적으시면 기본적으로 root directory에 저장합니다.
+    - DIR 안적으시면 기본적으로 root directory에 저장합니다.
 
 
 1. print git status
