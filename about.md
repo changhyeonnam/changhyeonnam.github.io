@@ -9,7 +9,7 @@ title: About
 
 ### Contact
 
-- Mail : <hj04143@gmail.com>
+- <hj04143@gmail.com>
 - [Github](https://github.com/changhyeonnam)
 - [LinkedIn](https://www.linkedin.com/in/changhyeon-nam-9306a616b/)
 
