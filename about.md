@@ -17,7 +17,7 @@ title: About
 - `2021.12 - 2022.2` : 현재 Kist(한국과학연구원) 인공지능 연구단 인턴으로, 추천시스템을 설계하는 일하고 있습니다. Matrix Factorization, NCF, Wide&Deep과 같은 모델을 사용하여 관광지 congestion에 따른 관광지 추천시스템을 설계하고 있습니다. 현재 진행과정은  [Matrix Factorization 구현](https://github.com/changhyeonnam/MFML)을 하였고, ALS optimizer 구현 및 NCF 모델을 공부하고 있습니다.
 
 - `2021.4 - 2021.7` : Clova ai rush 2021 (1 Round 8등, 2 Round 7등)
-naver clova에서 열린 ai rush 2021 1 Round 실시간 버스 도착 예정시간 예측 정확도 향상 과제에서 8등, 	2 Round(본선) 네이버 모바일 메인 마이구독의 UGC 컨텐츠 추천을 위한 문서 키워드 추출 과제에서 7등 	하였습니다. (수상권에 들지는 못했습니다)
+naver clova에서 열린 ai rush 2021 1 Round 실시간 버스 도착 예정시간 예측 정확도 향상 과제에서 8등, 	2 Round(본선) 네이버 모바일 메인 마이구독의 UGC 컨텐츠 추천을 위한 문서 키워드 추출 과제에서 7등	하였습니다. 
 
 - `2020.9 - 2021.2` : Google Machine Learning Bootcamp 참여
 Deep learning Speciailization Coursera 수료, Tensorflow Certificate 취득하였습니다.
