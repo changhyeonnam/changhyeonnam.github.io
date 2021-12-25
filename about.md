@@ -14,15 +14,15 @@ title: About
 
 ### Experience related to ML/DL
 
-- `2021.12 - 2022.2` : 현재 Kist(한국과학연구원) 인공지능 연구단 인턴으로, 추천시스템을 설계하는 일하고 있습니다. Matrix Factorization, NCF, Wide&Deep과 같은 모델을 사용하여 관광지 congestion에 따른 관광지 추천시스템을 설계하고 있습니다. 현재 진행과정은  [Matrix Factorization 구현](https://github.com/changhyeonnam/MFML)을 하였고, ALS optimizer 구현 및 NCF 모델을 공부하고 있습니다.
+- `2021.12 - 2022.2` : 현재 Kist(한국과학연구원) 인공지능 연구단 인턴으로, 추천시스템을 설계하는 일을 하고 있습니다. Matrix Factorization, NCF, Wide&Deep과 같은 모델을 사용하여 관광지 congestion에 따른 관광지 추천시스템을 설계하고 있습니다. 현재 진행과정은  [Matrix Factorization 구현](https://github.com/changhyeonnam/MFML)을 하였고, ALS optimizer 구현 및 NCF 모델을 공부하고 있습니다.
 
 - `2021.4 - 2021.7` : Clova ai rush 2021 (1 Round 8등, 2 Round 7등)
-naver clova에서 열린 ai rush 2021 1 Round 실시간 버스 도착 예정시간 예측 정확도 향상 과제에서 8등, 	2 Round(본선) 네이버 모바일 메인 마이구독의 UGC 컨텐츠 추천을 위한 문서 키워드 추출 과제에서 7등	하였습니다.
+naver clova에서 열린 ai rush 2021 1 Round 실시간 버스 도착 예정시간 예측 정확도 향상 과제에서 8등, 2 Round(본선) 네이버 모바일 메인 마이구독의 UGC 컨텐츠 추천을 위한 문서 키워드 추출 과제에서 7등 하였습니다.
 
 - `2020.9 - 2021.2` : Google Machine Learning Bootcamp 수료.
-Deep learning Speciailization Coursera 수료, Tensorflow Certificate 취득하였습니다.
+Deep learning Specialization Coursera 수료, Tensorflow Certificate 취득하였습니다.
 
-- `2019.9 - 2020.6` : Stacked Bi-LSTM 모델을 사용하여 근육의 움직임을 예측하는 toyproject에 참여했습니다.toy-project의 결과물을 논문의 형태로 만들어 휴먼테크논문대상에 참여해보았습니다.(서류에서 탈락됬지만 좋은 경험이었습니다!)
+- `2019.9 - 2020.6` : Stacked Bi-LSTM 모델을 사용하여 근육의 움직임을 예측하는 toy project에 참여했습니다. toy-project의 결과물을 논문의 형태로 만들어 휴먼테크논문대상에 참여해보았습니다.(서류에서 탈락됬지만 좋은 경험이었습니다!)
 
 ### Other Experience & Awards
 
