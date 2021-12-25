@@ -1,9 +1,9 @@
 ---
-title: Github 사용법
+title: github 사용법
 layout: post
 Created: December 24, 2021 3:05 PM
 tags:
-    - Github
+    - github
 use_math: true
 comments: true
 ---
@@ -91,5 +91,5 @@ comments: true
 
 최초로 remote repository에서 파일들 받아오실때는 git clone [remote repo url] 사용하시면됩니다.
 
-1. 만약 코드를 수정하시고 업로드 하고자 하실때는 git add -u → git push origin master 사용하시면 됩니다.
+1. 만약 코드를 수정하시고 업로드 하고자 하실때는 git add → git commit → git push origin master 사용하시면 됩니다.
 2. 만약 노트북에서 코드 수정하시고, 컴퓨터에서 다시 코드를 받아서 수정하고자 하실때는 git pull origin master → 1번 반복 수행.
