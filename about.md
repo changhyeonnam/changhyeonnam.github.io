@@ -4,7 +4,7 @@ title: About
 ---
 ### 남창현, Changhyeon Nam
 
-안녕하세요! NLP, Rec-sys, PS에 관심이 있고, 계속해서 공부하고 경험하고 있습니다. ( 각 project의 readme 및 관련 포스트는 작성 중에 있습니다.)
+안녕하세요! NLP, Rec-sys, PS에 관심이 있고, 공부한 내용들을 블로그에 정리하고 있습니다. 혹시 블로그 포스팅 내용 중에 잘못된 내용이 있다면 자유롭게 얘기해 주세요.
 
 
 ### Contact
