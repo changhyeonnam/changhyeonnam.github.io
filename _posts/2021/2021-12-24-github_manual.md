@@ -14,9 +14,11 @@ fetch, merge, checkout과 관련된 command는 다루지 않습니다!.
 
 아래 그림은 이번 포스트에서 다룰 command들입니다.
 
-![Untitled](/images/2021/github/github.png)
-
-
+<div class="center">
+  <figure>
+    <a href="/images/2021/github/github.png"><img src="/images/2021/github/github.png" width="800"  ></a>
+  </figure>
+</div>
 
 1. git repository clone
 
