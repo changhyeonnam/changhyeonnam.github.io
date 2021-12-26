@@ -79,7 +79,7 @@ fetch, merge, checkout과 관련된 command는 다루지 않습니다!.
     # git pull origin master
     ```
 
-    - remote repository에 있는 파일들을 받아 옵니다. 이때 현재 local directory에서 tracked file들과 conflict가 날 수 있습니다. 이러한 경우 아래의 명령어를  사용합니다.
+    - remote repository에 있는 파일들을 받아 옵니다. 이때 현재 working directory에서 tracked file들과 conflict가 날 수 있습니다. 이러한 경우 아래의 명령어를  사용합니다.
 
     ```bash
     git stash
