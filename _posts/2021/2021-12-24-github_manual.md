@@ -11,6 +11,8 @@ comments: true
 >협업을 위한 사용법이 아닌, 개인 repository 및 gpu server를 사용하기 위한 간단한 command 사용법 입니다.
 >
 
+![Untitled](/images/2021/github/github.png)
+
 1. git repository clone
 
     ```bash
