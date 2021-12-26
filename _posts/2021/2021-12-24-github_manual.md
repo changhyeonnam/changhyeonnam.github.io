@@ -9,9 +9,14 @@ comments: true
 ---
 
 >협업을 위한 사용법이 아닌, 개인 repository 및 gpu server를 사용하기 위한 간단한 command 사용법 입니다.
+fetch, merge, checkout과 관련된 command는 다루지 않습니다!.
 >
 
+아래 그림은 이번 포스트에서 다룰 command들입니다.
+
 ![Untitled](/images/2021/github/github.png)
+
+
 
 1. git repository clone
 
@@ -88,6 +93,8 @@ comments: true
 
     cf) git stash list 를 사용하시면 stash 목록을 보여줍니다.
 
+### reference
+1. [Github Documents](https://docs.github.com/en/get-started/using-git/about-git)
 
 ### 정리
 
