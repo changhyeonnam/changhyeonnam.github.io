@@ -173,9 +173,12 @@ $\hat y_{ui}=\sigma(h^Ta(p_u\odot q_i+W[[p_u],[q_i]]+b))$
 그래서 fused  model에 대해 flexibility를 제공하기 위해, GMF와 MLP가 separate embedding을 학습하게 했고, fig3과 같이 마지막 hidden layer를 concatenate함으로써 두개의 모델을 합쳤다. 다음과 같이 formulate할 수 있다.
 
 $\phi^{GMF}=p_u^G\odot q_i^G$
+
 $\phi^{MLP} = a_L(W_L^T(a_{L-1}(..a_2(W_2^T[[p_u^M],[q_i^M]]+b_2)..))+b_L)$
+
 $\hat y_{ui}=\sigma(h^T[[\phi^GMF],[\phi^{MLP}]])$
 $p^G_u$ ,$p^M_u$: user embedding for GMF and MLP
+
 $q^G_i$ ,$q^M_i$: item embedding for GMF and MLP
 MLP의 activation function : ReLU
 
