@@ -19,6 +19,7 @@ $ nvidia-smi
 
 각각 gpu의 정보를 나타냅니다. 2개 혹은 그 이상의 gpu를 사용할 시에, 첫번째꺼 부터 사용량이 올라가고, 점차 나머지 것들도 사용하게 되는 것을  확인할 수 있습니다.
 
+---
 ### Python에서 사용하는 GPU info 출력
 
 ```c
@@ -30,6 +31,7 @@ print('Count of using GPUs:', torch.cuda.device_count())
 
 현재 어떤 gpu들을 사용하고 있고, 몇개를 사용하고 있는지 출력합니다.
 
+---
 ### Command line에서 GPU할당
 
 ```c
@@ -52,6 +54,7 @@ ps
 
 `ps` 를 사용하시면 현재 돌아가고 있는 프로세스들을 확인할 수 있습니다. foreground process를 종료시킬때는 `ctrl+c` 를  사용하시면 되고, background process를 종료시킬때는 `kill pid값` 을 사용하면 됩니다.
 
+---
 ### Multi-GPU를 이용하여 parallel하게 학습시키는  방법
 
 간단한 모델이 다음과 같다고 해봅시다.
@@ -83,7 +86,7 @@ if torch.cuda.device_count() > 1:
 
 model.to(device)
 ```
-
+---
 ### reference
 
 1. [pytorch Docs](https://pytorch.org/docs/stable/generated/torch.nn.DataParallel.html)
