@@ -93,4 +93,4 @@ model.to(device)
 
 1. [pytorch Docs](https://pytorch.org/docs/stable/generated/torch.nn.DataParallel.html)
 2. [pytorch korea Docs](https://tutorials.pytorch.kr/beginner/blitz/data_parallel_tutorial.html)
-3. https://artiiicy.tistory.com/61
+3. [artiiicy's blog](https://artiiicy.tistory.com/61)
