@@ -34,7 +34,7 @@ print('Count of using GPUs:', torch.cuda.device_count())
 ---
 ### Command line에서 GPU할당
 
-`CUDA_VISIBLE_DEVICES`라는 envirable variable를 변경하여 cuda가 볼 수 있는 GPU를 내가 사용하고자 하는 다른 GPU로 제한하는 command이다. cuda는 cuda입장에서 visible한 gpu를 사용하는데, 인위적으로 visible devices를 변경함으로서 cuda가 내가 명시한 GPU를 사용하도록 하는 원리이다.
+`CUDA_VISIBLE_DEVICES`라는 envirable variable를 변경하여 cuda가 볼 수 있는 GPU를 사용하고자 하는 다른 GPU로 제한하는 command입니다. cuda는 visible한 gpu를 사용하는데, 인위적으로 visible devices를 변경함으로서, cuda가 명시한 GPU만을 사용하도록 하는 방법입니다.
 
 ```c
 CUDA_VISIBLE_DEVICES= 0,1,2 python train.py -e 30 -b 32 -d True
