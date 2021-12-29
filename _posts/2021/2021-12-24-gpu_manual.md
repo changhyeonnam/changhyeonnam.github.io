@@ -13,6 +13,12 @@ comments: true
 
 ### GPU 사용 정보 확인
 
+<div class="center">
+  <figure>
+    <a href="/images/2021/torch/gpu/gpu0.png"><img src="/images/2021/torch/gpu/gpu0.png" width="600"  ></a>
+  </figure>
+</div>
+
 ```bash
 $ nvidia-smi
 ```
