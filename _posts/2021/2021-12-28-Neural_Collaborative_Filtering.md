@@ -13,9 +13,13 @@ comments: true
 >
 
 NCF에서 제가 생각한 핵심은 다음과 같습니다.
+
 1. 기존의 Matrix Factorization의 한계점은 user-item의 interaction을 linear한 방식(fixed dot product)으로 계산하기 때문에, ranking loss가 생긴다. latent factor들을 latent space에서 표현했을때, cosine similarity가 실제 matrix의 factor의 양상과 일치하지 않는것을 확인할수 있다.
+
 2. user-item의 interaction에 대해서 non-linear한 방식으로도 학습하기 위해 MLP를 추가했고, 기존의 MF의 linear한 factor도 사용하기 위해 GMF(Generalized Matrix Factorization)를 MLP와 concatenate하여 NeuMF를 만들었다.
+
 3. 이때, 새로 배운점은 MLP, GMF를 concatenate하면 objective function이 non-convex하기 때문에 local optima로 optimize된다는 것이었다. 그래서 이 논문에서는 pre-trained MLP, pre-trained GMF를 이용하여 마지막 output layer만을 SGD를 통해 optimize한다. (MLP, GMF는 Adam optimizer로 optimize한다.  NeuMF에서 Adam을 사용하지 못하는 이유는 pre-trained model을 사용하기 때문에 momentum에 대한 정보가 없기 때문이다.)
+
 4. Implicit feedback으로 데이터를 변환하기 위해 rating(MovieLens Dataset), #Pinned(Pinterest Dataset)의 값을 one-hot encoding으로 변환하였고, 학습을 더 빠르게 하기 위해 Negative sampling을 이용하여 계산을 더 효율적으로 한다.
 
 

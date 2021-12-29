@@ -13,6 +13,9 @@ comments: true
 > 2009년에 발표된 [Matrix Factorization Techniques for Recommender Systems](https://datajobs.com/data-science-repo/Recommender-Systems-[Netflix].pdf) 논문을 review 내용입니다.
 >
 
+Matrix Factorization 논문에서 제가 생각한 핵심은 다음과 같습니다.
+
+
 ## Abstract
 
 Netflix Prize competition에서 matrix factorization model이 고전적인  nearest-neighbor technique보다 더 좋은 성능을 보인다고 증명했다. Matrix Factorization에서는 implicit feedback, temporal effect, confidence level과 같은 additional한 정보를 incorporate한다.
