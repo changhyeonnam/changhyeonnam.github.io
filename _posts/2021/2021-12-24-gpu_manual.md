@@ -13,17 +13,18 @@ comments: true
 
 ### GPU 사용 정보 확인
 
+```bash
+$ nvidia-smi
+```
+
+각각 gpu의 정보를 나타냅니다. 2개 혹은 그 이상의 gpu를 사용할 시에, 첫번째꺼 부터 사용량이 올라가고, 점차 나머지 것들도 사용하게 되는 것을  확인할 수 있습니다.
+
 <div class="center">
   <figure>
     <a href="/images/2021/torch/gpu/gpu0.png"><img src="/images/2021/torch/gpu/gpu0.png" width="600"  ></a>
   </figure>
 </div>
 
-```bash
-$ nvidia-smi
-```
-
-각각 gpu의 정보를 나타냅니다. 2개 혹은 그 이상의 gpu를 사용할 시에, 첫번째꺼 부터 사용량이 올라가고, 점차 나머지 것들도 사용하게 되는 것을  확인할 수 있습니다.
 
 ---
 ### Python에서 사용하는 GPU info 출력
@@ -94,6 +95,13 @@ if torch.cuda.device_count() > 1:
 
 model.to(device)
 ```
+
+<div class="center">
+  <figure>
+    <a href="/images/2021/torch/gpu/gpu1.png"><img src="/images/2021/torch/gpu/gpu1.png" width="600"  ></a>
+  </figure>
+</div>
+
 ---
 ### reference
 
