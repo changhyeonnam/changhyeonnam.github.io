@@ -13,8 +13,21 @@ comments: true
 > 2009년에 발표된 [Matrix Factorization Techniques for Recommender Systems](https://datajobs.com/data-science-repo/Recommender-Systems-[Netflix].pdf) 논문을 review 내용입니다.
 >
 
-Matrix Factorization 논문에서 제가 생각한 핵심은 다음과 같습니다.
+Matrix Factorization 논문에서 제가 생각한 핵심과 제가 구현한 모델의 간단한 설명은 다음과 같습니다.
 
+1. 기존의 content filtering approach 얻기 쉽지 않은 content info가 필요한 경우도 있고, user-item에 대한 dataset을 characterize하기 위한  profile을 추가로 생성해야 했다.
+
+2. collaborative filtering는 크게 2가지 (1) Neighborhood method 와 (2) latent factor model이 있고, 전자는 메모리,시간복잡도,성능 면에서 후자보다 좋지 못하다. Latent factor model 중 가장 성공적인 방법이 MF라고 한다.  
+
+3. MF는 user-item interaction에 대해 latent factor들을 inner product(dot product)하여 target에 대한 Matrix를 완성시킨다. Implicit feedback, explicit feedback을 모두 고려하여 MF를 구현할 수 있다.
+
+4. 이때, (1) bias, (2) cold start problem을 다루는 방법, (3) temporal Dynamics (4) confidence score를 prediction에 관한 항을 추가하여 구현한다.
+
+5. 제가 구현한 모델은 bias, confidence score만을 추가하여 구현하였습니다. 제가 추가한 bias항은 다음과 같습니다. bias of user[i]: i번째 user의 평균 rating, bias of item[i]: i번째 item의 평균 rating, $\mu$: 전체 평균 rating을 의미합니다.
+
+6. confidence score에 대한 구체적인 식의 설명이 없어서, 논문에서 말한 정의를 바탕으로 제가 정해서 사용했습니다. MovieLens data를 기반으로 모델을 구현하였는데, 해당 dataset은 user-based dataset이므로, user-based confidence score를 구현했습니다. user-based confidence score[i]는 i번째 user가 rating한 횟수를 의미합니다. 이 confidence score를 normalization를 적용시켜 사용했습니다.
+
+해당 모델의 구현은 [Matrix Factorization with MovieLens](https://github.com/changhyeonnam/MFML)를 참고해주세요.
 
 ## Abstract
 
@@ -44,7 +57,7 @@ Recommender system은 기본적으로 두가지 전략에 기저한다.
 
 - Content filtering보다 보통 더 정확하지만, cold start problem에 대해서는 content filtering이 더 우월하다.
 
-Collaborative filtering의 대표적인 두가지 area는 (1) neighborhood methods (2)Latent factor models 이다.
+Collaborative filtering의 대표적인 두가지 area는 (1) neighborhood methods (2) Latent factor models 이다.
 
 ### Neighborhood methods
 
