@@ -127,16 +127,11 @@ dimensions를 갖는 less well defined factor들일 수있다.
 
 - Matrix Factorization Model은 user와 item 모두를 mapping하여 latent factor space of dimensionality f로 합친다. user-item interaction은 latent factor space에서 inner product로써 표현된다.
 
-- $q_i$
+- $q_i$: vector of each item i. 주어진 item i에 대해 각 item이 어떠한 factor들을 소유하는 정도에 따라 양수 혹은 음수의 값을 갖는다.
 
-  vector of each item i. 주어진 item i에 대해 각 item이 어떠한 factor들을 소유하는 정도에 따라 양수 혹은 음수의 값을 갖는다.
-- $p_u$
+- $p_u$: vector of each user u. 유저가 item와 관련된 factor들의 interest 정도에 따라 양수 혹은 음수의 값을 갖는다.
 
-  vector of each user u. 유저가 item와 관련된 factor들의 interest 정도에 따라 양수 혹은 음수의 값을 갖는다.
-
-- $\hat r_{ui} = q^T_ip_u$
-
-  위 vector의 결과인 dot product로써, user u와 item i간의 interaction을 capture한다. (item의 characteristic에 관한 전반적인 유적의 interest를 의미) 이것은 item i에 대한 user u의 rating을 approximate하고, $r_{ui}$로 표현한다.
+- $\hat r_{ui} = q^T_ip_u$: 위 vector의 결과인 dot product로써, user u와 item i간의 interaction을 capture한다. (item의 characteristic에 관한 전반적인 유적의 interest를 의미) 이것은 item i에 대한 user u의 rating을 approximate하고, $r_{ui}$로 표현한다.
 
 - 가장  challenge한 것은 각 item과 user를 factor vector로 mapping하는 것이다. mapping한 후에는 위의 dot product를 통해 쉽게 rating을 estimate할 수 있다.
 
