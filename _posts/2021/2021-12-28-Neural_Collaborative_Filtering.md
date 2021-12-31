@@ -145,7 +145,7 @@ NCF하의 MLP는 다음과 같이 정의될 수 있다.
 
 - $\phi_2(z_1)=a_2(W_2^Tz_1+b_2)$,...,
 
-$\phi_L(z_{L-1})=a_L(W_L^Tz_K-1+b_L),$
+- $\phi_L(z_{L-1})=a_L(W_L^Tz_K-1+b_L),$
 
 - $\hat y_{ui}=\sigma(h^T\phi_L(z_L-1))$
 
