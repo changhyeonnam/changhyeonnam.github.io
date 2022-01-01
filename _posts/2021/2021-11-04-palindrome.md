@@ -5,6 +5,9 @@ tags:
     - PS
 use_math: true
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 ### A. 팰린드롬?
 

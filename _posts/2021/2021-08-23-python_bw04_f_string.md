@@ -6,6 +6,9 @@ tags:
     - Python
 use_math: true
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 ### [Effective Python] Better way 04: C 스타일 형식 문자열을 str.format과 쓰기보다는 f - string을 통한 interpolation 사용하라.
 

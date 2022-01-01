@@ -5,6 +5,9 @@ tags:
     - Python
 use_math: true
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 ### [Effective Python] Better way 20: None을 반환하기보다는 예외를 발생시켜라.
 

@@ -7,6 +7,9 @@ tags:
     - Paper
 use_math: true
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 > 2017년에 발표된 [Neural Collaborative Filtering](https://arxiv.org/pdf/1708.05031.pdf) 논문을 review한 내용입니다. Matrix  Factorization에 대해서는 한계를 다룬 내용을 제외한 것은 생략하겠습니다. (다음 [포스트](https://changhyeonnam.github.io/2021/12/21/Matrix_Factorization.html)를 참고하면됩니다.)

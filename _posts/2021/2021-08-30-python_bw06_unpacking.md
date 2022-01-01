@@ -5,6 +5,9 @@ tags:
     - Python
 use_math: true
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 ### [Effective Python] Better way 06: 인덱스를 사용하는 대신 대입을 사용해 데이터를 언패킹(unpacking) 하라
 

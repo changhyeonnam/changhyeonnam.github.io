@@ -5,6 +5,9 @@ tags:
     - Python
 use_math: true
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 ### [Effective Python] Better way 08: 여러 iterator에 대해 나란히 루프를 수행하려면 zip을 사용해라
 

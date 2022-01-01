@@ -6,7 +6,9 @@ tags:
     - Algorithm
 use_math: true
 comments: true
-
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 ```
 CTP 알고리즘 동아리에서 여름방학 코딩테스트반에 참여하여 공부한 내용입니다.

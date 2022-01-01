@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://changhyeonnam.github.io/sitemap.xml

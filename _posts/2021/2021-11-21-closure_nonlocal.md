@@ -5,6 +5,9 @@ tags:
     - Python
 use_math: true
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 > 이번학기에 시스템 프로그래밍을 수강하고 있는데, 어느정도 겹치는 내용이 많았습니다. (복습하는 느낌이랄까) 클로저(clousre)의 개념, 클로저와 데코레이터(decorator)의 관계에 대해서는 후에 더 자세히 정리할 계획입니다.

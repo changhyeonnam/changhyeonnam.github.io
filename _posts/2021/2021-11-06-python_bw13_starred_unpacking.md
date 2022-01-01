@@ -5,6 +5,9 @@ tags:
     - Python
 use_math: true
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 ### [Effective Python] Better way 13: slicing 보다는 나머지를  모두 잡아내는 unpacking을 사용하라
 

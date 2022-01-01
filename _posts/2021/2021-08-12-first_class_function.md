@@ -6,6 +6,9 @@ tags:
     - Python
 use_math: true
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 > "Fluent Python part3 객체로서 함수 chapter 05 일급 함수" 를 참고하여 작성한 포스트이다. 일급 객체로서 함수의 특성과 파이썬에서의 함수형 프로그래밍에 대한 내용과 고위 함수인 `reduce()`, `map()`, `__call__`,`callable()` 내장  함수와 inspect, annotation에 대한 내용을 포함한다.
 

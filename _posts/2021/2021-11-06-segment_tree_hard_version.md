@@ -6,6 +6,9 @@ tags:
     - Algorithm
 use_math: true
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 > C번 문제(나무는 쿼리를 싫어해~)에 대해서는 빠른 시일 내에 오프라인 쿼리와 온라인 쿼리를 공부하고 업데이트 하겠습니다.

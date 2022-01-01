@@ -6,7 +6,9 @@ tags:
     - Competition
 comments: true
 use_math: true
-
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 PACE Global Annual Forum, GM Warren Tech Center, July 22-25, 2018 후기

@@ -5,6 +5,9 @@ tags:
     - Python
 use_math: true
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 ### [Effective Python] Better way 19: 함수가 여러 값을 반환하는 경우 절대로 네 값 이상을 언패킹 하지 말라
 

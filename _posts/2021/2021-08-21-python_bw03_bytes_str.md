@@ -6,6 +6,9 @@ tags:
     - Python
 use_math: true
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 ### [Effective Python] Better way 03 : bytes와 str의 차이를 알아두라
 

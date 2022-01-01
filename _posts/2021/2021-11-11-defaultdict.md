@@ -5,6 +5,9 @@ tags:
     - Python
 use_math: true
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### [Effective Python] Better way 17:  내부 상태에서 원소가 없는 경우를 처리할 때는 setdefault보다 defaultdict을 사용하라.

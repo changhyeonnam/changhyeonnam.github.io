@@ -6,6 +6,9 @@ tags:
     - Linux
 use_math: true
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 > 인하대학교 컴퓨터공학과 이어진 교수님 리눅스프로그래밍 수업을 바탕으로 정리한 내용입니다.

@@ -6,6 +6,9 @@ tags:
     - Algorithm
 use_math: true
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 세그먼트 트리(segement tree) 는 구간들을 보존하고 있는 트리입니다.
 

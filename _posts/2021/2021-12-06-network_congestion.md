@@ -6,6 +6,9 @@ tags:
     - Network
 use_math: true
 comments: true
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 > 인하대학교 컴퓨터공학과 권구인 교수님 네트워크 수업을 바탕으로 정리한 내용입니다. 혼잡제어를 이해해야, 파일을 다운받을떄나 인터넷 접속할때 속도가 왜 변하는지 이해할 수 있다. tcp fair 위주로 다룬 내용입니다.
