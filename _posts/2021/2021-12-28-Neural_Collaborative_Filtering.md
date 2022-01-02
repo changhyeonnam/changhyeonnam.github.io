@@ -25,7 +25,7 @@ NCF에서 제가 생각한 핵심은 다음과 같습니다.
 
 4. Implicit feedback으로 데이터를 변환하기 위해 rating(MovieLens Dataset), #pinned(Pinterest Dataset)의 값을 one-hot encoding으로 변환하였다. 이때, 0을 negative instance로 보게 되는데, dataset의 대부분이 0으로 이루어진 sparsity problem이 생기게 된다. 이를 위해서 네개의 negative instance 당 하나의 positive instance을 하나의 sample로 만들어 학습시켰다.
 
-현재 [NFCML repository](https://github.com/changhyeonnam/NCFML)에 해당 논문을 작성해보고 있습니다.
+현재 [NFCML repository](https://github.com/changhyeonnam/NCFML)에 해당 논문을 구현해보고 있습니다.(거의 다 완성)
 
 ### Abstract
 
