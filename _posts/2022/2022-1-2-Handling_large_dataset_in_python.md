@@ -3,7 +3,7 @@ title: Handling Large dataset  in python(1)
 layout: post
 Created: January 2, 2022 2:52 PM
 tags:
-    - etc
+    - Python
 use_math: true
 comments: true
 sitemap :
