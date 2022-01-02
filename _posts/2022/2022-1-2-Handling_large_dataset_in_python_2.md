@@ -126,16 +126,14 @@ pandas dataframes을 save/load하는데 주로 사용하는 Parquet, HDF5, Pickl
     2. cos
         1. 전체 데이터셋이 메모리에 올라와 있어야 한다. 작은 subset만을 읽을 수 없다. 이 문제에 대해 partitioning을 이용하면 해결 될 수 있지만, 그 해당 partition만 읽을 수 있게 된다. 다른 말로는 Indexing을 지원하지 않는다.
         2. parquet file들은 immutable하다. append, update, delete가 불가능하다. BigData에서는 이 제한이 장점으로도 작용하는 경우가 있다고 한다.
-2. HDF5
+2. HDF5 (HDF5에 대한 자세한 내용은 다음 [링크](https://cyrille.rossant.net/moving-away-hdf5/)를 참고.)
     1. pros
         1. data slicing을 지원한다. 전체 dataset에 대해 일부분을 읽을 수 있다.
         2. 다른 binary format보다 빠른 편이다.
         3. parquet보다는 느리지만 compression을 지원한다.
         4. appending row를 지원한다. 즉 mutable하다.
     2. cons
-        1. data들이 corruption할 위험성이 있다.  
-
-    (HDF5에 대한 자세한 내용은 다음 [링크](https://cyrille.rossant.net/moving-away-hdf5/)를 참고.)
+        1. data들이 corruption할 위험성이 있다.
 
 3. Pickle
     1. cons
