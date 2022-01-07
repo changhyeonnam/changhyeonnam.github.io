@@ -23,7 +23,15 @@ NCF에서 제가 생각한 핵심은 다음과 같습니다.
 
 3. 이때, 새로 배운점은 MLP, GMF를 concatenate하면 objective function이 non-convex하기 때문에 local optima로 optimize된다는 것이었다. 그래서 이 논문에서는 pre-trained MLP, pre-trained GMF를 이용하여 마지막 output layer만을 SGD를 통해 optimize한다. (MLP, GMF는 Adam optimizer로 optimize한다. NeuMF에서 Adam을 사용하지 못하는 이유는 pre-trained model을 사용하므로 momentum에 대한 정보가 없기 때문이다.)
 
-4. 다음은 dataset이 어떻게 구성되어있는지에 대한 내용이다. 대부분의 내용이 논문에는 명시되어 있지 않고, 저자의 code에 이렇게 구현되있을뿐, 납득되지 않는 부분도 존재한다. 하지만 모델의 성능을 비교하기 위해 저자와 최대한 같은 데이터 셋을 구성하려고 노력했다. 현재 주어진 dataset에는 user와 item의 interaction이 있는 positive feedback만 있다. MovieLens Dataset은 user-based dataset으로, 최소 20개의 movie를 rating한 user에 대한 데이터로 이뤄져있다. 예를들어 user A에 대해서 trainset과 testset을 나눈다고 했을때, user A의 rating data중 하나만 testset으로 할당하고, user A의 나머지 rating data는 trainset으로 할당하였다. 이렇게 한 이유는 testset으로 평가 지표를 계산할때, 특정 user의 데이터만 많아지게 되면 계산값이 특정 user에 대해 편향 될수 있기 때문이다. 현재 trainset과 testset의 비율이 최소 19대 1이다. 그다음 trainset에 대해 implicit feedback을 만들기 위해, 나누기전의 전체 rating data를 참고하여, user A가 평가하지 않은 movie들로 1개의 positive sample당 4개의 negative sample을 만든다. 이제 user A에 대한 testset을 만들어보자. HR@k, NDCG@k에서 k가 어떤 값이 될지 모르므로 충분히 많은 데이터를 토대로 하나의 user에 대해 예측을 해야한다. 현재 user A에 대해서는 한쌍의 dataset 밖이 없다. 1개의 positive sample당 99개의 negative sample을 만든다. 왜 99개로 negative sampling하는지 살펴보자. 앞서 trainset에서 user A에 대해 rating한 movie가 최소 19개가 있다고 했었는데, 이것을 20개라고해보자. 그러면 negative sampling한 후에 trainset과 testset에서 user A의 data 비율이 대략 100:100이 된다. (왜 100:100을 맞췄는지는 충분히 납득가지 않는다. 보통 추천시스템에서 dataset 구성하는 convention일거라 생각한다.)
+4. 다음은 dataset이 어떻게 구성되어있는지에 대한 내용이다. 대부분의 내용이 논문에는 명시되어 있지 않고, 저자의 code에 이렇게 구현되있을뿐, 납득되지 않는 부분도 존재한다. 하지만 모델의 성능을 비교하기 위해 저자와 최대한 같은 데이터 셋을 구성하려고 노력했다. 현재 주어진 dataset에는 user와 item의 interaction이 있는 positive feedback만 있다. MovieLens Dataset은 user-based dataset으로, 최소 20개의 movie를 rating한 user에 대한 데이터로 이뤄져있다. 예를들어 user A에 대해서 trainset과 testset을 나눈다고 했을때, user A의 rating data중 하나만 testset으로 할당하고, user A의 나머지 rating data는 trainset으로 할당하였다. 이렇게 한 이유는 testset으로 평가 지표를 계산할때, 특정 user의 데이터만 많아지게 되면 계산값이 특정 user에 대해 편향 될수 있기 때문이다.
+
+  <div class="center">
+    <figure>
+      <a href="/images/2021/Rec_sys/ncf/ng.png"><img src="/images/2021/Rec_sys/ncf/ng.png" width="600"  ></a>
+    </figure>
+  </div>
+
+그다음 trainset에 대해 implicit feedback을 만들기 위해, 나누기전의 전체 rating data를 참고하여, user A가 평가하지 않은 movie들로 1개의 positive sample당 4개의 negative sample을 만든다. 이제 user A에 대한 testset을 만들어보자. HR@k, NDCG@k에서 k가 어떤 값이 될지 모르므로 충분히 많은 데이터를 토대로 하나의 user에 대해 예측을 해야한다. 현재 user A에 대해서는 한쌍의 dataset 밖이 없다. 1개의 positive sample당 99개의 negative sample을 만든다. 왜 99개로 negative sampling하는지 살펴보자. 앞서 trainset에서 user A에 대해 rating한 movie가 최소 19개가 있다고 했었는데, 이것을 20개라고해보자. 그러면 negative sampling한 후에 trainset과 testset에서 user A의 data 비율이 대략 100:100이 된다. (왜 100:100을 맞췄는지는 충분히 납득가지 않는다. 보통 추천시스템에서 dataset 구성하는 convention일거라 생각한다.)
 
 현재 [NFCML repository](https://github.com/changhyeonnam/NCFML)에 해당 논문을 구현해보고 있습니다.
 
