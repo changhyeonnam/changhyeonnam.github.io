@@ -31,7 +31,7 @@ NCF에서 제가 생각한 핵심은 다음과 같습니다.
     </figure>
   </div>
 
-그다음 trainset에 대해 implicit feedback을 만들기 위해, 나누기전의 전체 rating data를 참고하여, user A가 평가하지 않은 movie들로 1개의 positive sample당 4개의 negative sample을 만든다. 이제 user A에 대한 testset을 만들어보자. HR@k, NDCG@k에서 k가 어떤 값이 될지 모르므로 충분히 많은 데이터를 토대로 하나의 user에 대해 예측을 해야한다. 현재 user A에 대해서는 한쌍의 dataset 밖이 없다. 1개의 positive sample당 99개의 negative sample을 만든다. 왜 99개로 negative sampling하는지 살펴보자. 앞서 trainset에서 user A에 대해 rating한 movie가 최소 19개가 있다고 했었는데, 이것을 20개라고해보자. 그러면 negative sampling한 후에 trainset과 testset에서 user A의 data 비율이 대략 100:100이 된다. (왜 100:100을 맞췄는지는 충분히 납득가지 않는다. 보통 추천시스템에서 dataset 구성하는 convention일거라 생각한다.)
+  그다음 trainset에 대해 implicit feedback을 만들기 위해, 나누기전의 전체 rating data를 참고하여, user A가 평가하지 않은 movie들로 1개의 positive sample당 4개의 negative sample을 만든다. 이제 user A에 대한 testset을 만들어보자. HR@k, NDCG@k에서 k가 어떤 값이 될지 모르므로 충분히 많은 데이터를 토대로 하나의 user에 대해 예측을 해야한다. 현재 user A에 대해서는 한쌍의 dataset 밖이 없다. 1개의 positive sample당 99개의 negative sample을 만든다. 왜 99개로 negative sampling하는지 살펴보자. 앞서 trainset에서 user A에 대해 rating한 movie가 최소 19개가 있다고 했었는데, 이것을 20개라고해보자. 그러면 negative sampling한 후에 trainset과 testset에서 user A의 data 비율이 대략 100:100이 된다. (왜 100:100을 맞췄는지는 충분히 납득가지 않는다. 보통 추천시스템에서 dataset 구성하는 convention일거라 생각한다.)
 
 현재 [NFCML repository](https://github.com/changhyeonnam/NCFML)에 해당 논문을 구현해보고 있습니다.
 
