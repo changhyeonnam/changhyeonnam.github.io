@@ -1,5 +1,5 @@
 ---
-title: CS224N|Lecture 8 Final Projects. Practical Tips(Winter 2021)
+title: (Winter 2021)CS224N|Lecture 8 Final Projects. Practical Tips
 layout: post
 Created: January 10, 2022 4:23 AM
 tags:
