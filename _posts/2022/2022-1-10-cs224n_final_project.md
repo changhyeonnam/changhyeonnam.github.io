@@ -20,7 +20,7 @@ decoder의 hidden state들이 encoder들의 hidden state들을 보게하여, 각
 
 Q) 왜 encoder, decoder RNN을 분리해서 사용하고, translation이 진행될때, 이전 decoder의 sequence들에 대해서는 왜 고려하지 않는가 라는 질문이 있었다. A) 일단 attention은 Machine Translation을 위해 나온 모델으로써, source 언어, target언어 각각에 해당하는 sequence model이 있는 것이 합리적이다. 두번째 질문에 대해서는, 그것을 고려한 모델이 self-attention이다. 그리고 이어져서 나온 모델이 바로 transformer!.
 
-사실 attention이 처음 왜 개발되었는지를 고려해보면 self-attention이 왜 나왔는지 의구심이 들 수도 있다. conditional Language Model로써, decoder RNN에서 점점더 긴 문장을 해석할 수 록, encoder의 정보를 잃어 버리는것이 당연하다. 그래서 attention이 그 역할을 해준다. 그리고 decoder안에서의 sequence에 대해 학습한느 것은 LSTM이 그 역할을 잘해주고 있었다. 하지만 선택적으로 정보를 전달하는 방식인 LSTM보다 attention 방식이 더 성능이 좋고, 더 light weight했다.
+사실 attention이 처음 왜 개발되었는지를 고려해보면 self-attention이 왜 나왔는지 의구심이 들 수도 있다. conditional Language Model로써, decoder RNN에서 점점더 긴 문장을 해석할 수 록, encoder의 정보를 잃어 버리는것이 당연하다. 그래서 attention이 그 역할을 해준다. 그리고 decoder안에서의 sequence에 대해 학습하는 것은  LSTM이 그 역할을 해주고 있었다. 하지만 선택적으로 정보를 전달하는 방식인 LSTM보다 attention 방식이 더 성능이 좋고, 더 light weight했다.
 
 ---
 ![Untitled](/images/2022/cs224n/lec8/lec1.png)
