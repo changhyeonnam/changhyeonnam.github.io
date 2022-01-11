@@ -137,7 +137,7 @@ $E^{(l)} = LeakyReLU((L+I)E^{(l-1)}W_1^{(l)}+LE^{(l-1)}\odot E^{(l-1)}W_2^{(l)})
 - $E^{(0)}$: 처음 message-passing iteration에서의 set $E$을 의미한다. $e_u^{(0)}=e_u, e_i^{(0)}=e_i,I=identity\space matrix$
 - $L$: Laplacian  matrix for user-item graph.
 
-    $L = D^{-1\over2}AD^{-1\over2}, \space A= \begin{pmatrix} 0 & R\\ R^T & 0\end{pmatrix}$
+    $L = D^{-1\over2}AD^{-1\over2}$
 
 - $R\in R^{NXM}$: user-item interaction matrix.
 - $A$: adjacency matrix
