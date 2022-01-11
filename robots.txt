@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://changhyeonnam.github.io/sitemap.xml
+Sitemap:https://changhyeonnam.github.io//sitemap.xml
