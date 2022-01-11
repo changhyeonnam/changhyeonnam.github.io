@@ -6,7 +6,6 @@ tags:
     - Recommender system
     - Paper
 use_math: true
-comments: true
 sitemap :
   changefreq : daily
   priority : 1.0
