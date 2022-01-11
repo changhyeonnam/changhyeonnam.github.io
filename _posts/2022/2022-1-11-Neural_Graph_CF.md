@@ -164,7 +164,7 @@ $Loss  = \sum\limits_{(u,i,j)\in O} -ln \sigma (\hat y_{ui}-\hat y_{uj}) + \lamb
 - $R^+$: observed interation
 - $R^-$: unobserved interaction
 - $\sigma(.)$:  sigmoid function
-- $\theta =(E,(W^{(l)}_1, W^{(l)}_2 ) _{l=1}^L )$ : all trainable model parameters
+- $\theta =(E,(W^{(l)}_1, W^{(l)}_2 ))$ : all trainable model parameters
 - $\lambda$ control $L_2$ regularization. (prevent overfitting)
 
 그리고 mini-batch Adam을 사용하여 prediction model을 optimazation하고 model parameter들을 업데이트 시킨다. 특히, 랜덤하게 샘플된 triples $(u,i,j)\in O$에 대해서, 이것들의  representation $[e^(0),...,e^(L)]$을 L step의 propagation이후에  정하고,  lossfunction의  gradient를 사용하여  model parameter들을 update시킨다.
