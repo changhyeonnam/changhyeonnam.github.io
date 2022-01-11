@@ -1,7 +1,7 @@
 ---
 title: Neural Graph Collaborative Filtering
 layout: post
-Created: January 11, 2022 4:23 PM
+Created: January 10, 2022 4:23 PM
 tags:
     - Recommender system
     - Paper
