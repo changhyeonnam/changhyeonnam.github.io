@@ -9,8 +9,8 @@ disqus_shortname: Nam
 
 future: true
 
-markdown: kramdown
 kramdown:
+  input: GFM
   math_engine: mathjax
 
 # gems:
