@@ -137,7 +137,7 @@ pandas dataframes을 save/load하는데 주로 사용하는 Parquet, HDF5, Pickl
 
 3. Pickle
     1. cons
-        1. 매무 매우 빠르다.
+        1. 매우 매우 빠르다.
     2. pros
         1. disk에 많은 공간이 필요하다.
         2. 오랜 기간 지속적으로 저장하게 되면 compatibility problem이 생길 수 있다. 위에서 설명한 protocol version에 따른 호환성 문제를 야기 시킬수 있다는 말이다.
