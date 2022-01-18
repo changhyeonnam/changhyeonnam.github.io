@@ -1,7 +1,9 @@
 <head>
-  {% if page.use_math %}
-    {% include mathjax_support.html %}
-  {% endif %}
+  <!--mathjax-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   {% if jekyll.environment != 'development' %}<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">{% endif %}
