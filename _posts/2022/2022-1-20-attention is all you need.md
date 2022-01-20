@@ -47,7 +47,7 @@ Transformer는 stacked-self-attention과 point-wise (fully connected layers for 
 
 <div class="center">
   <figure>
-    <a href="/images/2022/paper/ana/img0.png"><img src="/images/2022/paper/ana/img0.png" width="600" height="400"   ></a>
+    <a href="/images/2022/paper/ana/img0.png"><img src="/images/2022/paper/ana/img0.png" width="600" height="600"   ></a>
   </figure>
 </div>
 
@@ -161,12 +161,7 @@ positional encoding에 대해 different frequency를 갖는  sine, cosine functi
 
 $pos$는 position을 $i$는 dimension을 의미한다. positional encoding의 각 dimension은 sinusoid에 대응된다. wavelength는 $2\pi$ 부터 $10000*2\pi$의 범위의 geometric progression을 형성한다. 어떠한 fixed offset $k$에 대해, $PE_{pos+k}$는 linear function of $PE_{pos}$로 나타낼 수 있어서, relative position에 의해 attend하는 법을  모델이 쉽게 학습된다고 가정을 했기 때문에 이 함수를 선택했다.
 
-
-<div class="center">
-  <figure>
-    <a href="/images/2022/paper/ana/img7.png"><img src="/images/2022/paper/ana/img7.png" width="400"  ></a>
-  </figure>
-</div>
+![Untitled](/images/2022/paper/ana/img7.png)
 
 learned positional embedding을 사용하여 실험하는 대신, 위의 table row E에서 볼 수 있듯이 두개의 버전이 거의 동일한  결과를 내는 것을 발견했다. sinusoidal version을 선택했고, 왜냐하면 모델잉 학습하는 동안 만난 trained dataset보다 더 긴 sequence를 추론 가능하게 하기 때문이다.
 
