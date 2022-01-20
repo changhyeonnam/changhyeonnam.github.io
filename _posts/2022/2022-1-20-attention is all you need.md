@@ -1,7 +1,7 @@
 ---
 title: Attention Is All You Need
 layout: post
-Created: January 20, 2022 3:45 AM
+Created: January 20, 2022 6:45 PM
 tags:
     - Natural Language Processing
     - Paper
