@@ -47,7 +47,7 @@ Transformer는 stacked-self-attention과 point-wise (fully connected layers for 
 
 <div class="center">
   <figure>
-    <a href="/images/2022/paper/ana/img0.png"><img src="/images/2022/paper/ana/img0.png" width="600" ></a>
+    <a href="/images/2022/paper/ana/img0.png"><img src="/images/2022/paper/ana/img0.png" width="600",height="400"   ></a>
   </figure>
 </div>
 
@@ -74,7 +74,7 @@ Attention function은 query와  a set of key-value pair를 ouput에 맵핑시킨
 
 <div class="center">
   <figure>
-    <a href="/images/2022/paper/ana/img1.png"><img src="/images/2022/paper/ana/img1.png" width="600" ></a>
+    <a href="/images/2022/paper/ana/img1.png"><img src="/images/2022/paper/ana/img1.png" width="400",height="400" ></a>
   </figure>
 </div>
 
@@ -95,7 +95,7 @@ $d_k$가 작은 값일 때, 위의 두개 mechanism은 유사하게 동작하지
 
 <div class="center">
   <figure>
-    <a href="/images/2022/paper/ana/img3.png"><img src="/images/2022/paper/ana/img3.png" width="600" ></a>
+    <a href="/images/2022/paper/ana/img3.png"><img src="/images/2022/paper/ana/img3.png" width="400",height="400" ></a>
   </figure>
 </div>
 
