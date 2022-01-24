@@ -13,7 +13,7 @@ sitemap :
 
 `nn.ModuleList` 은 forward method가 없지만, `nn.Sequential`은 forward method를 갖고있다. 그래서 `nn.Sequential`을 이용해 여러개의 module을 wrap하여 input을 넣을 수 있다.
 
-`nn.ModuleList`는 단지 python list인데, optimizer를 통해 paramter를 train할 수 있기 때문에 유용하다. `nn.Sequential`에서는 input에 대해 sequential하게 component들을 동작시킬 수 있다.
+`nn.ModuleList`는 단지 python list인데, optimizer를 통해 parameter를 접근하고, train할 수 있기 때문에 유용하다. `nn.Linear`들을 list에 추가하여 만든 것과 동일하다. 단지 좀더 가독성있는 코드를 짤 수 있다.
 
 ---
 
