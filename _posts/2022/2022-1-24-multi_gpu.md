@@ -11,7 +11,7 @@ sitemap :
   priority : 1.0
 ---
 
-Multi-GPU을 사용하는 가장 쉬운 방법은 batch size만큼의 data를 여러 gpu로 나눠 할당한후, gradient를 계산하고, 그 gradient를 누적하는 것이다. 이를 위해선 다음 4단계를 거쳐야 한다.
+Multi-GPU을 사용하는 가장 쉬운 방법은 GPU개수 만큼의 batch를 여러 gpu로 나눠 할당한후, gradient를 계산하고, 그 gradient를 하나의 gpu로 누적하여 back-propagation하는 것이다. 이를 위해선 다음 4단계를 거쳐야 한다.
 
 ![Untitled](/images/2022/pytorch/multi-gpu/Untitled0.png)
 
