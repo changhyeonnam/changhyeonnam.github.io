@@ -15,6 +15,8 @@ sitemap :
 > 구현하고자 하는 sequence recommendation model ‘Self-Attentive Sequential Recommendation’이 transformer기반으로 되어 있어서 [Attention Is All You Need](https://arxiv.org/abs/1706.03762) 을 읽게 되었다. 이번 기회에 transformer를 parallelization 하는것 까지 pytorch로 구현해보고자 한다. 2021 winter cs224n lecture 9 포스트를 이 논문 review이후에 올렸는데, 그 포스트를 보면 transformer까지 진행된 flow와 모델의 component에 대한 근거를 더 명확하게 이해할 수 있을것 같다.
 >
 
+해당 논문에 대해 [transformer](https://github.com/changhyeonnam/transformer) repository에 구현해보고 있습니다.
+
 ---
 
 # Abstract
