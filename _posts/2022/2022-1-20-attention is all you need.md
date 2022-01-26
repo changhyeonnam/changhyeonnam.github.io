@@ -19,56 +19,53 @@ sitemap :
 
 # Abstract
 
-dominant한 sequence transduction model들은 encoder와 decoder를 포함하는 복잡한 RNN을 기저한다. Transformer 이전의 SOTA 모델 또한 attention mechanism을 사용한 encoder-decoder 구조를 사용한다. 이 논문에서 제안한 Transformer 모델은 RNN, CNN을 사용하지 않고 attention mechanism만을 기저한 모델이다. 두개의 MT(Machine Translation) task에서 이전의 ensemble한 SOTA 모델들에 비교하여 훨씬 좋은 BLEU score를 달성했다. Transformer는 parallelizable하기 때문에 학습할 때도 더 적은 시간을 사용한다.
+dominant한 sequence transduction model들은 encoder와 decoder를 포함하는 복잡한 RNN 구조을 base로 둔다. Transformer 이전의 SOTA 모델 또한 attention mechanism을 사용한 encoder-decoder 구조를 사용한다. 이 논문에서 제안한 Transformer 모델은 RNN, CNN을 사용하지 않고 attention mechanism만을 기저한 모델이다. 두개의 MT(Machine Translation) task에서 이전의 SOTA 모델들을 ensemble한것과 비교했을때, 훨씬 좋은 BLEU score를 달성했다. Transformer는 parallelizable하기 때문에 학습할 때도 더 적은 시간을 사용한다.
 
 # 1. Introduction
 
-RNN,LSTM,GRU은 sequence modeling과 LM, MT task와 관련된 transduction problem에 대해서도 SOTA한 성능을 보였다. Recurrent model들은 input, output sequence의 symbol position에 따라 계산한다. step에 position을 할당하는 computation에서, sequence hidden state, previous  hidden state, input을 generate한다. 이것의 본질적인 sequential 특성에서, memory limit이 training example간의 batching(일괄처리)을 제한하기 때문에 longer sequence length에서 중요해지는 training에서의 parallelization을 저해한다.
+RNN,LSTM,GRU은 sequence modeling과 (LM, MT task와 관련된) transduction problem에 대해서도 SOTA한 성능을 보였다. Recurrent model들은 input, output sequence의 symbol position에 따라 factor를 계산한다. 각 Time step에 position을 할당하는 computation에서 sequence hidden state, previous  hidden state, input을 generate한다. 이것의 본질적인 sequential 특성인 memory limit이 training example간의 batching(일괄처리)을 제한하기 때문에 longer sequence length에서 중요해지는 training에서의 parallelization을 저해한다.
 
 Attention mechanism은 다양한 task에서 sequence modeling, transduction model의 필수부분이 되었고, input 또는 output sequence의 distance와 상관없이 dependencies를 모델링해 줄 수 있다. 하지만 몇몇을 제외하고 대부분은 RNN과 결합하여 사용했다.
 
-이 논문에서는 recurrence를 사용하지 않고, 대신  input과 ouput 사이의 global dependency를 고려하기 위해 전적으로 attention mechanism만을 사용한다.  Transformer는 더 많은 parallelization을 이용할 수 있고, P100 GPU 8개에서 12시간 정도만 학습했음에도 SOTA한 성능을 보였다.
+이 논문에서는 recurrence를 사용하지 않고, 대신  input과 output 사이의 global dependency를 고려하기 위해 전적으로 attention mechanism만을 사용한다.  Transformer는 더 많은 parallelization을 이용할 수 있고, P100 GPU 8개에서 12시간 정도만 학습했음에도 SOTA한 성능을 보였다.
 
 # 2. Background
 
-sequential computation을 줄이는 목표는 Extended Neural GPU, ByteNet, ConvS2S 모델들의 기반이기도 하다. 이 모델들은 모두 CNN을 basic building block으로 사용한것으로, 전체 Input과 output position에 대해 hidden representation을 parallel하게 계산한다. 이런 모델들에서 두 개의 임의의 input 또는 output position의 signal를 relate하는 데 필요한 operation의 수는 position 사이의 거리에 따라 증가한다. Transformer에서 averaging Attention-Weighted positions로 인해 reduced resolution에 대한 cost를 감안하더라도, operation을 constant number로 감소 시킨다. reduced resolution에 대한 cost은 Muli-Head Attention으로 상쇄시키고자 한다.
+sequential computation을 줄이는 목표가 Extended Neural GPU, ByteNet, ConvS2S 모델들을 만드는것에 대해 motivation이 되었다. 이 모델들은 모두 CNN을 basic building block으로 사용한것으로, 전체 Input과 output position에 대해 hidden representation을 parallel하게 계산한다. 이런 모델에서 두 개의 임의의 input 또는 output position의 signal를 relate하는 데 필요한 operation의 수는 position 사이의 거리에 따라 증가한다. Transformer에서 averaging Attention-Weighted positions로 인해 reduced resolution에 대한 cost를 감안하더라도, operation을 O(1)으로 감소 시킨다. Reduced resolution에 대한 cost은 Muli-Head Attention으로 보완하고자 한다.
 
-intra-attention이라고도 불리는 Self-Attention은 sequence의 representation을 계산하기 위해 single sequence의 different position을 연관시키는 attention mechanism이다. Self-Attention은 reading comprehension(=Q&A task), abstractive summarization, textual entailment, task-independent sentence representations에서도 성공적으로 사용되고 있다.
+intra-attention이라고도 불리는 Self-Attention은 sequence의 representation을 계산하기 위해, single sequence에서 different position들을 연관시키는 attention mechanism이다. Self-Attention은 reading comprehension(=Q&A task), abstractive summarization, textual entailment, task-independent sentence representations에서도 성공적으로 사용되고 있다.
 
-End-to-end memory는 sequence aligned recurrence 대시넹  recurrent attention mechanism에 기저하고 있고, simple-language question answering and language modeling tasks에 좋은 성능을 보이고 있다.
+End-to-end memory network는 sequence aligned recurrence 대신에  recurrent attention mechanism에 기저하고 있고, simple-language question answering and language modeling tasks에 좋은 성능을 보이고 있다.
 
 Transformer는 sequence-aligned RNN, CNN을 사용하지 않고 전적으로 self-attention에 의존하여 input과 output의 representation을 계산하려는 첫번째 transduction model이다. Transformer, self-attention에 대해 설명하고 그것의 장점에 대해 설명할 것이다.
 
 # 3. Model Architecture
 
-대부분의 competitive neural sequence transduction Model들은 encoder-decoder struture를 갖고 있다. encoder는 input sequence of symbol representation $(x_1,...,x_n)$ 을 sequence of continuous representation $z=(z_1,...,z_n)$ 으로 맵핑시킨다. 주어진 $z$에 대해, decoder는 output sequence $(y_1,...,y_m)$of symbol을 하나씩 generate한다. 각 time step에서, 다음 output symbol을  생성할 때, 추가적인 input으로 이전에 generate한 symbol을 사용하기 때문에 auto-regressive하다.
+대부분의 competitive neural sequence transduction Model들은 encoder-decoder structure를 갖고 있다. encoder는 input sequence of symbol representation $(x_1,...,x_n)$ 을 sequence of continuous representation $z=(z_1,...,z_n)$ 으로 맵핑시킨다. 주어진 encoder output $z$에 대해, decoder는 output sequence $(y_1,...,y_m)$of symbol을 하나씩 generate한다. 각 time step에서, 다음 output symbol을  생성할 때, 추가적인 input으로 이전에 generate한 symbol을 사용하기 때문에 auto-regressive하다.
 
 Transformer는 stacked-self-attention과 point-wise (fully connected layers for both encoder, decoder)를 사용하여 방금 언급한 overall architecture를 따른다. 이에 대한 구조가 아래 그림에 나타나 있다.
 
 <div class="center">
   <figure>
-    <a href="/images/2022/paper/ana/img0.png"><img src="/images/2022/paper/ana/img0.png" width="600" height="600"   ></a>
+    <a href="/images/2022/paper/ana/img0.png"><img src="/images/2022/paper/ana/img0.png" width="600" height="700"   ></a>
   </figure>
 </div>
 
 
 ## 3.1 Encoder and Decoder Stacks
 
-- Encoder : Encoder는 N= 6 개의 동일한 layer의 stack으로 이루어져 있다. 각 layer는 두개의 sub-layer를 갖는다. 첫번째 sub-layer는 multi-head self-attention mechanism이고, 두번째는 간단한 position-wise fully connected feed-forward network이다. 두개의 sub layer에 각각에 대해  layer normalization이 뒤에 오고, 그 다음 residual connection을 사용했다.
-
-    > residual connection은 ResNet에서 처음 배운것 같다. vanishing gradinet 문제를 해결하기 위해 적용한 techinque이다.
-    >
+- Encoder : Encoder는 N = 6 개의 동일한 layer의 stack으로 이루어져 있다. 각 layer는 두개의 sub-layer를 갖는다. 첫번째 sub-layer는 multi-head self-attention mechanism이고, 두번째 sub-layer는 간단한 position-wise fully connected feed-forward network이다. 두개의 sub layer에 각각에 대해  layer normalization이 뒤에 오고, 그 다음 residual connection을 사용되었다.
 
     각 sub-layer의 output은 $LayerNorm(x+Sublayer(x))$이고, $Sublayer(x)$는 각 sub-layer function의 output이다. 모델의 모든 sub-layer가 Residual connection을 사용하기 위해, $d_{model}=512$ 크기의 dimension을 갖는 embedding layer들을 output으로써 produce한다.
 
-- Decoder : Decoder 또한 N = 6 개의 동일한 layer의 stack으로 일뤄진다. encoder에서 사용했던 두개의 sub-layer를 사용하고, 추가로 decoder는 encoder stack의 output에 대해 multi-head attention을 수행하는 third sub-layer를 사용한다. (위 그림에서 decoder 2번째 sub-layer를 의미한다.) Encoder와 유사하게 각 sub-layer에 residual connection과 layer normalization을 사용한다. 또한 현재 position이 바로 subsequent positions에 attend하는 것을 방지하기 위하여 decoder의 self-attention sub-layer를 수정하였다. 하나의 position에 의해 offset된 output embeddings과 결합된 masking은 position i에 대한 prediction이 i보다 작은 positions에서의 known output에만 depend하게 보장해준다.
+- Decoder : Decoder 또한 N = 6 개의 동일한 layer의 stack으로 이뤄진다. encoder에서 사용했던 두개의 sub-layer를 사용하고, 추가로 decoder는 encoder stack의 output에 대해 multi-head attention을 수행하는 third sub-layer를 사용한다. (위 그림에서 decoder 2번째 sub-layer를 의미한다.) Encoder와 유사하게 각 sub-layer에 residual connection과 layer normalization을 사용한다. 또한 현재 position이 바로 subsequent positions에 attend하는 것을 방지하기 위하여 decoder의 self-attention sub-layer를 수정하였다. 하나의 position에 의해 offset된 output embeddings과 결합된 masking은 position i에 대한 prediction이 i보다 작은 positions에서의 known output에만 depend하게 보장해준다.
 
-    > 현재 position에서 generate한 output이 아직 generate 되지 않은 output에 attend하면 안되기 때문에 masking을 사용함으로써 이를 해결한다.  어떻게 masking하는지에 대해선 뒤에서 나올것 같다.
+    > 현재 position에서 generate한 output이 아직 generate 되지 않은 output에 attend하면 안되기 때문에 masking을 사용함으로써 이를 해결한다.
     >
 
 ## 3.2 Attention
 
-Attention function은 query와  a set of key-value pair를 ouput에 맵핑시킨다. 이때, query, key, value, output은 모두 vector이다. Ouput은 value에 대해 weighted sum으로 계산된다. 각 value에 할당된 weight들은 대응되는  key에 따른 query의 compatibility function에 의해 계산 된다.
+Attention function은 query와  a set of key-value pair를 output에 맵핑시킨다. 이때, query, key, value, output은 모두 vector이다. Output은 value에 대해 weighted sum으로 계산된다. 각 value에 할당된 weight들은 대응되는  key에 따른 query의 compatibility function에 의해 계산 된다.
 
 ### 3.2.1 Scaled Dot-Product Attention
 
@@ -89,12 +86,9 @@ batch size만큼 한번에 계산하기 위해서 실전에선, query 집합을 
   </figure>
 </div>
 
-가장 많이 사용된 Attention function은 additive attention, dot-product attention이다. Dot-product attention은  scaling factor ${1 \over {\sqrt d_k}}$ 를 제외하고는 동일하다. Additive attention는 single hidden layer와 feed-forward network에 사용하여 compatibility function을 계산한다.  두가지 attention은 theoretical complexity 면에서  유사하지만, 매우 optimized된 matrix multiplication code로 구현될 수 있기 때문에, dot-product attention이 실전에서 훨씬 빠르고 공간 복잡도 면에서도 더 효율적이다.
+가장 많이 사용되는 두가지 Attention function은 additive attention, dot-product attention이다. Dot-product attention은  scaling factor ${1 \over {\sqrt d_k}}$ 를 제외하고는 본 논문에서 사용한 attention과 동일하다. Additive attention는 single hidden layer로 feed-forward network을 사용하여 compatibility function을 계산한다.  두가지 attention은 theoretical complexity 면에서 유사하지만, dot-product attention이 매우 optimized된 matrix multiplication code로 구현될 수 있기 때문에, 실전에서 훨씬 빠르고 공간 복잡도 면에서도 더 효율적이다.
 
-> optimized matrix multiplication이 numpy, pandas에서의 vectorization을 사용하는 matrix연산과 유사한점이 있을꺼 같다. 나중에 한번 파봐야 겠다.
->
-
-$d_k$가 작은 값일 때, 위의 두개 mechanism은 유사하게 동작하지만, large value$d_k$로 scaling하지 않을때 additive attention이 dot product attention보다 성능이 더 뛰어나다. Dimension이 큰 Dot product을 softmax function에 push하게 되면 매우 작은 gradient값을 갖게 된다. 그래서 ${1 \over {\sqrt d_k}}$로 dot product  scaling했다.
+$d_k$가 작은 값일 때, 위의 두개 mechanism은 유사하게 동작하지만, large value$d_k$로 scaling하지 않을때, additive attention이 dot product attention보다 성능이 더 뛰어나다. Dimension이 큰 Dot product을 softmax function에 push하게 되면 매우 작은 gradient값을 갖게 된다. 그래서 ${1 \over {\sqrt d_k}}$로 dot product attention을 scaling했다.
 
 ### 3.2.2 Multi-Head Attention
 
@@ -104,10 +98,9 @@ $d_k$가 작은 값일 때, 위의 두개 mechanism은 유사하게 동작하지
   </figure>
 </div>
 
-$d_{model}$-dimensional keys, values, queries에 대해 single  attention function을 연산하는 것 대신 $d_k,d_k,d_v$ dimension에 대해 학습된 linear projection을 h번 사용하여 keys, valeus, queries을 linearly project하는 것이 더 beneficial했다. 각 query, key, value들에 대해 각각의 projected version에 대해서, parallel하게 attention function을 수행하여 $d_v$ dimension을 갖는 output을 계산했다. 위의 그림처럼 이 값들은 concatenate되어 한번 project되어 final value를 계산하게 된다.
+$d_{model}$-dimensional keys, values, queries에 대해 한번 attention function을 연산하는 것 보다 $d_k,d_k,d_v$ dimension에 대해 학습된 linear projection을 h번 사용하여 keys, valeus, queries을 linearly project하는 것이 더 beneficial하다. 각 query, key, value들에 대해 각각의 projected version에 대해서, parallel하게 attention function을 수행하여 $d_v$ dimension을 갖는 output을 계산했다. 위의 그림처럼 이 값들은 concatenate되어 한번 project되어 final value를 계산하게 된다.
 
-Multi-head attention은 model이 different position에서의 different representation subspace에서의 information을 jointly attend하게 해준다.
-
+Multi-head attention은 model이 different position의 different representation subspace에서 information들을 jointly attend하게 해준다.
 
 <div class="center">
   <figure>
@@ -144,7 +137,7 @@ Different position에 대해선 같은 linear transformation을 사용하는 반
 
 ## 3.4 Embeddings and Softmax
 
-다른 sequence transduction model들과 유사하게, Input token들과 ouput token들을 vector dimension $d_{model}$로 바꾸기 위해 learned embedding을 사용한다. 또한 decoder ouput을 predicted next-token probabilities로 바꾸기 위해 usual learned linear transformation과 softmax function을 사용한다. Model에서,  같은 weight matrix를 two embedding layers와 pre-softmax linear transformation 사이에 공유한다. embedding layer에서는 이 weight들에 대해 $\sqrt{d_{model}}$을 곱해준다.
+다른 sequence transduction model들과 유사하게, Input token들과 output token들을 vector dimension $d_{model}$로 바꾸기 위해 learned embedding을 사용한다. 또한 decoder output을 predicted next-token probabilities로 바꾸기 위해 usual learned linear transformation과 softmax function을 사용한다. Model에서,  같은 weight matrix를 two embedding layers와 pre-softmax linear transformation 사이에 공유한다. embedding layer에서는 이 weight들에 대해 $\sqrt{d_{model}}$을 곱해준다.
 
 ### 3.5 Positional Encoding
 
@@ -175,9 +168,9 @@ learned positional embedding을 사용하여 실험하는 대신, 위의 table r
 
 ![Untitled](/images/2022/paper/ana/img8.png)
 
-Table 1에서 볼 수 있듯이, self-attention layer는 모든 position에 대해 constant number의 sequential하게 실행되는 operation에 연결하는 반면, recurrent layer는 O(n) sequential operation을 필요로 한다. computational complexity면에서 sequence length n이 representation dimensionality d 보다 작을때, self-attention layer들은 recurrent layer들보다 훨씬 빠르다. word-peice, byte-pair representation과 같은 sentence representations을 사용하는 대부분의 MT task의  SOTA model에서 $l<d$이 성립한다.
+Table 1에서 볼 수 있듯이, self-attention layer는 모든 position에 대해 O(1)의 sequential하게 실행되는 operation을 수행하는 반면, recurrent layer는 O(n) sequential operation을 필요로 한다. computational complexity면에서 sequence length n이 representation dimensionality d 보다 작을때, self-attention layer들은 recurrent layer들보다 훨씬 빠르다. word-peice, byte-pair representation과 같은 sentence representations을 사용하는 대부분의 MT task의  SOTA model에서 $l<d$이 성립한다.
 
-long dependency를 포함한 task에서 computational performance를 향상시키기 위해, self-attention은 각각의 output position을 중심으로 한 input sequence 에서 크기 r의 이웃만을 고려하는 것으로 제한되었다. 이것은 maximum path length를 $O(n/r)$으로 증가시킬 수 있다.
+long dependency를 포함한 task에서 computational performance를 향상시키기 위해, self-attention은 각각의 output position을 중심으로 한 input sequence에서 크기 r의 이웃만을 고려하는 것으로 제한되었다. 이것은 maximum path length를 $O(n/r)$으로 증가시킬 수 있다.
 
 k<n인 single convolution layer만 있는 kernel은 all pair of input과 output position을 연결하지 않는다. 그래서 O($log_k(n)$의 dilated convolutions 혹은 O(n/k)의 contiguous kernels와 같은 경우, $O(n/k)$ convolution layers을 쌓는 것을 요구한다. (network에서의 2개의 position에 대해 longest path의 length를 증가시키기 위해)  보통 CNN이 RNN보다 k배 만큼 연산이 expensive하다. 하지만 Separable convolution에 대해선 complexity가 $O(k\cdot n \cdot d +n\cdot d^2)$로 매우 감소한다. 하지만 $k=n$인 경우, Complexity off separable convolution과 우리 model에서 사용한 self-attention layer는  동일하다.
 
