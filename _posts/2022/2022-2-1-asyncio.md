@@ -45,7 +45,7 @@ print(next(gen))
 
 ### Communicating with a generator
 
-`send()`, `throw()` method를 이용하여 generator와 comunicate를 할 수 있다. [genertor.send,throw](https://docs.python.org/3/reference/expressions.html#generator.send)
+`send()`, `throw()` method를 이용하여 generator와 comunicate를 할 수 있다. [genertor.send](https://docs.python.org/3/reference/expressions.html#generator.send)
 
 다음 공식문서를 보면 더 잘 이해 할 수 있다. generator.send(value)로 전달되는 argument의 값은 현재 yield expression의 결과가 되고, generator 로부터 yield되는 다음 값을 반환한다. `generator.throw(type,value)`는 generator안에서 전달된 type의 exception이 Raise되게 해준다.
 
@@ -147,7 +147,7 @@ task object들은 coroutine 함수들을 wrap하는 special future object으로,
 
 이제 본격적으로 Asyncio에 대해 알아보자. asyncio에 대해서 이해하려면 event loop을 이해해야 한다. event loop은 tasks가 준비되었을때 마다 call되어, single working machine으로 그것들을 coordinate한다.
 
-IO part of event loop은  `[select](https://docs.python.org/3/library/select.html#module-select)` 라는  함수로 구현되어 있다. select은 blocking function으로, os에서 정의된 함수로, 소켓으로 데이터가 오거나 나갈때 기다리게 해준다. data를 받을때는, wake up되어, 데이터를 받은 socket을 반환한다. 또는 write을 하기 위해 준비가 된 socket을 반환 받는다.
+IO part of event loop은  [select](https://docs.python.org/3/library/select.html#module-select) 라는  함수로 구현되어 있다. select은 blocking function으로, os에서 정의된 함수로, 소켓으로 데이터가 오거나 나갈때 기다리게 해준다. data를 받을때는, wake up되어, 데이터를 받은 socket을 반환한다. 또는 write을 하기 위해 준비가 된 socket을 반환 받는다.
 
 ayncio를 통해 socket으로 데이터를 보내거나 받을때, 실제로 일어나는 일은, socket이 먼저 즉시 read or sent될 data가 있는지 확인한다. `send.()` buffer가 full이거나 `.recv()` buffer가 비여있다면, 해당 socket이 select function에 의해 등록된다. (recv를 위한 rlist 혹은 send를 위한 wlist에 추가하는 것에 의해 등록된다.)  await 함수가 future object을 새로 만들어 socket과 tie한다.
 
@@ -179,6 +179,8 @@ asyncio는 function을 pause, resume하기 위해 generator를 사용한다. inn
 ### reference
 
 1. [https://stackoverflow.com/questions/49005651/how-does-asyncio-actually-work/51116910#51116910](https://stackoverflow.com/questions/49005651/how-does-asyncio-actually-work/51116910#51116910)
-
+2. [Future.add_done_callback](https://docs.python.org/3/library/asyncio-task.html#asyncio.Future.add_done_callback)
+3. [genertor.send](https://docs.python.org/3/reference/expressions.html#generator.send)
+4.
 > 해당 질문의 답변을 토대로 작성한 글이다. 각기 다른 답변에서 여러 관점으로 asyncio에 대해 설명하고 있다. 마지막에서 두번째로 답한 답변을 읽어 보았더니, async/await과 asyncio를 분리하여 설명하고 있다.
 >
