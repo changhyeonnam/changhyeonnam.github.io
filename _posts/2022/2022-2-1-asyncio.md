@@ -180,5 +180,5 @@ asyncio는 function을 pause, resume하기 위해 generator를 사용한다. inn
 2. [Python docs: Future.add_done_callback](https://docs.python.org/3/library/asyncio-task.html#asyncio.Future.add_done_callback)
 3. [Python docs: generator.send](https://docs.python.org/3/reference/expressions.html#generator.send)
 
-> 해당 질문의 답변을 토대로 작성한 글이다. 각기 다른 답변에서 여러 관점으로 asyncio에 대해 설명하고 있다. 마지막에서 두번째로 답한 답변을 읽어 보았더니, async/await과 asyncio를 분리하여 설명하고 있다.
+> stackoverflow 질문의 답변을 토대로 작성한 글이다. 각기 다른 답변에서 여러 관점으로 asyncio에 대해 설명하고 있다. 마지막에서 두번째로 답한 답변을 읽어 보았더니, async/await과 asyncio를 분리하여 설명하고 있다.
 >
