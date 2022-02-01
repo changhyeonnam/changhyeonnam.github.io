@@ -45,7 +45,7 @@ print(next(gen))
 
 ### Communicating with a generator
 
-`send()`, `throw()` method를 이용하여 generator와 comunicate를 할 수 있다. [generator.send](https://docs.python.org/3/reference/expressions.html#generator.send)
+`send()`, `throw()` method를 이용하여 generator와 communicate를 할 수 있다. [generator.send](https://docs.python.org/3/reference/expressions.html#generator.send)
 
 다음 공식문서를 보면 더 잘 이해 할 수 있다. generator.send(value)로 전달되는 argument의 값은 현재 yield expression의 결과가 되고, generator 로부터 yield되는 다음 값을 반환한다. `generator.throw(type,value)`는 generator안에서 전달된 type의 exception이 Raise되게 해준다.
 
