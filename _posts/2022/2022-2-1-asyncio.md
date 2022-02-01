@@ -137,7 +137,7 @@ Futures object들은 `__await__()`가 내부에 구현되어 있고, 특정한 s
 
 Futures object이 유지하고 있는 result는 어떠한 python object일 수도 있고, exception일 수도 있다.
 
-future object의 중요한 feature 중 하나는, `[add_done_callback()](https://docs.python.org/3/library/asyncio-task.html#asyncio.Future.add_done_callback)` 이라는 method를 갖고 있다는 것이다. 이 method는 future object이 finish 혹은 exception이 raise될때, call된다.
+future object의 중요한 feature 중 하나는, [add_done_callback()](https://docs.python.org/3/library/asyncio-task.html#asyncio.Future.add_done_callback) 이라는 method를 갖고 있다는 것이다. 이 method는 future object이 finish 혹은 exception이 raise될때, call된다.
 
 ### Tasks
 
