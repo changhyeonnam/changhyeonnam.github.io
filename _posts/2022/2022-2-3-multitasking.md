@@ -10,8 +10,6 @@ sitemap :
   priority : 1.0
 ---
 
-
-
 ### Concurrency(동시성), Parallelism(병렬성) in Python
 
 동시성과 병렬성에 대해 간단하게 짚고가면 각 정의는 다음과 같다.
@@ -385,7 +383,7 @@ Duration 3.1328768730163574 seconds
 
 ### When to Use Concurrency
 
-Donald Knuth는 다음과 같이 말했다. “Premature optimization is the root of all evil (or at least most of it) in programming.” 즉, Concurrency가 필요한지 먼저 생각해봐야하고, 그 다음 cpu bound한지, io bound한지 봐야한다. CPU bound의 경우, multi processing을 사용하면된다. IO bound의 경우 rule of thumb은 asyncio를 사용한 경우 이를 사용하고, threading은 꼭 사용해야할 때만 사용하면 된다. asyncio version의 library를 support하지 않는 경우를 제외하곤 대부분의 경우 가장 좋은 속도를 보여준다.
+Donald Knuth는 다음과 같이 말했다. “Premature optimization is the root of all evil (or at least most of it) in programming.” 즉, Concurrency가 필요한지 먼저 생각해봐야하고, 그 다음 cpu bound한지, io bound한지 봐야한다. CPU bound의 경우, multi processing을 사용하면된다. IO bound의 경우 rule of thumb은 asyncio를 사용할 수 있는 경우 이를 사용하고, threading은 꼭 사용해야하는 경우에만 사용하면 된다. asyncio version의 library를 support하지 않는 경우를 제외하곤 대부분의 경우 asyncio가 가장 좋은 속도를 보여준다.
 
 ---
 
