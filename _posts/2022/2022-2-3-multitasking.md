@@ -400,4 +400,4 @@ Donald Knuth는 다음과 같이 말했다. “Premature optimization is the roo
 1.  [real python concurrency](https://realpython.com/python-concurrency/) (해당 post의 image 출처는 real python link입니다.)
 2. [Session Objects](https://docs.python-requests.org/en/latest/user/advanced/)
 3. [What is the difference between lock, mutex and semaphore?](https://stackoverflow.com/questions/2332765/what-is-the-difference-between-lock-mutex-and-semaphore)
-4. [Python pool map and choosing number of processe](https://stackoverflow.com/questions/25058006/python-pool-map-and-choosing-number-of-processes)
+4. [Python pool map and choosing number of process](https://stackoverflow.com/questions/25058006/python-pool-map-and-choosing-number-of-processes)
