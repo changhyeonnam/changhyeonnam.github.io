@@ -1,5 +1,5 @@
 ---
-title: Multitaskinig  in Python
+title: Multitasking  in Python
 Created: January 29, 2022 7:05 PM
 tags:
     - Python
@@ -10,7 +10,7 @@ sitemap :
   priority : 1.0
 ---
 
-Multitaskinig  in Python에서는 다음과 같은 주제를 다룰 예정이다.
+Multitasking  in Python에서는 다음과 같은 주제를 다룰 예정이다.
 
 1. Concurrency(동시성), Parallelism(병렬성)
 2. I/O bound process
