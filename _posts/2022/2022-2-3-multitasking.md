@@ -1,5 +1,5 @@
 ---
-title: Multitasking  in Python
+title: Multitasking in Python
 Created: February 3, 2022 7:05 PM
 tags:
     - Python
@@ -9,6 +9,9 @@ sitemap :
   changefreq : daily
   priority : 1.0
 ---
+>
+Multitasking in Python Post에서는 Concurrency, Parallelism에 따른 I/O Bound task, CPU Bound task의 성능을 검증하는 내용을 다룹니다. Concurrency와 관련해서는 Threading과 asyncio, Parallelism과 관련해서는 mutliprocessing을 다룹니다.
+>
 
 ### Concurrency(동시성), Parallelism(병렬성) in Python
 
