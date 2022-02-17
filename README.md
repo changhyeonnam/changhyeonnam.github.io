@@ -1,4 +1,4 @@
->copied from lanyonm.github.io
+>design was copied from lanyonm.github.io. I customized blog. 
 
 # Jekyll source for blog.lanyonm.org
 Read more here: [GitHub User Pages](https://help.github.com/articles/user-organization-and-project-pages).
