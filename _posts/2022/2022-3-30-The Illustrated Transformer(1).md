@@ -1,7 +1,7 @@
 ---
 title: The Illustrated Transformer(1)
 layout: post
-Created: February 11, 2022 2:39 PM
+Created: March 30, 2022 23:30 PM
 tags:
     - Natural Language Processing
 use_math: true
