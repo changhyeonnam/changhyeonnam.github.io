@@ -24,8 +24,6 @@ sitemap :
 
 AI 모델 개발 파이프라인은 크게 3단계 의사결정을 거치게 된다.
 
-![Untitled](imgur.com//Untitled.png)
-
 1. 어떤 feature를 쓸지 결정. (직접 db에서 data를 꺼내어 feature를 개발)
 2. 알고리즘 디자인 (gausssian, Tweedie, 최신 최적화 기법)
 3. 학습과정 (batch, learning rate, etc)
@@ -34,7 +32,7 @@ AI 모델 개발 파이프라인은 크게 3단계 의사결정을 거치게 된
 
 ### 1.2 최신 AI 연구 트렌드 TL;DR (# 선크게후고민)
 
-![Untitled 1](imgur.com//Untitled%201_s86zcdyzb.png)
+
 
 최신 ai 연구는 Big이 대세이다. Model, Data, Resource 모두 크게 하는 추세이다. 큰 모델은 성능은 좋지만 서비스 측면에서 빠른 latency를 만족시키 어렵고, 많은 GPU를 항상 사용할 수도 없다. 그래서 서비스에 big model(=pretrained model)을 직접 사용하는 것이 아니라 knowledge transfer를 사용한다. Transfer learning이라고 부르기도 하는데, 큰 모델이 학습한 것을 작은 모델에 주입하여, 작은모델을 이용하여 대신 서비스를 하는 것이다.
 
