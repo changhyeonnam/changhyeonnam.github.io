@@ -160,7 +160,7 @@ CLUE는 SimCLR와 마찬가지로 contrastive model이다. CLUE에서는 augment
 
 ![Untitled 9](https://i.imgur.com/nuoPvkH.png)위의 그래프들을 petaflop/s-day(24시간 동안 초당 10^15개의 부동소수점 연산을 수행하는 데에 소요되는 전력)에 따라 그린 그래프이다**.** Batch size가 작다면 Compute Resource를 투자해 모델 크기를 키워도 성능이 향상되지 않는다. Batch size가 크다면 모델 크기를 증가시켜 성능을 향상시킬 수 있다.
 
-Compute Resouce는 데이터 셋 길이보다 모델 크기에 먼저 투자하는게 좋다.
+Compute Resource는 데이터 셋 길이보다 모델 크기에 먼저 투자하는게 좋다.
 
 ### 2.4 CLUE(analysis)
 
