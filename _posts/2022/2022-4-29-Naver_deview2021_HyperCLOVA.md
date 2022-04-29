@@ -1,5 +1,5 @@
 ---
-title: HyperCLOVA에게 무엇이든 물어보살
+title: Business AI 고민? HyperCLOVA에게 무엇이든 물어보살
 layout: post
 Created: April 28, 2022 9:31 AM
 tags:
