@@ -1,5 +1,5 @@
 ---
-title: The Illustrated Transformer(1)
+title: The Illustrated Transformer
 layout: post
 Created: March 30, 2022 23:30 PM
 tags:
