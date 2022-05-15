@@ -1,7 +1,7 @@
 ---
 title: Knowledge-enhanced text generation on colloquial language
 layout: post
-Created: April 28, 2022 9:31 AM
+Created: May 12, 2022 7:45 PM
 tags:
     - Conference
     - Natural Language Processing
