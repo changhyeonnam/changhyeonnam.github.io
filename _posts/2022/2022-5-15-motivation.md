@@ -21,7 +21,7 @@ sitemap :
 ### Paper review & Toy Project
 
 1. 현재 집현전 3기 advanced에 참여하여 매 주 EMNLP, NACCL 등의 최신 논문을 리뷰하고 있다. 집현전 스터디에서 발표한 논문들을 리뷰할 예정이다.
-2. PLM들의 대표적인 모델의 pretraing objective나 특징들은 간단하게 알고 있었지만, 각 잡고 모든 논문을 읽어본 것이 아니다. 또한 난 논문을 다 구현해봐야 80%이상 이해 되었다고 생각한다. 그래서 NLP의 downstream task (예를들어, Machine-translation, text summarization)을 rnn부터 PLM들을 이용한 최신 경향까지 하나씩 구현해 보면서, 리뷰할 예정이다. 현재는 MT task를 하나씩 구현해보고 있다. 나중에는 Constrastive Learning을 이용하여 embedding을 학습하는 SimCSE도 읽어보고 구현해보고 싶다!  
+2. PLM들의 대표적인 모델의 pretraing objective나 특징들은 간단하게 알고 있었지만, 각 잡고 모든 논문을 읽어본 것이 아니다. 또한 난 논문을 다 구현해봐야 80%이상 이해 되었다고 생각한다. 그래서 NLP의 downstream task (예를들어, Machine-translation, text summarization)을 rnn부터 PLM들을 이용한 최신 경향까지 하나씩 구현해 보면서, 리뷰할 예정이다. 현재는 MT task를 하나씩 구현해보고 있다. 
 3. Recommendation system 관련해서도 diversity, sparse problem을 어떻게 다루는지 발전 양상도 다뤄볼 예정이다. Naver devops2021/2020이나 kakao if 컨퍼런스 에서 다뤘던 추천시스템 발표도 리뷰할 예정이다.
 
 ### Backend
