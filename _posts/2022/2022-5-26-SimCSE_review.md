@@ -1,7 +1,7 @@
 ---
 title: SimCSE: Simple Contrastive Learning of Sentence Embeddings
 layout: post
-Created: May 25, 2022 1:13 PM
+Created: May 26, 2022 1:00 AM
 tags:
     - Paper
     - Natural Language Processing
