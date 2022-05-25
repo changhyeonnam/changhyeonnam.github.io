@@ -3,8 +3,8 @@ title: 스프링 입문 | 스프링 웹 개발 기초
 layout: post
 Created: May 17, 2022 7:21 PM
 tags:
-    - java
-    - spring boot
+    - Java
+    - Spring boot
 use_math: true
 comments: true
 sitemap :

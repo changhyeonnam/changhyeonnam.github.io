@@ -3,8 +3,8 @@ title: 스프링 입문 | 회원 관리 예제 - 백엔드 개발
 layout: post
 Created: May 18, 2022 11:16 PM
 tags:
-    - java
-    - spring boot
+    - Java
+    - Spring boot
 use_math: true
 comments: true
 sitemap :

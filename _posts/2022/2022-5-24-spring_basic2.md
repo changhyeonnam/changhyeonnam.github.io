@@ -3,8 +3,8 @@ title: 스프링  입문 | 스프링 빈과 의존관계 설정
 layout: post
 Created: May 24, 2022 8:59 PM
 tags:
-    - java
-    - spring boot
+    - Java
+    - Spring boot
 use_math: true
 comments: true
 sitemap :
