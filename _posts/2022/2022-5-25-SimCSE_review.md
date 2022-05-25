@@ -6,7 +6,6 @@ tags:
     - Paper
     - Natural Language Processing
     - Contrastive Learning
-
 use_math: true
 comments: true
 sitemap :
@@ -15,4 +14,3 @@ sitemap :
 ---
 
 > SimCLR에서 사용한 Contrastive learning을 통해 sentence embedding을 표현하고자 연구 되었다. SimCSE에서의 핵심은 다음과 같다. Unsupervised SimCSE에서는 input sentence itself를 예측하는 과정을 통해 학습하였다. Dropout mask를 minimal augmentation으로써 사용하였는데, 단순히 dropout만으로 기존의 모델들의 성능을 능가했다. Supervised SimCSE에서는 NLI dataset을 이용하여 supervised signal을 제공하였다. SimCSE는 sentence embedding의 alignment, uniformity를 향상시키며, 이 과정에서 embedding space의 anisotropic(비등방성)을 완화시켰다. [[Paper Link]](https://arxiv.org/abs/2104.08821)
->
