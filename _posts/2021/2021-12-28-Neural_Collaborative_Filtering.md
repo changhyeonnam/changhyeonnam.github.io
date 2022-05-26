@@ -1,5 +1,5 @@
 ---
-title: Neural Collaborative Filtering
+title: Neural Collaborative Filtering (WWW 2017)
 layout: post
 Created: December 27, 2021 2:12 PM
 tags:
