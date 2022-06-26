@@ -86,7 +86,7 @@ Wiki에서는 Perplexity를 다음과 같이 정의한다.
 
 본질적으로 Perplexity는 불확실성의 척도라고 이해할 수 있다. LM의 ppl은 뒤 따라오는 symbol을 predict할때의 level of ppl이라고 할 수 있다. 예를들어, Entropy of three bits인 LM이 있다고 해보자. (각 비트는 2가지 경우의 수가 있다. 0아니면 1) Entropy가 3비트라는 것은 following(다음에 따라오는) symbol을 예측할 때, 8가지 가능한 옵션 중에 골라야 한다는 것을 의미한다. 즉 우리는 해당 LM이 perplexity of 8를 갖는다고 할 수 있다.
 
-![Untitled 6](https://i.imgur.com/MYDN2rD.png)
+![Untitled 6](https://i.imgur.com/MYDN2rDm.png)
 즉, Empirical distribution P와 우리의 LM이 학습하는 distribution인 Q의 ppl을 위와 같이 표현할 수 있다.
 
 ---
@@ -137,7 +137,7 @@ Perplexity를 cross entropy로, 그 반대로도 바꿀 수 있기 때문에, cr
     ![Untitled 9](https://i.imgur.com/RdHnuicm.png)
 2. Entropy의 확률 분포는 uniform할 때, 최대가 된다. 같은 set of symbol을 갖는 language에 대해서, 모든 symbol이 모두 같은 확률을 같는 langauge가 maximal entropy를 갖는다.
     $\mid V \mid$ : 확률 분포 P를 갖는 임의의 언어의 vocabulary size라고 하자.
-  ![Untitled 10](https://i.imgur.com/23rhvZom.png)
+  ![Untitled 10](https://i.imgur.com/23rhvZol.png)
     27개(공백을 추가한)의 symbol을 갖는 영어의 character-level entropy는 다음과 같다.
 
     ![Untitled 11](https://i.imgur.com/CFqLrPqm.png)
