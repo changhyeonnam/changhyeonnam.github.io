@@ -16,9 +16,9 @@ sitemap :
 
 ---
 
-기본적으로 Language Model 성능은 perplexity, cross entropy, bits-per-charactre(BPC)등을 사용하여 측정 한다. 또는 NLP downstream task에서의 성능을 사용하기도 한다. GLUE와 같은 것이 대표적이다.
+기본적으로 Language Model 성능은 perplexity, cross entropy, bits-per-character(BPC)등을 사용하여 측정 한다. 또는 NLP downstream task에서의 성능을 사용하기도 한다. GLUE와 같은 것이 대표적이다.
 
-하지만 점점 더 많은 metric을 사용하게 되면 LM사이에 성능을 평가하기 어려워진다. 예를들어  LM 성능을 특정 downstream task에서의 성능으로 표현하게 되면 LM의 성능이 reliable하다고 할 수 없다.
+하지만 점점 더 많은 metric을 사용하게 되어, LM사이에 성능을 평가하기 어려워 졌다. 예를들어  LM 성능을 특정 downstream task에서의 성능으로 표현하게 되면 LM의 성능이 reliable하다고 할 수 없다.
 
 Perplexity를 최소화 시키는 것을 목표로 하는 대부분의 LM에 대해서 한가지 혼란스러운 점은 perplexity의 lower bound(하한)은 어떤 값인지에 대한 것이다. Perplexity를 0으로 하는것이 불가능하기 때문에, 우리는 optimal value를 알 수 없으며, 얼마나 낮아야 우리의 LM이 좋은지 알 수 있을까?  
 
