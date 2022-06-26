@@ -76,7 +76,7 @@ Shannon은 language Entropy H를 다음과 같이 표현하였다. 해당 정의
 1. $H(P)$ : P에 최적화된 코드를 사용하여 P의 결과를 인코딩하는 데 필요한 평균 비트수.
 2. $D_{KL}(P\mid \mid Q)$ : Q에 최적화된 코드를 사용하여 P의 결과를 인코딩하는 데 필요한 추가 비트 수.
 
-이때 empirial entropy인 $H(P)$가 unoptimizable하기 때문에, Language Model을 학습할때 objective인 cross entropy loss를 최소하는 하는것은 KL divergence인 $D_{KL}(P\mid \mid Q)$를 최소화 시키는 것과 같다. 즉, $D_{KL}(P||Q)$는 empirical distribution of language로부터 학습한 우리의 LM 모델의 objective이다.
+이때 empirial entropy인 $H(P)$가 unoptimizable하기 때문에, Language Model을 학습할때 objective인 cross entropy loss를 최소하는 하는것은 KL divergence인 $D_{KL}(P\mid \mid Q)$를 최소화 시키는 것과 같다. 즉, $D_{KL}(P\mid \mid Q)$는 empirical distribution of language로부터 학습한 우리의 LM 모델의 objective이다.
 
 ---
 
