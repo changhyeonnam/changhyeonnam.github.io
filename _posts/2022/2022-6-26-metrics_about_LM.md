@@ -1,10 +1,8 @@
 ---
 title: Metrics about Language Model
-Created: May 25, 2022 8:59 PM
+Created: June 26, 2022 11:23 PM
 tags:
-  - Paper
   - Natural Language Processing
-  - Contrastive learning
 
 use_math: true
 comments: true
