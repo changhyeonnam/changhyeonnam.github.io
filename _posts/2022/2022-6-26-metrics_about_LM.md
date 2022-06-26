@@ -11,7 +11,7 @@ sitemap :
   priority : 1.0
 ---
 
-> 최근까지 나온 여러 PLM 모델들은 PPL(Perplexity)를 metric으로 사용하고 있다. 하지만 vocab size, tokenizer, 학습된 여러 데이터셋에 따라 모델의 성능이 달라질 수 있다는 생각을 했고, 어떻게 ppl을 사용하는 지 궁금하여 글을  작성하게 되었다. 이번 글에서는 Entropy, Cross Entropy, Perplexity를 포함한 metric과 자주 사용하는 GLUE, BLUE등도 정리해볼 생각이다. 기본적으로 다음 [[Link]](https://thegradient.pub/understanding-evaluation-metrics-for-language-models/)를 참고하여 작성했다.
+> 최근까지 나온 여러 PLM 모델들은 PPL(Perplexity)를 metric으로 사용하고 있다. 하지만 vocab size, tokenizer, 학습된 여러 데이터셋에 따라 모델의 성능이 달라질 수 있다는 생각을 했고, 어떻게 ppl을 사용하는 지 궁금하여 글을  작성하게 되었다. 이번 글에서는 Entropy, Cross Entropy, Perplexity를 포함한 metric과 Downstream task의 metric으로 자주 사용하는 GLUE, BLUE등도 정리해볼 생각이다. 기본적으로 다음 [[Link]](https://thegradient.pub/understanding-evaluation-metrics-for-language-models/)를 참고하여 작성했다.
 >
 
 ---
