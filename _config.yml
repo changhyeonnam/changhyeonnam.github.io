@@ -6,6 +6,7 @@ exclude: [Gemfile, Gemfile.lock, README.md]
 
 author: 'ChangHyeon Nam'
 disqus_shortname: changhyeon
+mathjax: true # whether support mathjax
 
 future: true
 
