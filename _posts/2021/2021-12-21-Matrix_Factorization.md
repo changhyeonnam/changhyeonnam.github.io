@@ -3,7 +3,7 @@ title: Matrix Factorization Techniques for Recommender Systems
 layout: post
 Created: November 17, 2021 4:49 PM
 tags:
-    - Recommender system
+    - Recommendation System
     - Paper
 use_math: true
 comments: true
