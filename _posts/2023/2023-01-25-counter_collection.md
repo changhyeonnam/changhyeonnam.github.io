@@ -74,5 +74,29 @@ Counter object의 함수를 살펴보자.
 4. total() : count의 합을 반환해 준다. → python 3.10에서부터 가능하다. (3.8 사용중)
 
 ---
+
+Leetcode에서 [621. Task Scheduler](https://leetcode.com/problems/task-scheduler/description/?envType=study-plan&id=level-2) 문제를 파이썬으로 풀다가 정리한 내용이다. 여기에선 value간만 필요해서, values()로 반환해서 dict values 타입을 사용해서 풀었다. 혹시나 나중에 또 쓸일이 있을까봐 기록해 둔다.
+
+```python
+from collections import Counter
+class Solution(object):
+    def leastInterval(self, tasks, n):
+        """
+        :type tasks: List[str]
+        :type n: int
+        :rtype: int
+        """
+        c = Counter(tasks).values()
+        max_cnt = max(c)
+        part_cnt = max_cnt-1
+        max_freq = c.count(max_cnt)
+        empty_slots = part_cnt * (n-(max_freq-1))
+        available_tasks = len(tasks)- max_cnt * max_freq
+        idles = max(0, empty_slots - available_tasks)
+        answer = len(tasks) + idles
+        return answer
+```
+
+---
 ## Reference
 1. [python document : collections.Counter](https://docs.python.org/3/library/collections.html#collections.Counter)
