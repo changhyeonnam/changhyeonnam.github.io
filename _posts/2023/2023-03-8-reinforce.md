@@ -3,7 +3,7 @@ title: REINFORCE 알고리즘 구현
 layout: post
 Created: March 8, 2023 1:12 PM
 tags:
-    - Machine Learning
+    - Reinforcement Learning
 use_math: true
 comments: true
 sitemap :
