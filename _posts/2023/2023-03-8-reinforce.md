@@ -11,12 +11,12 @@ sitemap :
   priority : 1.0
 ---
 
-> Policy Gradient method 중 하나인 REINFORC를 구현하는 중, Categorical 함수를 사용해야 했다. torch.distributions 패키지와 Categorical 함수와 관련하여 pytorch 공식문서를 참고하였고, 기존의 알고있던 REINFORCE 알고리즘의 일부분을 같이 정리해 보았다.
+> Policy Gradient method 중 하나인 REINFORCE를 구현하는 중, Categorical 함수를 사용해야 했다. torch.distributions 패키지와 Categorical 함수와 관련하여 pytorch 공식문서를 참고하였고, 기존의 알고있던 REINFORCE 알고리즘의 일부분을 같이 정리해 보았다.
 >
 
 ---
 
-`distributions` package는 parameterizable probability distributions와 sampling functions을 포함하고 있다. 이 패키지를 이용하면 stochastic computation graphs와stochastic gradient estimators for optimization을 구현해 줄 수 있다.
+`distributions` package는 parameterizable probability distributions와 sampling functions을 포함하고 있다. 이 패키지를 이용하면 stochastic computation graphs와 stochastic gradient estimators for optimization을 구현해 줄 수 있다.
 
 Parameterizable probability distributions을 직접 학습하는 것은 불가능하고, torch 공식 문서에서는 대표적인 두가지 방법인 Score function(REINFORCE)와 pathwise derivative estimator을 설명한다. 두번째 방법에 대해서는 아직 잘 몰라서, 첫번째 방법만 간단하게 설명하고 넘어가려 한다.
 
