@@ -44,17 +44,17 @@ Choice overload는 좋은 대안책들로 이루어진 large set에서 선택하
 
 ### 2.1 Choice overload
 
-Iyengar과 Lepper가 처음 choice overload effect를 증명하였다. 큰 사이즈의 choice set에 끌리지만, 그 동시에 choice difficulty가 증가하고, choice satisfaction이 감소 한다는 것을 잼 (그 잼 맞다. 딸기잼) 미각부스에서의  실험으로 이를 증명했다.
+Iyengar과 Lepper가 처음으로 choice overload effect를 증명하였다. 큰 사이즈의 choice set에 끌리지만, 그 동시에 choice difficulty가 증가하고, choice satisfaction이 감소 한다는 것을 잼 `(그 잼 맞다. 딸기잼)` 미각부스에서의  실험으로 이를 증명했다.
 
-24개의 타입으로 이루어진 잼이 6개의 타입으로 이루어진 잼보다 덜 attractive하다는 것을 실험 했고, 사람들은 더 large set의 미각 부스에 더 많이 attract되었다. 하지만 잼들을 맛본 후 사람들이 구매를 할때, small set의 미각부스에서는 30%, large st에서는 3%의 비율의 사람이 구입을 하였다. 즉, 사람들은 더 small set에서 더 높은 만족도를 보였다는 것을 의미한다.
+24개의 타입으로 이루어진 잼 미각부스와 6개의 타입으로 이루어진 잼 미각부스를 이용하여 실험을 했다. 사람들은 large set의 미각 부스에 더 많이 attract되었다. 하지만 잼들을 맛본 후 사람들이 구매를 할때는 small set의 미각부스에서는 30%, large set에서는 3%의 비율의 사람이 구입을 하였다. 즉, 사람들은 더 small set에서 더 높은 만족도를 보였다는 것을 의미한다.
 
-Choice overload에 기저하는 메커니즘은 무엇일까? 아이템의 세트가 증가됨으로써, 그 세트의 전체 이득 (=the sum of the benefits of each option) 이 증가하기 때문에 더 attractive해진다. 하지만, 그와 동시에 결정과 관련된 심리학적 비용을 증가시켜 결정을 더 어렵게 만든다. 많은 아이템으로부터 제공된 이득은 모든 아이템을 비교하여 선택하는 비용을 능가하고, small set에 비하여 잘못된 선택할 가능성(potential regret associated with the choice)을 증가시키고, small set에 비해 더 높은 퀄리티의 아이템을 고를 수도 있다는 기대를 증가시킨다.  그 결과 크기가 large set는 choice deferral(not choosing at all)할 가능성을 증가시키거나 선택된 옵션에 대해 감소된 만족도를 확인할 수 있었다.
+Choice overload에 기저하는 메커니즘은 무엇일까? 아이템의 세트가 증가됨으로써, 그 세트의 전체 이득 (=the sum of the benefits of each option) 이 증가하기 때문에 더 attractive해진다. 하지만, 그와 동시에 결정과 관련된 심리학적 비용을 증가시켜 결정을 더 어렵게 만든다. 많은 아이템으로부터 제공된 이득은 모든 아이템을 비교하여 선택하는 비용보다 크고, small set에 비하여 잘못된 선택할 가능성(potential regret associated with the choice)을 증가시키고, small set에 비해 더 높은 퀄리티의 아이템을 고를 수도 있다는 기대를 증가시킨다.  그 결과 large set는 choice deferral(not choosing at all)할 가능성을 증가시키거나 선택된 옵션에 대해 감소된 만족도를 확인할 수 있었다.
 
 ![Untitled](https://i.imgur.com/N0kAyxD.png)
 
-Reutskaja,Hogarth는 benefit of large set은 충분히 만족하지만, 비용이 이득보다 더 빠른 속도로 주장하고, 세트 크기에 대한 함수가 위와 같은 inverted U shape of satisfaction형태가 된다고 한다.
+Reutskaja,Hogarth는 benefit of large set은 충분히 만족하지만, 비용이 이득보다 더 빠른 속도로 증가한다. 위와 같이 set size와 satisfaction에 대한 함수가 inverted U shape형태가 된다고 한다.
 
-정리하면, Choice overload는 두가지 기저하는 concept들이 상호작용한 결과로 볼 수 있다.
+정리하면, Choice overload는 두가지 기저하는 concept들이 상호작용한(interplay) 결과로 볼 수 있다.
 
 1. Item set attractiveness
 2. choice difficulty
