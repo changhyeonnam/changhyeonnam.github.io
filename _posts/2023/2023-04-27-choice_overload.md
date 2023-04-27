@@ -22,9 +22,9 @@ sitemap :
 
 많은 사람들이  large, high quality recommendation set에 끌리지만, Choice overload에 대한 심리학 연구에서는 많은 매력적인 아이템들을 포함하는 recommendation set에서 아이템을 고르는 것은 매우 어려운 task라는 것을 보여주고 있다.
 
-MovieLens 데이터 세트를 적용한 MF 기반 실험에서 추천 세트 사이즈, 세트 퀄리티을 이용하여 perceived variety, recommendation set attractiveness, choice difficulty, satisfaction with chosen item에 대해 조사해보고자 했다.  
+MovieLens 데이터 세트를 적용한 MF 기반 실험에서 recommendation set size, set quality을 이용하여 perceived variety, recommendation set attractiveness, choice difficulty, satisfaction with chosen item에 대해 조사해보고자 했다.  
 
-그 결과는 좋은 아이템 들만을 포함하는 large set가 small set보다 반드시 높은 선택 만족도를 의미하지 않는다고 했다. 그 이유는 증가된 recommendation set의 attractiveness가 recommendation set에서 선택하는 것의 증가된 어려움으로 상쇠되기 때문이라고 한다.
+그 결과는 좋은 아이템 들만을 포함하는 large set가 small set보다 반드시 높은 choice satisfaction를 의미하지 않는다고 했다. 그 이유는 증가된 recommendation set의 attractiveness가 increased difficulty of choosing from these sets 으로 상쇄되기 때문이라고 한다.
 
 ## 1. Introdocution
 
@@ -74,7 +74,7 @@ Choice overload을 대해 조절할 수 있는 것 중 하나는 comparability o
 
 이 논문의 목표는 choice overload effect를 연구하고, 추천시스템이 이러한 effect를 본질적으로 야기하려는 경향이 있는지 보이고자 하였다. 실험의 결과는 Choice overload가 recommendation set attractiveness와 choice difficulty사이에서 상호작용하는 것을 조절함으로써 제어된다는 것을 보여준다. Top-5은 다양성을 제한하지만, 선택하기 쉬웠다. Top-20은 다양하지만, 선택하기 어려웠다. Lin-20은 다양했고 선택하기 쉬웠지만 attractiveness가 떨어졌다. (Lin-20은 Top-5에 나머지 15개를 19등, 199등, .., 1499등으로 채운 추천리스트이다.)
 
-그러면 optimal number of recommendations의 값은 무엇일까? 위의 Invereted U-shape의 그래프에서 볼 수 있는 item set size와 satisfaction indeed의 관계를 고려하면, 5와 20 사이의 추천 개수가 제일 좋다는 것을 알 수 있었다. 이 논문의 결과에 따른 ideal number는 7~10개의 아이템 수라고 한다. 
+그러면 optimal number of recommendations의 값은 무엇일까? 위의 Invereted U-shape의 그래프에서 볼 수 있는 item set size와 satisfaction indeed의 관계를 고려하면, 5와 20 사이의 추천 개수가 제일 좋다는 것을 알 수 있었다. 이 논문의 결과에 따른 ideal number는 7~10개의 아이템 수라고 한다.
 
 ---
 
