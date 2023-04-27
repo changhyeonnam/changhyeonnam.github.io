@@ -1,5 +1,5 @@
 ---
-title: Understanding Choice Overload in Recommender Systems
+title: Understanding Choice Overload in Recommender Systems (RecSys 2010)
 layout: post
 Created: April 27, 2023 7:14 AM
 tags:
