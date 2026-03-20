@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --c-bg: #ffffff;
+  --c-text: #111111;
+  --c-text-muted: #888888;
+  --c-border: #e4e4e7;
+}
+
+.dark {
+  --c-bg: #111111;
+  --c-text: #eeeeee;
+  --c-text-muted: #888888;
+  --c-border: #27272a;
+}
+
+html {
+  background-color: var(--c-bg);
+}
+
+body {
+  background-color: var(--c-bg);
+  color: var(--c-text);
+  transition: background-color 0.15s, color 0.15s;
+}
+
+/* Blog prose content */
+.prose-content p {
+  color: var(--c-text-muted);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.prose-content h2 {
+  color: var(--c-text);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-content h3 {
+  color: var(--c-text);
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-content a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.prose-content a:hover {
+  color: #1e40af;
+}
+
+.prose-content code {
+  font-size: 0.85em;
+  background-color: var(--c-text-muted);
+  opacity: 0.2;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+.prose-content pre {
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+.prose-content pre code {
+  background: none;
+  opacity: 1;
+  padding: 0;
+}
