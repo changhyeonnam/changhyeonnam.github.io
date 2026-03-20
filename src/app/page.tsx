@@ -12,12 +12,13 @@ export default function Home() {
             Changhyeon Nam
           </h1>
           <p className="mb-4 leading-relaxed" style={{ color: 'var(--c-text)' }}>
-            I build efficient AI systems at scale.
+            At SK Telecom, I build GPU platforms for LLM training and serving, covering the full
+            stack from infrastructure to application.
           </p>
           <p className="mb-4 leading-relaxed" style={{ color: 'var(--c-text)' }}>
-            At SK Telecom, I push GPU clusters to their limits—optimizing LLM inference and
-            training across the full stack, from low-level infrastructure to distributed
-            orchestration (K8s, Slurm).
+            I developed LLM pretraining and finetuning pipelines on Kubernetes and Slurm, and on
+            the inference side, I focus on disaggregated serving architectures and KV cache
+            tiering, optimizing performance across the system (Kubernetes, NVIDIA Dynamo, etc).
           </p>
           <p className="mb-4 leading-relaxed" style={{ color: 'var(--c-text)' }}>
             Previously, I worked as an ML Engineer Intern at NAVER Clova and KIST, building
