@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 function SunIcon() {
   return (
@@ -30,6 +31,7 @@ function MoonIcon() {
 
 export function Nav() {
   const { resolvedTheme, setTheme } = useTheme()
+  const { lang, setLang } = useLanguage()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => setMounted(true), [])
@@ -45,30 +47,50 @@ export function Nav() {
       </Link>
 
       {mounted && (
-        <div
-          className="flex items-center gap-0.5 rounded-full p-1"
-          style={{ border: '1px solid var(--c-border)' }}
-        >
-          {[
-            { value: 'light', icon: <SunIcon /> },
-            { value: 'dark', icon: <MoonIcon /> },
-          ].map((opt) => {
-            const isActive = resolvedTheme === opt.value
-            return (
+        <div className="flex items-center gap-2">
+          {/* Language toggle */}
+          <div
+            className="flex items-center gap-0.5 rounded-full p-1"
+            style={{ border: '1px solid var(--c-border)' }}
+          >
+            {(['en', 'ko'] as const).map((l) => (
+              <button
+                key={l}
+                onClick={() => setLang(l)}
+                className="flex h-6 w-8 items-center justify-center rounded-full text-xs font-medium transition-all duration-150"
+                style={{
+                  backgroundColor: lang === l ? 'var(--c-text)' : 'transparent',
+                  color: lang === l ? 'var(--c-bg)' : 'var(--c-text-muted)',
+                }}
+              >
+                {l.toUpperCase()}
+              </button>
+            ))}
+          </div>
+
+          {/* Theme toggle */}
+          <div
+            className="flex items-center gap-0.5 rounded-full p-1"
+            style={{ border: '1px solid var(--c-border)' }}
+          >
+            {[
+              { value: 'light', icon: <SunIcon /> },
+              { value: 'dark', icon: <MoonIcon /> },
+            ].map((opt) => (
               <button
                 key={opt.value}
                 onClick={() => setTheme(opt.value)}
                 aria-label={opt.value}
                 className="flex h-6 w-6 items-center justify-center rounded-full transition-all duration-150"
                 style={{
-                  backgroundColor: isActive ? 'var(--c-text)' : 'transparent',
-                  color: isActive ? 'var(--c-bg)' : 'var(--c-text-muted)',
+                  backgroundColor: resolvedTheme === opt.value ? 'var(--c-text)' : 'transparent',
+                  color: resolvedTheme === opt.value ? 'var(--c-bg)' : 'var(--c-text-muted)',
                 }}
               >
                 {opt.icon}
               </button>
-            )
-          })}
+            ))}
+          </div>
         </div>
       )}
     </nav>

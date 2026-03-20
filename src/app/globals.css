@@ -16,14 +16,10 @@
   --c-border: #27272a;
 }
 
-html {
-  background-color: var(--c-bg);
-}
-
+html,
 body {
   background-color: var(--c-bg);
   color: var(--c-text);
-  transition: background-color 0.15s, color 0.15s;
 }
 
 /* Blog prose content */
