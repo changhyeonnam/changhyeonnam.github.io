@@ -6,7 +6,7 @@ export type Post = {
 }
 
 // Add your posts here (newest first).
-// For each post, create a matching page at src/app/blog/<slug>/page.tsx
+// For each post, create a matching page at src/app/post/<slug>/page.tsx
 //
 // Example:
 // {

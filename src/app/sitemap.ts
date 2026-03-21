@@ -7,7 +7,7 @@ const baseUrl = 'https://changhyeonnam.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const postUrls = posts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
+    url: `${baseUrl}/post/${post.slug}`,
     lastModified: new Date(post.date),
   }))
 

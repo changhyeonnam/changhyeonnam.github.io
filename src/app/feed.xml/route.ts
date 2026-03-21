@@ -10,10 +10,10 @@ export function GET() {
       (post) => `
     <item>
       <title><![CDATA[${post.title}]]></title>
-      <link>${baseUrl}/blog/${post.slug}</link>
+      <link>${baseUrl}/post/${post.slug}</link>
       <description><![CDATA[${post.description ?? ''}]]></description>
       <pubDate>${new Date(post.date).toUTCString()}</pubDate>
-      <guid isPermaLink="true">${baseUrl}/blog/${post.slug}</guid>
+      <guid isPermaLink="true">${baseUrl}/post/${post.slug}</guid>
     </item>`,
     )
     .join('')

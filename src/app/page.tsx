@@ -87,7 +87,7 @@ export default function Home() {
                   {post.date}
                 </span>
                 <Link
-                  href={`/blog/${post.slug}`}
+                  href={`/post/${post.slug}`}
                   className="tracking-tight text-sm hover:underline"
                   style={{ color: 'var(--c-text)' }}
                 >

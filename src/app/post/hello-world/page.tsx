@@ -28,12 +28,12 @@ export default function HelloWorld() {
             <p>This is a sample blog post. Replace this content with your own writing.</p>
             <p>
               Each post lives in its own directory under{' '}
-              <code>src/app/blog/your-slug/page.tsx</code>. This makes it easy to add interactive
+              <code>src/app/post/your-slug/page.tsx</code>. This makes it easy to add interactive
               React components — calculators, visualizations, demos — directly inside a post.
             </p>
             <h2>Adding a new post</h2>
             <p>
-              1. Create <code>src/app/blog/your-slug/page.tsx</code>
+              1. Create <code>src/app/post/your-slug/page.tsx</code>
               <br />
               2. Add the entry to <code>src/lib/posts.ts</code>
               <br />
