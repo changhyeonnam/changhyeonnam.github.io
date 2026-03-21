@@ -3,7 +3,7 @@ import { posts } from '@/lib/posts'
 export const dynamic = 'force-static'
 
 export function GET() {
-  const baseUrl = 'https://changhyeonnam.github.io'
+  const baseUrl = 'https://changhyeonnam.com'
 
   const items = posts
     .map(

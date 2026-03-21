@@ -3,7 +3,7 @@ import { posts } from '@/lib/posts'
 
 export const dynamic = 'force-static'
 
-const baseUrl = 'https://changhyeonnam.github.io'
+const baseUrl = 'https://changhyeonnam.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const postUrls = posts.map((post) => ({

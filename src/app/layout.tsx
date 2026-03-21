@@ -6,7 +6,7 @@ import { LanguageProvider } from '@/contexts/LanguageContext'
 
 const geist = Geist({ subsets: ['latin'] })
 
-const baseUrl = 'https://changhyeonnam.github.io'
+const baseUrl = 'https://changhyeonnam.com'
 
 export const metadata: Metadata = {
   title: 'Changhyeon Nam',
