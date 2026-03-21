@@ -59,6 +59,13 @@ export default function Home() {
               linkedin
             </a>
             <a
+              href="mailto:hj04143@gmail.com"
+              className="text-sm transition-opacity hover:opacity-50"
+              style={{ color: 'var(--c-text-muted)' }}
+            >
+              email
+            </a>
+            <a
               href="/feed.xml"
               target="_blank"
               rel="noopener noreferrer"
