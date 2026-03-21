@@ -6,9 +6,32 @@ import { LanguageProvider } from '@/contexts/LanguageContext'
 
 const geist = Geist({ subsets: ['latin'] })
 
+const baseUrl = 'https://changhyeonnam.github.io'
+
 export const metadata: Metadata = {
   title: 'Changhyeon Nam',
-  description: 'Software Engineer at SK Telecom, working on AI infrastructure and LLM systems.',
+  description: 'Software Engineer at SK Telecom, building GPU platforms for LLM training and serving.',
+  metadataBase: new URL(baseUrl),
+  openGraph: {
+    title: 'Changhyeon Nam',
+    description: 'Software Engineer at SK Telecom, building GPU platforms for LLM training and serving.',
+    url: baseUrl,
+    siteName: 'Changhyeon Nam',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Changhyeon Nam',
+    description: 'Software Engineer at SK Telecom, building GPU platforms for LLM training and serving.',
+  },
+  alternates: {
+    types: {
+      'application/rss+xml': `${baseUrl}/feed.xml`,
+    },
+  },
+  verification: {
+    google: '0V5CXBSMLGnza61r-3pc1C5RKiHmyEU-CshJ1GQutK0',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
